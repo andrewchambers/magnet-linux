@@ -22,9 +22,13 @@ So how does redo-linux improve things?
 
 ## Who should consider using redo-linux?
 
+Nobody yet (unless you want to participate in the design process).
+
+In the future it will be for:
+
 - Professional software engineers and organizations interested in reproducible software systems.
 - Enthusiasts and advanced linux users.
-- People who do not have reliable global internet access.
+- People who want to a more decentralized linux distribution for whatever reason.
 
 ## Why is it called redo-linux?
 
@@ -32,8 +36,7 @@ The core of the system is a software build tool called 'redo' that is simple and
 
 ## Project principles
 
-- Keep it simple, less is more.
-- People should only pay for what they use.
+- Keep it simple.
 - Empower the user.
 
 ## Project inspirations
