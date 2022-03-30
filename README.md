@@ -5,7 +5,7 @@ A minimalist, secure and decentralized linux distribution.
 ## Why does this project exist?
 
 In order to produce reliable software systems we believe it is important users
-have the ability to easily modify, debug, recompile and self host any part of the system.
+have the ability to easily modify, debug, recompile any part of the system.
 
 With this in mind, many traditional linux distributions suffer from a few problems:
 
@@ -46,18 +46,16 @@ The core of the system is a software build tool called 'redo' that is simple and
 - https://github.com/oasislinux/oasis
 - https://nixos.org
 - https://guix.gnu.org
-- https://www.linuxfromscratch.org/
+- https://www.linuxfromscratch.org
 
 ## Project status
 
-This project is a prototype. We will develop it as long as there is a need
+This project is a *vaporware* prototype. We will develop it as long as there is a need
 and interest. Once it is a functioning and useful system we *may* remove the prototype label.
 
 ## Sponsoring the project
 
 This project is funded entirely by sponsors:
-
-Current sponsors:
 
 - https://bupstash.io - Easy and efficient encrypted backups.
 
