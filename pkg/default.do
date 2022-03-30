@@ -74,6 +74,8 @@ case $filename in
     for closed_over in $(cat "$pkgdir/build-closure"); do
       echo "$pkgdir/$closed_over/pkg.tar.zstd"
     done | xargs -r redo-ifchange
+    
+    exit 123
     ;;
   *)
     echo "don't know how to build $1" >&2
