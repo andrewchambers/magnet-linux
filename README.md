@@ -9,8 +9,7 @@ have the ability to easily modify, debug, recompile and self host any part of th
 
 With this in mind, many traditional linux distributions suffer from a few problems:
 
-- If upstream deprecates a version, you may be unable to reproduce and maintain older versions of your software system
-  without access to the distributions servers and infrastructure.
+- If upstream deprecates a software version, you may be unable to reproduce and maintain older versions of your software system.
 - It can be difficult to make patches and customizations to core software provided with the system.
 - Many source based linux distributions omit efficient package precompilation and caching.
 
