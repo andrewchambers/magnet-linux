@@ -4,14 +4,15 @@ A minimalist, secure and decentralized linux distribution.
 
 ## Why does this project exist?
 
-In order to produce reliable software systems, we believe it is important users
+In order to produce reliable software systems we believe it is important users
 have the ability to easily modify, debug, recompile and self host any part of the system.
 
 With this in mind, many traditional linux distributions suffer from a few problems:
 
-- If upstream deprecates a version, you may be unable to reproduce and maintain your software system.
+- If upstream deprecates a version, you may be unable to reproduce and maintain older versions of your software system
+  without access to the distributions servers and infrastructure.
 - It can be difficult to make patches and customizations to core software provided with the system.
-- Many source based linux distributions often omit efficient package precompilation and caching.
+- Many source based linux distributions omit efficient package precompilation and caching.
 
 So how does redo-linux improve things?
 
