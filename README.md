@@ -17,6 +17,7 @@ With this in mind, many traditional linux distributions suffer from a few proble
 So how does redo-linux improve things?
 
 - This source code repository contains nearly everything required to build and run the operating system.
+- You can fork, patch and modify the operating system using the same methods as any other software.
 - You can securely use precompiled packages with transparent recompilation when none are found.
 - Package caches are hosted on p2p networks and can be entirely self hosted.
 - All external source code is mirrored on p2p networks and can be self hosted.
