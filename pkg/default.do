@@ -10,12 +10,6 @@ out="$(readlink -f "$3")"
 
 cd "$pkgdir"
 
-if ! test -f "meta"
-then
-  echo "$pkgdir is not a package directory (no meta file)."
-  exit 1
-fi
-
 case $filename in
   run-closure)
     redo-ifchange run-deps
@@ -94,10 +88,10 @@ case $filename in
     
     exit 123
     ;;
-  run-deps | build-deps)
+  run-deps | build-deps | files)
     touch "$out"
     ;;
-  meta | files | build)
+  build)
     echo "$1 is a mandatory file."
     exit 1
     ;;
