@@ -117,28 +117,9 @@ case $filename in
       exit 1
     fi
 
-    found=false
-    mirror_dir="${REDO_LINUX_MIRROR_DIR:-$scriptdir/../mirrors}"
-    mirrors=$(find "$mirror_dir" -type f | xargs -r cat | grep -e "^$hash" | sort)
-    for mirror in $mirrors
-    do
-      url=$(echo "$mirror" | cut -f 3- -d ' ')
-      echo "downloading $url..."
-      curl -s -L "$url" -o "$out"
-      actual_hash=$(sha256sum "$out" | cut -c 1-64)
-      if test "$hash" = "$actual_hash"
-      then
-        found=true
-        break
-      fi
-      echo "mirror $url failed hash check, trying next"
-    done
-
-    if ! test "$found" = true
+    if ! $scriptdir/../bin/fetch "$hash" "$out"
     then
-      echo "all mirrors failed, unable to download $pkgdir/$filename"
+      echo "unable to fetch $pkgdir/$filename"
       exit 1
     fi
-
-    ;;
 esac

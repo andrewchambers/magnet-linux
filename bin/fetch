@@ -1,0 +1,20 @@
+#!/bin/sh
+set -ue
+
+script_dir=$(dirname "$(readlink -f "$0")")
+mirrors="${REDO_LINUX_MIRRORS:-$script_dir/../mirrors/current.rec}"
+hash="$1"
+out="$2"
+
+rec="$(recsel -e "sha256 = '$hash'" -P url "$mirrors")"
+if test -z "$rec"
+then
+	echo "record for hash not found in $(readlink -f $mirrors)" >&2
+	exit 1
+fi
+
+url="$(echo "$rec" | shuf -n 1)"
+
+echo "downloading from mirror $url" 2>&1
+curl -L -o "$out" "$url"
+echo "$hash $out" | sha256sum -c --quiet
