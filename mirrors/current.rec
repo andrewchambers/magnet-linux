@@ -1,7 +1,7 @@
 %rec: mirrors
 %unique: sha256
 %mandatory: url sha256
-%allowed: sha256 url
+%allowed: url sha256
 %sort: url
 
 url: https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.bz2
