@@ -4,5 +4,32 @@
 %allowed: url sha256
 %sort: url
 
-url: https://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.bz2
-sha256: de23af78fca90ce32dff2dd45b3432b2334740bb9bb7b05bf60fdbfc396ceb9c
+url: https://busybox.net/downloads/binaries/1.35.0-x86_64-linux-musl/busybox
+sha256: 6e123e7f3202a8c1e9b1f94d8941580a25135382b99e8d3e34fb858bba311348
+
+url: https://more.musl.cc/11/x86_64-linux-musl/x86_64-linux-musl-native.tgz
+sha256: eb1db6f0f3c2bdbdbfb993d7ef7e2eeef82ac1259f6a6e1757c33a97dbcef3ad
+
+url: https://ftp.gnu.org/gnu/binutils/binutils-2.38.tar.xz
+sha256: e316477a914f567eccc34d5d29785b8b0f5a10208d36bbacedcc39048ecfe024
+
+url: https://ftp.gnu.org/gnu/coreutils/coreutils-9.0.tar.xz
+sha256: ce30acdf4a41bc5bb30dd955e9eaa75fa216b4e3deb08889ed32433c7b3b97ce
+
+url: http://ftp.gnu.org/gnu/make/make-4.3.tar.gz
+sha256: e05fdde47c5f7ca45cb697e973894ff4f5d79e13b750ed57d7b66d8defc78e19
+
+url: https://musl.libc.org/releases/musl-1.2.2.tar.gz
+sha256: 9b969322012d796dc23dda27a35866034fa67d8fb67e0e2c45c913c3d43219dd
+
+url: http://mirrors.ibiblio.org/gnu/gcc/gcc-11.2.0/gcc-11.2.0.tar.xz
+sha256: d08edc536b54c372a1010ff6619dd274c0f1603aa49212ba20f7aa2cda36fa8b
+
+url: https://www.mpfr.org/mpfr-current/mpfr-4.1.0.tar.xz
+sha256: 0c98a3f1732ff6ca4ea690552079da9c597872d30e96ec28414ee23c95558a7f
+
+url: https://www.multiprecision.org/downloads/mpc-1.2.0.tar.gz
+sha256: e90f2d99553a9c19911abdb4305bf8217106a957e3994436428572c8dfe8fda6
+
+url: https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz
+sha256: fd4829912cddd12f84181c3451cc752be224643e87fac497b69edddadc49b4f2

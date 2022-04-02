@@ -66,7 +66,7 @@ case $filename in
       done | xargs -r cat
     ) | sha256sum | cut -c 1-64 >"$3"
     ;;
-  pkg.tar.zst)
+  pkg.tar.gz)
     redo-ifchange \
       build \
       build-closure \
@@ -80,13 +80,52 @@ case $filename in
       
     cut -f 2- -d " " < files | xargs -r redo-ifchange
 
-    sha256sum --strict -c files
+    sha256sum --quiet -c files
 
     for closed_over in $(cat build-closure); do
-      echo "$closed_over/pkg.tar.zstd"
+      echo "$closed_over/pkg.tar.gz"
     done | xargs -r redo-ifchange
-    
-    exit 123
+
+    echo "preparing build chroot..."
+    rm -rf chroot
+    mkdir -p \
+      chroot \
+      chroot/dev \
+      chroot/proc \
+      chroot/tmp \
+      chroot/var \
+      chroot/etc \
+      chroot/home/build \
+      chroot/destdir
+
+    for closed_over in $(cat build-closure); do
+      tar -C chroot -xf "$closed_over/pkg.tar.gz"
+    done
+
+    for file in $(cat files | cut -f 2- -d " " | sed 's/^[[:space:]]*//')
+    do
+      cp "$file" ./chroot/home/build
+    done
+
+    cp build ./chroot/tmp/build
+    chmod +x ./chroot/tmp/build
+
+    bwrap \
+      --unshare-net \
+      --unshare-pid \
+      --clearenv \
+      --setenv PATH /bin \
+      --setenv TMP /tmp \
+      --setenv HOME /home/build \
+      --setenv DESTDIR /destdir \
+      --bind ./chroot /  \
+      --dev /dev \
+      --proc /proc \
+      --chdir /home/build \
+      -- \
+      /tmp/build
+
+    tar -C chroot/destdir -czf "$out" .
     ;;
   run-deps | build-deps | files)
     touch "$out"
@@ -103,7 +142,7 @@ case $filename in
     for line in $(cat files)
     do
       hash=$(echo "$line" | cut -f -1 -d ' ')
-      name=$(echo "$line" | cut -f 2- -d ' ')
+      name=$(echo "$line" | cut -f 2- -d ' ' | sed 's/^[[:space:]]*//')
       if test "$filename" = "$name"
       then
         found=true

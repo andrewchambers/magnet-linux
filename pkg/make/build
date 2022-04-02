@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -eux
+
+tar -xf *
+cd *
+export CFLAGS="--static"
+./configure --prefix="" --disable-dependency-tracking
+./build.sh
+./make install-strip
