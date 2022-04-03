@@ -1,6 +1,6 @@
 # redo-linux
 
-A minimalist, secure and decentralized linux distribution.
+A minimalist and decentralized linux distribution.
 
 ## Why does this project exist?
 
@@ -19,8 +19,8 @@ So how does redo-linux improve things?
 - This source code repository contains nearly everything required to build and run the operating system.
 - You can fork, patch and modify the operating system using the same methods as any other software.
 - You can securely use precompiled packages with transparent recompilation when none are found.
-- Package caches are hosted on p2p networks and can be entirely self hosted.
-- All external source code is mirrored on p2p networks and can be self hosted.
+- Package cache can easily be self hosted and mirrored.
+- All external source code can easily be self hosted and mirrored.
 
 ## Who should consider using redo-linux?
 

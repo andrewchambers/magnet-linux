@@ -3,7 +3,10 @@ set -eux
 
 tar --strip-components=1 -xf *.tar.*
 
-patch -p1 < 0001-prevent-info-rebuild.patch
+for patch in *.patch
+do
+  patch -p1 < $patch
+done
 
 ./configure \
   --prefix="/" \

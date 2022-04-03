@@ -70,6 +70,7 @@ case $filename in
     redo-ifchange \
       build \
       build-closure \
+      run-closure \
       files
 
     if grep -q -e "^/" -e "\.\./" files
@@ -82,7 +83,7 @@ case $filename in
 
     sha256sum --quiet -c files
 
-    for closed_over in $(cat build-closure); do
+    for closed_over in $(cat build-closure run-closure); do
       echo "$closed_over/pkg.tar.gz"
     done | xargs -r redo-ifchange
 
