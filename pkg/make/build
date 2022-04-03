@@ -1,9 +1,7 @@
 #!/bin/sh
-
 set -eux
 
-tar -xf *
-cd *
+tar --strip-components=1 -xf *
 export CFLAGS="--static"
 ./configure --prefix="" --disable-dependency-tracking
 ./build.sh

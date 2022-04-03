@@ -4,8 +4,17 @@
 %allowed: url sha256
 %sort: url
 
+url: https://ftp.gnu.org/gnu/sed/sed-4.8.tar.xz
+sha256: f79b0cfea71b37a8eeec8490db6c5f7ae7719c35587f21edb0617f370eeff633
+
+url: https://ftp.gnu.org/gnu/grep/grep-3.7.tar.xz
+sha256: 5c10da312460aec721984d5d83246d24520ec438dd48d7ab5a05dbc0d6d6823c
+
 url: https://busybox.net/downloads/binaries/1.35.0-x86_64-linux-musl/busybox
 sha256: 6e123e7f3202a8c1e9b1f94d8941580a25135382b99e8d3e34fb858bba311348
+
+url: https://busybox.net/downloads/busybox-1.35.0.tar.bz2
+sha256: faeeb244c35a348a334f4a59e44626ee870fb07b6884d68c10ae8bc19f83a694
 
 url: https://more.musl.cc/11/x86_64-linux-musl/x86_64-linux-musl-native.tgz
 sha256: eb1db6f0f3c2bdbdbfb993d7ef7e2eeef82ac1259f6a6e1757c33a97dbcef3ad

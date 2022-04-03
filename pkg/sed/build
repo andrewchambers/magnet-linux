@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *
+export CFLAGS="--static"
+./configure --prefix=""
+make -j$(nproc) install-strip

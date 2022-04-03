@@ -115,7 +115,7 @@ case $filename in
       --unshare-pid \
       --clearenv \
       --setenv PATH /bin \
-      --setenv TMP /tmp \
+      --setenv TMPDIR /tmp \
       --setenv HOME /home/build \
       --setenv DESTDIR /destdir \
       --bind ./chroot /  \
@@ -126,6 +126,9 @@ case $filename in
       /tmp/build
 
     tar -C chroot/destdir -czf "$out" .
+
+    chmod -R 700 chroot
+    rm -rf chroot
     ;;
   run-deps | build-deps | files)
     touch "$out"
