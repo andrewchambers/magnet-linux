@@ -4,8 +4,17 @@
 %allowed: url sha256
 %sort: url
 
+url: https://ftp.gnu.org/gnu/tar/tar-1.34.tar.xz
+sha256: 63bebd26879c5e1eea4352f0d03c991f966aeb3ddeb3c7445c902568d5411d28
+
+url: https://tukaani.org/xz/xz-5.2.5.tar.xz
+sha256: 3e1e518ffc912f86608a8cb35e4bd41ad1aec210df2a47aaa1f95e7f5576ef56
+
+url: https://ftp.gnu.org/gnu/gzip/gzip-1.11.tar.xz
+sha256: 9b9a95d68fdcb936849a4d6fada8bf8686cddf58b9b26c9c4289ed0c92a77907
+
 url: https://github.com/ibara/oksh/releases/download/oksh-7.0/oksh-7.0.tar.gz
-sha256: a6bdd7d1b31266d11c4f4de6c1b748d4607ab0231af5188fc2533d0ae2438fec
+sha256: 21d5891f38ffea3a5d1aa8c494f0a5579c93778535e0a92275b102dec3221da1
 
 url: https://ftp.gnu.org/gnu/diffutils/diffutils-3.8.tar.xz
 sha256: a6bdd7d1b31266d11c4f4de6c1b748d4607ab0231af5188fc2533d0ae2438fec

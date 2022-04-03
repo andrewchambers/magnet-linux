@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *
+./configure --prefix="" --disable-nls
+make -j$(nproc) install-strip
