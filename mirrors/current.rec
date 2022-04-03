@@ -4,6 +4,14 @@
 %allowed: url sha256
 %sort: url
 
+
+
+url: https://github.com/andrewchambers/p2pkgs/raw/5dd35e46bcf2b3303f9a2d89540828a92765b3a2/seed.tar.gz
+sha256: 551a8063baca5ec430d8967810cabdb9e5b4ead12c5eeea925165e8711d941a8
+
+url: http://ftp.barfooze.de/pub/sabotage/tarballs/linux-headers-4.19.88-1.tar.xz
+sha256: 995bc76ccf0c40d752b5ea67c022232a17eef6c9ec80ea74ea742e3c19992813
+
 url: https://ftp.gnu.org/gnu/sed/sed-4.8.tar.xz
 sha256: f79b0cfea71b37a8eeec8490db6c5f7ae7719c35587f21edb0617f370eeff633
 
@@ -25,13 +33,13 @@ sha256: e316477a914f567eccc34d5d29785b8b0f5a10208d36bbacedcc39048ecfe024
 url: https://ftp.gnu.org/gnu/coreutils/coreutils-9.0.tar.xz
 sha256: ce30acdf4a41bc5bb30dd955e9eaa75fa216b4e3deb08889ed32433c7b3b97ce
 
-url: http://ftp.gnu.org/gnu/make/make-4.3.tar.gz
+url: https://ftp.gnu.org/gnu/make/make-4.3.tar.gz
 sha256: e05fdde47c5f7ca45cb697e973894ff4f5d79e13b750ed57d7b66d8defc78e19
 
 url: https://musl.libc.org/releases/musl-1.2.2.tar.gz
 sha256: 9b969322012d796dc23dda27a35866034fa67d8fb67e0e2c45c913c3d43219dd
 
-url: http://mirrors.ibiblio.org/gnu/gcc/gcc-11.2.0/gcc-11.2.0.tar.xz
+url: https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-11.2.0.tar.xz
 sha256: d08edc536b54c372a1010ff6619dd274c0f1603aa49212ba20f7aa2cda36fa8b
 
 url: https://www.mpfr.org/mpfr-current/mpfr-4.1.0.tar.xz

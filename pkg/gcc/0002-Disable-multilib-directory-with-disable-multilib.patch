@@ -1,0 +1,25 @@
+From 7623671dbfac810d73c4d5061d33741716d600c1 Mon Sep 17 00:00:00 2001
+From: Michael Forney <mforney@mforney.org>
+Date: Thu, 26 Mar 2020 17:08:26 -0700
+Subject: [PATCH] Disable multilib directory with --disable-multilib
+
+---
+ gcc/Makefile.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gcc/Makefile.in b/gcc/Makefile.in
+index 8a5fb3fd99c..f6df63ffac4 100644
+--- a/gcc/Makefile.in
++++ b/gcc/Makefile.in
+@@ -2166,7 +2166,7 @@ libgcc.mvars: config.status Makefile specs xgcc$(exeext)
+ multilib.h: s-mlib; @true
+ s-mlib: $(srcdir)/genmultilib Makefile
+ 	if test @enable_multilib@ = yes \
+-	   || test -n "$(MULTILIB_OSDIRNAMES)"; then \
++	   && test -n "$(MULTILIB_OSDIRNAMES)"; then \
+ 	  $(SHELL) $(srcdir)/genmultilib \
+ 	    "$(MULTILIB_OPTIONS)" \
+ 	    "$(MULTILIB_DIRNAMES)" \
+-- 
+2.31.1
+

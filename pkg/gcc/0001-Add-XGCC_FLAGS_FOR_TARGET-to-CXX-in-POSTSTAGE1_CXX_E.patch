@@ -1,0 +1,52 @@
+From 6c8de6bcd675e53e06a93a1c19800e61507f45e0 Mon Sep 17 00:00:00 2001
+From: Michael Forney <mforney@mforney.org>
+Date: Wed, 25 Mar 2020 16:39:08 -0700
+Subject: [PATCH] Add XGCC_FLAGS_FOR_TARGET to CXX in POSTSTAGE1_CXX_EXPORT
+
+This contains the necessary sysroot flags if configured with
+--with-build-sysroot, and matches the corresponding value for CC
+in POSTSTAGE1_HOST_EXPORTS.
+
+2020-03-25  Michael Forney  <mforney@mforney.org>
+
+        * Makefile.tpl (POSTSTAGE1_HOST_EXPORTS): Add XGCC_FLAGS_FOR_TARGET
+        and TFLAGS to CXX.
+	* Makefile.in: Regenerate.
+---
+ Makefile.in  | 4 ++--
+ Makefile.tpl | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/Makefile.in b/Makefile.in
+index 36e369df6e7..c49fcc03d31 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -248,8 +248,8 @@ POSTSTAGE1_CXX_EXPORT = \
+ 	  `if $(LEAN); then echo ' -isystem '; else echo ' -I'; fi`$$r/prev-$(TARGET_SUBDIR)/libstdc++-v3/include \
+ 	  `if $(LEAN); then echo ' -isystem '; else echo ' -I'; fi`$$s/libstdc++-v3/libsupc++ \
+ 	  -L$$r/prev-$(TARGET_SUBDIR)/libstdc++-v3/src/.libs \
+-	  -L$$r/prev-$(TARGET_SUBDIR)/libstdc++-v3/libsupc++/.libs"; \
+-	  export CXX; \
++	  -L$$r/prev-$(TARGET_SUBDIR)/libstdc++-v3/libsupc++/.libs \
++	  $(XGCC_FLAGS_FOR_TARGET) $$TFLAGS"; export CXX; \
+ 	CXX_FOR_BUILD="$$CXX"; export CXX_FOR_BUILD;
+ @endif target-libstdc++-v3-bootstrap
+ 
+diff --git a/Makefile.tpl b/Makefile.tpl
+index efed1511750..b627069e8c8 100644
+--- a/Makefile.tpl
++++ b/Makefile.tpl
+@@ -251,8 +251,8 @@ POSTSTAGE1_CXX_EXPORT = \
+ 	  `if $(LEAN); then echo ' -isystem '; else echo ' -I'; fi`$$r/prev-$(TARGET_SUBDIR)/libstdc++-v3/include \
+ 	  `if $(LEAN); then echo ' -isystem '; else echo ' -I'; fi`$$s/libstdc++-v3/libsupc++ \
+ 	  -L$$r/prev-$(TARGET_SUBDIR)/libstdc++-v3/src/.libs \
+-	  -L$$r/prev-$(TARGET_SUBDIR)/libstdc++-v3/libsupc++/.libs"; \
+-	  export CXX; \
++	  -L$$r/prev-$(TARGET_SUBDIR)/libstdc++-v3/libsupc++/.libs \
++	  $(XGCC_FLAGS_FOR_TARGET) $$TFLAGS"; export CXX; \
+ 	CXX_FOR_BUILD="$$CXX"; export CXX_FOR_BUILD;
+ @endif target-libstdc++-v3-bootstrap
+ 
+-- 
+2.26.2
+

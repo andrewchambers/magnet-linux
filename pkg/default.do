@@ -123,7 +123,7 @@ case $filename in
       --proc /proc \
       --chdir /home/build \
       -- \
-      /tmp/build
+      /tmp/build 2>&1 | tee build.log
 
     tar -C chroot/destdir -czf "$out" .
 

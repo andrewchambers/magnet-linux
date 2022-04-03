@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *
+make ARCH=x86_64 prefix= install

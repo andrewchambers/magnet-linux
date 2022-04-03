@@ -1,0 +1,320 @@
+From f52abd27c3598ee705ee8ee1bf36388d5874a36f Mon Sep 17 00:00:00 2001
+From: Martin Liska <mliska@suse.cz>
+Date: Fri, 13 Nov 2020 17:21:45 +0100
+Subject: [PATCH] libsanitizer: Apply local patches.
+
+---
+ libsanitizer/asan/asan_globals.cpp            | 19 ------------------
+ libsanitizer/asan/asan_interceptors.h         |  7 ++++++-
+ libsanitizer/asan/asan_mapping.h              |  2 +-
+ .../sanitizer_linux_libcdep.cpp               |  4 ++++
+ .../sanitizer_common/sanitizer_mac.cpp        |  2 +-
+ libsanitizer/sanitizer_common/sanitizer_mac.h | 20 +++++++++++++++++++
+ .../sanitizer_platform_limits_linux.cpp       |  7 +++++--
+ .../sanitizer_platform_limits_posix.h         |  2 +-
+ .../sanitizer_common/sanitizer_stacktrace.cpp | 17 +++++++++++-----
+ libsanitizer/tsan/tsan_rtl_ppc64.S            |  1 +
+ libsanitizer/ubsan/ubsan_flags.cpp            |  1 +
+ libsanitizer/ubsan/ubsan_handlers.cpp         | 15 ++++++++++++++
+ libsanitizer/ubsan/ubsan_handlers.h           |  8 ++++++++
+ libsanitizer/ubsan/ubsan_platform.h           |  2 ++
+ 14 files changed, 77 insertions(+), 30 deletions(-)
+
+diff --git a/libsanitizer/asan/asan_globals.cpp b/libsanitizer/asan/asan_globals.cpp
+index 9d7dbc6f264..e045c31cd1c 100644
+--- a/libsanitizer/asan/asan_globals.cpp
++++ b/libsanitizer/asan/asan_globals.cpp
+@@ -154,23 +154,6 @@ static void CheckODRViolationViaIndicator(const Global *g) {
+   }
+ }
+ 
+-// Check ODR violation for given global G by checking if it's already poisoned.
+-// We use this method in case compiler doesn't use private aliases for global
+-// variables.
+-static void CheckODRViolationViaPoisoning(const Global *g) {
+-  if (__asan_region_is_poisoned(g->beg, g->size_with_redzone)) {
+-    // This check may not be enough: if the first global is much larger
+-    // the entire redzone of the second global may be within the first global.
+-    for (ListOfGlobals *l = list_of_all_globals; l; l = l->next) {
+-      if (g->beg == l->g->beg &&
+-          (flags()->detect_odr_violation >= 2 || g->size != l->g->size) &&
+-          !IsODRViolationSuppressed(g->name))
+-        ReportODRViolation(g, FindRegistrationSite(g),
+-                           l->g, FindRegistrationSite(l->g));
+-    }
+-  }
+-}
+-
+ // Clang provides two different ways for global variables protection:
+ // it can poison the global itself or its private alias. In former
+ // case we may poison same symbol multiple times, that can help us to
+@@ -216,8 +199,6 @@ static void RegisterGlobal(const Global *g) {
+     // where two globals with the same name are defined in different modules.
+     if (UseODRIndicator(g))
+       CheckODRViolationViaIndicator(g);
+-    else
+-      CheckODRViolationViaPoisoning(g);
+   }
+   if (CanPoisonMemory())
+     PoisonRedZones(*g);
+diff --git a/libsanitizer/asan/asan_interceptors.h b/libsanitizer/asan/asan_interceptors.h
+index e8c58c2dc6b..5bd5be6bac2 100644
+--- a/libsanitizer/asan/asan_interceptors.h
++++ b/libsanitizer/asan/asan_interceptors.h
+@@ -81,7 +81,12 @@ void InitializePlatformInterceptors();
+ #if ASAN_HAS_EXCEPTIONS && !SANITIZER_WINDOWS && !SANITIZER_SOLARIS && \
+     !SANITIZER_NETBSD
+ # define ASAN_INTERCEPT___CXA_THROW 1
+-# define ASAN_INTERCEPT___CXA_RETHROW_PRIMARY_EXCEPTION 1
++# if ! defined(ASAN_HAS_CXA_RETHROW_PRIMARY_EXCEPTION) \
++     || ASAN_HAS_CXA_RETHROW_PRIMARY_EXCEPTION
++#   define ASAN_INTERCEPT___CXA_RETHROW_PRIMARY_EXCEPTION 1
++# else
++#   define ASAN_INTERCEPT___CXA_RETHROW_PRIMARY_EXCEPTION 0
++# endif
+ # if defined(_GLIBCXX_SJLJ_EXCEPTIONS) || (SANITIZER_IOS && defined(__arm__))
+ #  define ASAN_INTERCEPT__UNWIND_SJLJ_RAISEEXCEPTION 1
+ # else
+diff --git a/libsanitizer/asan/asan_mapping.h b/libsanitizer/asan/asan_mapping.h
+index 455e2364cd0..2511e7043df 100644
+--- a/libsanitizer/asan/asan_mapping.h
++++ b/libsanitizer/asan/asan_mapping.h
+@@ -171,7 +171,7 @@ static const u64 kAArch64_ShadowOffset64 = 1ULL << 36;
+ static const u64 kRiscv64_ShadowOffset64 = 0xd55550000;
+ static const u64 kMIPS32_ShadowOffset32 = 0x0aaa0000;
+ static const u64 kMIPS64_ShadowOffset64 = 1ULL << 37;
+-static const u64 kPPC64_ShadowOffset64 = 1ULL << 44;
++static const u64 kPPC64_ShadowOffset64 = 1ULL << 41;
+ static const u64 kSystemZ_ShadowOffset64 = 1ULL << 52;
+ static const u64 kSPARC64_ShadowOffset64 = 1ULL << 43;  // 0x80000000000
+ static const u64 kFreeBSD_ShadowOffset32 = 1ULL << 30;  // 0x40000000
+diff --git a/libsanitizer/sanitizer_common/sanitizer_linux_libcdep.cpp b/libsanitizer/sanitizer_common/sanitizer_linux_libcdep.cpp
+index 572aa86fa53..da19d3d2ceb 100644
+--- a/libsanitizer/sanitizer_common/sanitizer_linux_libcdep.cpp
++++ b/libsanitizer/sanitizer_common/sanitizer_linux_libcdep.cpp
+@@ -732,9 +732,13 @@ u32 GetNumberOfCPUs() {
+ #elif SANITIZER_SOLARIS
+   return sysconf(_SC_NPROCESSORS_ONLN);
+ #else
++#if defined(CPU_COUNT)
+   cpu_set_t CPUs;
+   CHECK_EQ(sched_getaffinity(0, sizeof(cpu_set_t), &CPUs), 0);
+   return CPU_COUNT(&CPUs);
++#else
++  return 1;
++#endif
+ #endif
+ }
+ 
+diff --git a/libsanitizer/sanitizer_common/sanitizer_mac.cpp b/libsanitizer/sanitizer_common/sanitizer_mac.cpp
+index f4c6b442a14..f455856c85d 100644
+--- a/libsanitizer/sanitizer_common/sanitizer_mac.cpp
++++ b/libsanitizer/sanitizer_common/sanitizer_mac.cpp
+@@ -37,7 +37,7 @@
+ extern char **environ;
+ #endif
+ 
+-#if defined(__has_include) && __has_include(<os/trace.h>)
++#if defined(__has_include) && __has_include(<os/trace.h>) && defined(__BLOCKS__)
+ #define SANITIZER_OS_TRACE 1
+ #include <os/trace.h>
+ #else
+diff --git a/libsanitizer/sanitizer_common/sanitizer_mac.h b/libsanitizer/sanitizer_common/sanitizer_mac.h
+index 0b6af5a3c0e..96a5986a47a 100644
+--- a/libsanitizer/sanitizer_common/sanitizer_mac.h
++++ b/libsanitizer/sanitizer_common/sanitizer_mac.h
+@@ -14,6 +14,26 @@
+ 
+ #include "sanitizer_common.h"
+ #include "sanitizer_platform.h"
++
++/* TARGET_OS_OSX is not present in SDKs before Darwin16 (macOS 10.12) use
++   TARGET_OS_MAC (we have no support for iOS in any form for these versions,
++   so there's no ambiguity).  */
++#if !defined(TARGET_OS_OSX) && TARGET_OS_MAC
++# define TARGET_OS_OSX 1
++#endif
++
++/* Other TARGET_OS_xxx are not present on earlier versions, define them to
++   0 (we have no support for them; they are not valid targets anyway).  */
++#ifndef TARGET_OS_IOS
++#define TARGET_OS_IOS 0
++#endif
++#ifndef TARGET_OS_TV
++#define TARGET_OS_TV 0
++#endif
++#ifndef TARGET_OS_WATCH
++#define TARGET_OS_WATCH 0
++#endif
++
+ #if SANITIZER_MAC
+ #include "sanitizer_posix.h"
+ 
+diff --git a/libsanitizer/sanitizer_common/sanitizer_platform_limits_linux.cpp b/libsanitizer/sanitizer_common/sanitizer_platform_limits_linux.cpp
+index c51327e1269..f22f5039128 100644
+--- a/libsanitizer/sanitizer_common/sanitizer_platform_limits_linux.cpp
++++ b/libsanitizer/sanitizer_common/sanitizer_platform_limits_linux.cpp
+@@ -26,9 +26,12 @@
+ 
+ // With old kernels (and even new kernels on powerpc) asm/stat.h uses types that
+ // are not defined anywhere in userspace headers. Fake them. This seems to work
+-// fine with newer headers, too.
++// fine with newer headers, too.  Beware that with <sys/stat.h>, struct stat
++// takes the form of struct stat64 on 32-bit platforms if _FILE_OFFSET_BITS=64.
++// Also, for some platforms (e.g. mips) there are additional members in the
++// <sys/stat.h> struct stat:s.
+ #include <linux/posix_types.h>
+-#if defined(__x86_64__) ||  defined(__mips__)
++#if defined(__x86_64__)
+ #include <sys/stat.h>
+ #else
+ #define ino_t __kernel_ino_t
+diff --git a/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.h b/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.h
+index 8a156b7fcb8..cba41ba5494 100644
+--- a/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.h
++++ b/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.h
+@@ -83,7 +83,7 @@ const unsigned struct_kernel_stat64_sz = 104;
+ #elif defined(__mips__)
+ const unsigned struct_kernel_stat_sz = SANITIZER_ANDROID
+                                            ? FIRST_32_SECOND_64(104, 128)
+-                                           : FIRST_32_SECOND_64(160, 216);
++                                           : FIRST_32_SECOND_64(144, 216);
+ const unsigned struct_kernel_stat64_sz = 104;
+ #elif defined(__s390__) && !defined(__s390x__)
+ const unsigned struct_kernel_stat_sz = 64;
+diff --git a/libsanitizer/sanitizer_common/sanitizer_stacktrace.cpp b/libsanitizer/sanitizer_common/sanitizer_stacktrace.cpp
+index 07e4409f4a5..515deddf6b2 100644
+--- a/libsanitizer/sanitizer_common/sanitizer_stacktrace.cpp
++++ b/libsanitizer/sanitizer_common/sanitizer_stacktrace.cpp
+@@ -85,8 +85,8 @@ static inline uhwptr *GetCanonicFrame(uptr bp,
+   // Nope, this does not look right either. This means the frame after next does
+   // not have a valid frame pointer, but we can still extract the caller PC.
+   // Unfortunately, there is no way to decide between GCC and LLVM frame
+-  // layouts. Assume LLVM.
+-  return bp_prev;
++  // layouts. Assume GCC.
++  return bp_prev - 1;
+ #else
+   return (uhwptr*)bp;
+ #endif
+@@ -109,14 +109,21 @@ void BufferedStackTrace::UnwindFast(uptr pc, uptr bp, uptr stack_top,
+          IsAligned((uptr)frame, sizeof(*frame)) &&
+          size < max_depth) {
+ #ifdef __powerpc__
+-    // PowerPC ABIs specify that the return address is saved at offset
+-    // 16 of the *caller's* stack frame.  Thus we must dereference the
+-    // back chain to find the caller frame before extracting it.
++    // PowerPC ABIs specify that the return address is saved on the
++    // *caller's* stack frame.  Thus we must dereference the back chain
++    // to find the caller frame before extracting it.
+     uhwptr *caller_frame = (uhwptr*)frame[0];
+     if (!IsValidFrame((uptr)caller_frame, stack_top, bottom) ||
+         !IsAligned((uptr)caller_frame, sizeof(uhwptr)))
+       break;
++    // For most ABIs the offset where the return address is saved is two
++    // register sizes.  The exception is the SVR4 ABI, which uses an
++    // offset of only one register size.
++#ifdef _CALL_SYSV
++    uhwptr pc1 = caller_frame[1];
++#else
+     uhwptr pc1 = caller_frame[2];
++#endif
+ #elif defined(__s390__)
+     uhwptr pc1 = frame[14];
+ #elif defined(__riscv)
+diff --git a/libsanitizer/tsan/tsan_rtl_ppc64.S b/libsanitizer/tsan/tsan_rtl_ppc64.S
+index 8285e21aa1e..9e533a71a9c 100644
+--- a/libsanitizer/tsan/tsan_rtl_ppc64.S
++++ b/libsanitizer/tsan/tsan_rtl_ppc64.S
+@@ -1,5 +1,6 @@
+ #include "tsan_ppc_regs.h"
+ 
++        .machine altivec
+         .section .text
+         .hidden __tsan_setjmp
+         .globl _setjmp
+diff --git a/libsanitizer/ubsan/ubsan_flags.cpp b/libsanitizer/ubsan/ubsan_flags.cpp
+index 25cefd46ce2..9a66bd37518 100644
+--- a/libsanitizer/ubsan/ubsan_flags.cpp
++++ b/libsanitizer/ubsan/ubsan_flags.cpp
+@@ -50,6 +50,7 @@ void InitializeFlags() {
+   {
+     CommonFlags cf;
+     cf.CopyFrom(*common_flags());
++    cf.print_summary = false;
+     cf.external_symbolizer_path = GetFlag("UBSAN_SYMBOLIZER_PATH");
+     OverrideCommonFlags(cf);
+   }
+diff --git a/libsanitizer/ubsan/ubsan_handlers.cpp b/libsanitizer/ubsan/ubsan_handlers.cpp
+index e201e6bba22..2184625aa6e 100644
+--- a/libsanitizer/ubsan/ubsan_handlers.cpp
++++ b/libsanitizer/ubsan/ubsan_handlers.cpp
+@@ -894,6 +894,21 @@ void __ubsan_handle_cfi_bad_type(CFICheckFailData *Data, ValueHandle Vtable,
+ 
+ }  // namespace __ubsan
+ 
++void __ubsan::__ubsan_handle_cfi_bad_icall(CFIBadIcallData *CallData,
++                                           ValueHandle Function) {
++  GET_REPORT_OPTIONS(false);
++  CFICheckFailData Data = {CFITCK_ICall, CallData->Loc, CallData->Type};
++  handleCFIBadIcall(&Data, Function, Opts);
++}
++
++void __ubsan::__ubsan_handle_cfi_bad_icall_abort(CFIBadIcallData *CallData,
++                                                 ValueHandle Function) {
++  GET_REPORT_OPTIONS(true);
++  CFICheckFailData Data = {CFITCK_ICall, CallData->Loc, CallData->Type};
++  handleCFIBadIcall(&Data, Function, Opts);
++  Die();
++}
++
+ void __ubsan::__ubsan_handle_cfi_check_fail(CFICheckFailData *Data,
+                                             ValueHandle Value,
+                                             uptr ValidVtable) {
+diff --git a/libsanitizer/ubsan/ubsan_handlers.h b/libsanitizer/ubsan/ubsan_handlers.h
+index 219fb15de55..9f412353fc0 100644
+--- a/libsanitizer/ubsan/ubsan_handlers.h
++++ b/libsanitizer/ubsan/ubsan_handlers.h
+@@ -215,12 +215,20 @@ enum CFITypeCheckKind : unsigned char {
+   CFITCK_VMFCall,
+ };
+ 
++struct CFIBadIcallData {
++  SourceLocation Loc;
++  const TypeDescriptor &Type;
++};
++
+ struct CFICheckFailData {
+   CFITypeCheckKind CheckKind;
+   SourceLocation Loc;
+   const TypeDescriptor &Type;
+ };
+ 
++/// \brief Handle control flow integrity failure for indirect function calls.
++RECOVERABLE(cfi_bad_icall, CFIBadIcallData *Data, ValueHandle Function)
++
+ /// \brief Handle control flow integrity failures.
+ RECOVERABLE(cfi_check_fail, CFICheckFailData *Data, ValueHandle Function,
+             uptr VtableIsValid)
+diff --git a/libsanitizer/ubsan/ubsan_platform.h b/libsanitizer/ubsan/ubsan_platform.h
+index 51e535d1e22..42944a0b3d0 100644
+--- a/libsanitizer/ubsan/ubsan_platform.h
++++ b/libsanitizer/ubsan/ubsan_platform.h
+@@ -12,6 +12,7 @@
+ #ifndef UBSAN_PLATFORM_H
+ #define UBSAN_PLATFORM_H
+ 
++#ifndef CAN_SANITIZE_UB
+ // Other platforms should be easy to add, and probably work as-is.
+ #if defined(__linux__) || defined(__FreeBSD__) || defined(__APPLE__) ||        \
+     defined(__NetBSD__) || defined(__DragonFly__) || \
+@@ -21,5 +22,6 @@
+ #else
+ # define CAN_SANITIZE_UB 0
+ #endif
++#endif //CAN_SANITIZE_UB
+ 
+ #endif
+-- 
+2.34.1
+

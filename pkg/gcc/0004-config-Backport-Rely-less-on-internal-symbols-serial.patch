@@ -1,0 +1,207 @@
+From aa4780ecbc3fa700600a8d01d64998d737847dc5 Mon Sep 17 00:00:00 2001
+From: Michael Forney <mforney@mforney.org>
+Date: Sun, 23 May 2021 16:13:54 -0700
+Subject: [PATCH] config: Backport "Rely less on internal symbols" (serial 68)
+ to gettext.m4
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+GNU gettext introduced this change[0] in version 0.19.8 to fix
+gettext detection with musl libc, since it does not define these
+internal symbols.
+
+This allows gcc to build with musl gettext rather than falling back
+to the bundled version.
+
+[0] https://git.savannah.gnu.org/gitweb/?p=gettext.git;a=commit;h=b67399b4
+
+2021-05-23  Michael Forney  <mforney@mforney.org>
+
+        * config/gettext.m4 (AM_GNU_GETTEXT): Skip checks for the
+        internal symbols _nl_msg_cat_cntr, _nl_domain_bindings, and
+        _nl_expand_alias, if __GNU_GETTEXT_SUPPORTED_REVISION is defined.
+	Backport of gettext serial 67-68 patch.
+---
+ config/gettext.m4 | 52 +++++++++++++++++++++++++++++++----------------
+ intl/configure    | 24 +++++++++++++++++++---
+ 2 files changed, 56 insertions(+), 20 deletions(-)
+
+diff --git a/config/gettext.m4 b/config/gettext.m4
+index 45fa6b4ab76..2a30a4da17c 100644
+--- a/config/gettext.m4
++++ b/config/gettext.m4
+@@ -128,6 +128,13 @@ AC_DEFUN([AM_GNU_GETTEXT],
+ 
+         AC_CACHE_CHECK([for GNU gettext in libc], gt_cv_func_gnugettext_libc,
+          [AC_TRY_LINK([#include <libintl.h>
++#ifndef __GNU_GETTEXT_SUPPORTED_REVISION
++extern int _nl_msg_cat_cntr;
++extern int *_nl_domain_bindings;
++#define __GNU_GETTEXT_SYMBOL_EXPRESSION (_nl_msg_cat_cntr + *_nl_domain_bindings)
++#else
++#define __GNU_GETTEXT_SYMBOL_EXPRESSION 0
++#endif
+ ]ifelse([$2], [need-formatstring-macros],
+ [#ifndef __GNU_GETTEXT_SUPPORTED_REVISION
+ #define __GNU_GETTEXT_SUPPORTED_REVISION(major) ((major) == 0 ? 0 : -1)
+@@ -135,10 +142,9 @@ AC_DEFUN([AM_GNU_GETTEXT],
+ changequote(,)dnl
+ typedef int array [2 * (__GNU_GETTEXT_SUPPORTED_REVISION(0) >= 1) - 1];
+ changequote([,])dnl
+-], [])[extern int _nl_msg_cat_cntr;
+-extern int *_nl_domain_bindings;],
++], []),
+             [bindtextdomain ("", "");
+-return (int) gettext ("")]ifelse([$2], [need-ngettext], [ + (int) ngettext ("", "", 0)], [])[ + _nl_msg_cat_cntr + *_nl_domain_bindings],
++return (int) gettext ("")]ifelse([$2], [need-ngettext], [ + (int) ngettext ("", "", 0)], [])[+ __GNU_GETTEXT_SYMBOL_EXPRESSION],
+             gt_cv_func_gnugettext_libc=yes,
+             gt_cv_func_gnugettext_libc=no)])
+ 
+@@ -160,6 +166,17 @@ return (int) gettext ("")]ifelse([$2], [need-ngettext], [ + (int) ngettext ("",
+             LIBS="$LIBS $LIBINTL"
+             dnl Now see whether libintl exists and does not depend on libiconv.
+             AC_TRY_LINK([#include <libintl.h>
++#ifndef __GNU_GETTEXT_SUPPORTED_REVISION
++extern int _nl_msg_cat_cntr;
++extern
++#ifdef __cplusplus
++"C"
++#endif
++const char *_nl_expand_alias ();
++#define __GNU_GETTEXT_SYMBOL_EXPRESSION (_nl_msg_cat_cntr + *_nl_domain_bindings)
++#else
++#define __GNU_GETTEXT_SYMBOL_EXPRESSION 0
++#endif
+ ]ifelse([$2], [need-formatstring-macros],
+ [#ifndef __GNU_GETTEXT_SUPPORTED_REVISION
+ #define __GNU_GETTEXT_SUPPORTED_REVISION(major) ((major) == 0 ? 0 : -1)
+@@ -167,20 +184,26 @@ return (int) gettext ("")]ifelse([$2], [need-ngettext], [ + (int) ngettext ("",
+ changequote(,)dnl
+ typedef int array [2 * (__GNU_GETTEXT_SUPPORTED_REVISION(0) >= 1) - 1];
+ changequote([,])dnl
+-], [])[extern int _nl_msg_cat_cntr;
+-extern
+-#ifdef __cplusplus
+-"C"
+-#endif
+-const char *_nl_expand_alias ();],
++], []),
+               [bindtextdomain ("", "");
+-return (int) gettext ("")]ifelse([$2], [need-ngettext], [ + (int) ngettext ("", "", 0)], [])[ + _nl_msg_cat_cntr + *_nl_expand_alias (0)],
++return (int) gettext ("")]ifelse([$2], [need-ngettext], [ + (int) ngettext ("", "", 0)], [])[ + __GNU_GETTEXT_SYMBOL_EXPRESSION],
+               gt_cv_func_gnugettext_libintl=yes,
+               gt_cv_func_gnugettext_libintl=no)
+             dnl Now see whether libintl exists and depends on libiconv.
+             if test "$gt_cv_func_gnugettext_libintl" != yes && test -n "$LIBICONV"; then
+               LIBS="$LIBS $LIBICONV"
+               AC_TRY_LINK([#include <libintl.h>
++#ifndef __GNU_GETTEXT_SUPPORTED_REVISION
++extern int _nl_msg_cat_cntr;
++extern
++#ifdef __cplusplus
++"C"
++#endif
++const char *_nl_expand_alias ();
++#define __GNU_GETTEXT_SYMBOL_EXPRESSION (_nl_msg_cat_cntr + *_nl_domain_bindings)
++#else
++#define __GNU_GETTEXT_SYMBOL_EXPRESSION 0
++#endif
+ ]ifelse([$2], [need-formatstring-macros],
+ [#ifndef __GNU_GETTEXT_SUPPORTED_REVISION
+ #define __GNU_GETTEXT_SUPPORTED_REVISION(major) ((major) == 0 ? 0 : -1)
+@@ -188,14 +211,9 @@ return (int) gettext ("")]ifelse([$2], [need-ngettext], [ + (int) ngettext ("",
+ changequote(,)dnl
+ typedef int array [2 * (__GNU_GETTEXT_SUPPORTED_REVISION(0) >= 1) - 1];
+ changequote([,])dnl
+-], [])[extern int _nl_msg_cat_cntr;
+-extern
+-#ifdef __cplusplus
+-"C"
+-#endif
+-const char *_nl_expand_alias ();],
++], []),
+                 [bindtextdomain ("", "");
+-return (int) gettext ("")]ifelse([$2], [need-ngettext], [ + (int) ngettext ("", "", 0)], [])[ + _nl_msg_cat_cntr + *_nl_expand_alias (0)],
++return (int) gettext ("")]ifelse([$2], [need-ngettext], [ + (int) ngettext ("", "", 0)], [])[ + __GNU_GETTEXT_SYMBOL_EXPRESSION],
+                [LIBINTL="$LIBINTL $LIBICONV"
+                 LTLIBINTL="$LTLIBINTL $LTLIBICONV"
+                 gt_cv_func_gnugettext_libintl=yes
+diff --git a/intl/configure b/intl/configure
+index 1e100395369..67cad6c314d 100755
+--- a/intl/configure
++++ b/intl/configure
+@@ -5983,13 +5983,19 @@ else
+   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <libintl.h>
++#ifndef __GNU_GETTEXT_SUPPORTED_REVISION
+ extern int _nl_msg_cat_cntr;
+ extern int *_nl_domain_bindings;
++#define __GNU_GETTEXT_SYMBOL_EXPRESSION (_nl_msg_cat_cntr + *_nl_domain_bindings)
++#else
++#define __GNU_GETTEXT_SYMBOL_EXPRESSION 0
++#endif
++
+ int
+ main ()
+ {
+ bindtextdomain ("", "");
+-return (int) gettext ("") + (int) ngettext ("", "", 0) + _nl_msg_cat_cntr + *_nl_domain_bindings
++return (int) gettext ("") + (int) ngettext ("", "", 0)+ __GNU_GETTEXT_SYMBOL_EXPRESSION
+   ;
+   return 0;
+ }
+@@ -6412,17 +6418,23 @@ else
+                         cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <libintl.h>
++#ifndef __GNU_GETTEXT_SUPPORTED_REVISION
+ extern int _nl_msg_cat_cntr;
+ extern
+ #ifdef __cplusplus
+ "C"
+ #endif
+ const char *_nl_expand_alias ();
++#define __GNU_GETTEXT_SYMBOL_EXPRESSION (_nl_msg_cat_cntr + *_nl_domain_bindings)
++#else
++#define __GNU_GETTEXT_SYMBOL_EXPRESSION 0
++#endif
++
+ int
+ main ()
+ {
+ bindtextdomain ("", "");
+-return (int) gettext ("") + (int) ngettext ("", "", 0) + _nl_msg_cat_cntr + *_nl_expand_alias (0)
++return (int) gettext ("") + (int) ngettext ("", "", 0) + __GNU_GETTEXT_SYMBOL_EXPRESSION
+   ;
+   return 0;
+ }
+@@ -6439,17 +6451,23 @@ rm -f core conftest.err conftest.$ac_objext \
+               cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <libintl.h>
++#ifndef __GNU_GETTEXT_SUPPORTED_REVISION
+ extern int _nl_msg_cat_cntr;
+ extern
+ #ifdef __cplusplus
+ "C"
+ #endif
+ const char *_nl_expand_alias ();
++#define __GNU_GETTEXT_SYMBOL_EXPRESSION (_nl_msg_cat_cntr + *_nl_domain_bindings)
++#else
++#define __GNU_GETTEXT_SYMBOL_EXPRESSION 0
++#endif
++
+ int
+ main ()
+ {
+ bindtextdomain ("", "");
+-return (int) gettext ("") + (int) ngettext ("", "", 0) + _nl_msg_cat_cntr + *_nl_expand_alias (0)
++return (int) gettext ("") + (int) ngettext ("", "", 0) + __GNU_GETTEXT_SYMBOL_EXPRESSION
+   ;
+   return 0;
+ }
+-- 
+2.32.0
+

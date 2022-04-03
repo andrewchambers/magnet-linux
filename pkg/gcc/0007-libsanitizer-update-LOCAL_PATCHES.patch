@@ -1,0 +1,23 @@
+From 820499bf8a7f7897e95ba94172a09aef03ff2ecb Mon Sep 17 00:00:00 2001
+From: Martin Liska <mliska@suse.cz>
+Date: Thu, 13 May 2021 09:30:05 +0200
+Subject: [PATCH] libsanitizer: update LOCAL_PATCHES.
+
+libsanitizer/ChangeLog:
+
+	* LOCAL_PATCHES: Update to the corresponding revision.
+---
+ libsanitizer/LOCAL_PATCHES | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/libsanitizer/LOCAL_PATCHES b/libsanitizer/LOCAL_PATCHES
+index 09a11004d60..6c48392e69f 100644
+--- a/libsanitizer/LOCAL_PATCHES
++++ b/libsanitizer/LOCAL_PATCHES
+@@ -1,2 +1 @@
+-d72227e29a083d7a8929d84894ba024651a1c3a7
+-8eb12742e8ae5a16e05be627c701234dc7c13504
++fb73b1ce36c6ede097ecb220fcd0a1ed2df8fd01
+-- 
+2.34.1
+

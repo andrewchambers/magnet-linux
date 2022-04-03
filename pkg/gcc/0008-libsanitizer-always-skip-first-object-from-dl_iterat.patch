@@ -1,0 +1,80 @@
+From f079723decaecfa92cc26659c3dd1e0bc00a822d Mon Sep 17 00:00:00 2001
+From: Michael Forney <mforney@mforney.org>
+Date: Thu, 10 Feb 2022 17:28:17 -0800
+Subject: [PATCH] libsanitizer: always skip first object from dl_iterate_phdr
+
+All platforms return the main executable as the first dl_phdr_info.
+FreeBSD, NetBSD, Solaris, and Linux-musl place the executable name
+in the dlpi_name field of this entry. It appears that only Linux-glibc
+uses the empty string.
+
+To make this work generically on all platforms, unconditionally
+skip the first object (like is currently done for FreeBSD and NetBSD).
+This fixes first DSO detection on Linux-musl. It also would likely
+fix detection on Solaris/Illumos if it were to gain PIE support
+(since dlpi_addr would not be NULL).
+
+Additionally, only skip the Linux VDSO on linux.
+
+Finally, use the empty string as the "seen first dl_phdr_info"
+marker rather than (char *)-1. If there was no other object, we
+would try to dereference it for a string comparison.
+---
+ libsanitizer/asan/asan_linux.cpp | 27 +++++++++------------------
+ 1 file changed, 9 insertions(+), 18 deletions(-)
+
+diff --git a/libsanitizer/asan/asan_linux.cpp b/libsanitizer/asan/asan_linux.cpp
+index 4bcbe5d02e3..a000593ec91 100644
+--- a/libsanitizer/asan/asan_linux.cpp
++++ b/libsanitizer/asan/asan_linux.cpp
+@@ -131,30 +131,21 @@ static int FindFirstDSOCallback(struct dl_phdr_info *info, size_t size,
+   VReport(2, "info->dlpi_name = %s\tinfo->dlpi_addr = %p\n",
+           info->dlpi_name, info->dlpi_addr);
+ 
+-  // Continue until the first dynamic library is found
+-  if (!info->dlpi_name || info->dlpi_name[0] == 0)
+-    return 0;
+-
+-  // Ignore vDSO
+-  if (internal_strncmp(info->dlpi_name, "linux-", sizeof("linux-") - 1) == 0)
+-    return 0;
++  const char **name = (const char **)data;
+ 
+-#if SANITIZER_FREEBSD || SANITIZER_NETBSD
+   // Ignore first entry (the main program)
+-  char **p = (char **)data;
+-  if (!(*p)) {
+-    *p = (char *)-1;
++  if (!*name) {
++    *name = "";
+     return 0;
+   }
+-#endif
+ 
+-#if SANITIZER_SOLARIS
+-  // Ignore executable on Solaris
+-  if (info->dlpi_addr == 0)
++#    if SANITIZER_LINUX
++  // Ignore vDSO
++  if (internal_strncmp(info->dlpi_name, "linux-", sizeof("linux-") - 1) == 0)
+     return 0;
+-#endif
++#    endif
+ 
+-  *(const char **)data = info->dlpi_name;
++  *name = info->dlpi_name;
+   return 1;
+ }
+ 
+@@ -175,7 +166,7 @@ void AsanCheckDynamicRTPrereqs() {
+   // Ensure that dynamic RT is the first DSO in the list
+   const char *first_dso_name = nullptr;
+   dl_iterate_phdr(FindFirstDSOCallback, &first_dso_name);
+-  if (first_dso_name && !IsDynamicRTName(first_dso_name)) {
++  if (first_dso_name && first_dso_name[0] && !IsDynamicRTName(first_dso_name)) {
+     Report("ASan runtime does not come first in initial library list; "
+            "you should either link runtime to your application or "
+            "manually preload it with LD_PRELOAD.\n");
+-- 
+2.34.1
+

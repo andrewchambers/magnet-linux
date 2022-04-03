@@ -1,0 +1,41 @@
+From 833c6a42bc7001ace642efcdbe3ddb88d70e02e6 Mon Sep 17 00:00:00 2001
+From: Michael Forney <mforney@mforney.org>
+Date: Mon, 30 Mar 2020 14:13:07 -0700
+Subject: [PATCH] gcc: Remove pod2man rules
+
+Although the pregenerated manuals are shipped in the release archives,
+the intermediate .pod files are not. This causes make(1) to attempt
+to rebuild them anyway, ignoring the version in VPATH:
+
+  Must remake target 'doc/gcc.1'.
+    Ignoring VPATH name '../.././gcc/doc/gcc.1'.
+---
+ gcc/Makefile.in | 12 ------------
+ 1 file changed, 12 deletions(-)
+
+diff --git a/gcc/Makefile.in b/gcc/Makefile.in
+index f6df63ffac4..a66e810bea8 100644
+--- a/gcc/Makefile.in
++++ b/gcc/Makefile.in
+@@ -3443,18 +3443,6 @@ man: $(MANFILES) lang.man @GENINSRC@ srcman lang.srcman
+ srcman: $(MANFILES)
+ 	-cp -p $^ $(srcdir)/doc
+ 
+-doc/%.1: %.pod
+-	$(STAMP) $@
+-	-($(POD2MAN) --section=1 $< > $(@).T$$$$ && \
+-		mv -f $(@).T$$$$ $@) || \
+-		(rm -f $(@).T$$$$ && exit 1)
+-
+-doc/%.7: %.pod
+-	$(STAMP) $@
+-	-($(POD2MAN) --section=7 $< > $(@).T$$$$ && \
+-		mv -f $(@).T$$$$ $@) || \
+-		(rm -f $(@).T$$$$ && exit 1)
+-
+ %.pod: %.texi
+ 	$(STAMP) $@
+ 	-$(TEXI2POD) -DBUGURL="$(BUGURL_TEXI)" $< > $@
+-- 
+2.31.1
+

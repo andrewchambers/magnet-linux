@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *
+export LDFLAGS="--static"
+./configure \
+  --prefix="/" \
+  --target=x86_64-linux-musl \
+  --disable-gold \
+  --disable-libctf \
+  --disable-nls \
+  --disable-plugins \
+  --enable-default-hash-style=gnu \
+  --enable-deterministic-archives \
+  --enable-new-dtags
+make -j$(nproc)
+make install-strip
+cd $DESTDIR
+for b in $(ls x86_64-linux-musl/bin)
+do
+  ln -s x86_64-linux-musl-$b bin/$b
+done

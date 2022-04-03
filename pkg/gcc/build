@@ -1,0 +1,66 @@
+#!/bin/sh
+
+set -ex
+
+tar xf gcc-*
+tar xf gmp-*
+tar xf mpc-*
+tar xf mpfr-*
+
+rm *.tar.*
+
+mv gcc-* src
+mv gmp-* src/gmp
+mv mpc-* src/mpc
+mv mpfr-* src/mpfr
+
+cd src
+
+for f in "$OLDPWD"/*.patch; do
+	patch -p1 -i "$f"
+done
+
+./configure \
+	--build=x86_64-linux-musl \
+	--prefix=/ \
+	--libdir=/lib \
+	--disable-assembly \
+	--disable-decimal-float \
+	--disable-gnu-indirect-function \
+	--disable-libgomp \
+	--disable-libitm \
+	--disable-libmpx \
+	--disable-libmudflap \
+	--disable-libquadmath \
+	--disable-libsanitizer \
+	--disable-lto \
+	--disable-multilib \
+	--disable-nls \
+	--disable-plugin \
+	--disable-werror \
+	--enable-default-pie \
+	--enable-initfini-array \
+	--enable-languages=c,c++ \
+	--enable-libstdcxx-time=rt \
+	--enable-tls \
+	--with-sysroot=/ \
+	--with-build-sysroot=/ \
+	--with-debug-prefix-map="$PWD=" \
+	--with-native-system-header-dir=/include
+make -j16 BOOT_CFLAGS="$CFLAGS" BOOT_LDFLAGS="$LDFLAGS"
+make INFO_DEPS= install-strip
+cd "$DESTDIR/"
+find . '(' -name '*.py' -o -name '*.la' ')' -exec rm {} +
+for bin in cc c++ g++ gcc; do
+	ln -sf x86_64-linux-musl-$bin bin/$bin
+done
+ln -sf x86_64-linux-musl-gcc bin/x86_64-linux-musl-cc
+ln -sf x86_64-linux-musl-g++ bin/x86_64-linux-musl-c++
+
+for std in c99 c11; do
+	cat >>bin/$std <<EOF
+#!/bin/sh
+exec cc -std=$std "\$@"
+EOF
+	chmod +x bin/$std
+done
