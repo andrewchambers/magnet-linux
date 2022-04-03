@@ -1,8 +1,10 @@
 #!/bin/sh
 set -eux
 
-tar --strip-components=1 -xf *
-export LDFLAGS="--static"
+tar --strip-components=1 -xf *.tar.*
+
+patch -p1 < 0001-prevent-info-rebuild.patch
+
 ./configure \
   --prefix="/" \
   --target=x86_64-linux-musl \
