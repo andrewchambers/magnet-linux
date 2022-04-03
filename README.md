@@ -18,9 +18,9 @@ So how does redo-linux improve things?
 
 - This source code repository contains nearly everything required to build and run the operating system.
 - You can fork, patch and modify the operating system using the same methods as any other software.
-- You can securely use precompiled packages with transparent recompilation when none are found.
-- Package cache can easily be self hosted and mirrored.
-- All external source code can easily be self hosted and mirrored.
+- You can easily use precompiled packages, but get automatic compilation when no online cache is found.
+- You can easily self host and mirror the package cache (with whatever packages you want).
+- All source code can easily be self hosted and mirrored (there is no centralized package server).
 
 ## Who should consider using redo-linux?
 
