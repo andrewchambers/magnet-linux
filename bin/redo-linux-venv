@@ -1,0 +1,85 @@
+#!/bin/sh
+
+set -eu
+
+usage() {
+  echo "Usage: $0 [-o dir] pkgs..." 1>&2
+  exit 1
+}
+
+dir="$(cd "$(dirname "$0")"; pwd)"
+out="./venv"
+parallelism=
+while getopts "o::" o
+do
+  case "$o" in
+    o)
+      out="${OPTARG}"
+      ;;
+    *)
+      usage
+      ;;
+  esac
+done
+
+shift $((OPTIND-1))
+pkgs=$@
+
+if test -e "$out"
+then
+  echo "$out already exists" 1>&2
+  exit 1
+fi
+
+redo-ifchange $(
+  for pkg in $pkgs
+  do
+    echo $pkg/pkg.tar.gz
+  done
+)
+
+tars="$(
+  set -e
+  for pkg in $pkgs
+  do
+    echo "$pkg/pkg.tar.gz"
+    for closed_over in $(cat "$pkg/run-closure")
+    do
+      echo "$pkg/${closed_over}/pkg.tar.gz"
+    done
+  done | sort -u
+)"
+
+mkdir "$out"
+for tar in $tars
+do
+  tar -C "$out" -xzf "$tar"
+done
+
+mkdir -p "$out/bin"
+cat <<EOF  > "$out/bin/venv-run"
+#!/bin/sh
+
+set -eu
+
+unset host_binds
+unset venv_binds
+
+for b in \$(ls /)
+do
+  host_binds+=(--dev-bind "/\$b" "/\$b")
+done
+
+for b in \$(ls "$out")
+do
+  venv_binds+=(--dev-bind "$out/\$b" "/\$b")
+done
+
+exec bwrap \\
+  "\${host_binds[@]}" \\
+  "\${venv_binds[@]}" \\
+  --chdir "\$PWD" \\
+  -- "\$@"
+EOF
+
+chmod +x "$out/bin/venv-run"
