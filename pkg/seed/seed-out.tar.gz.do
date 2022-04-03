@@ -11,7 +11,9 @@ tarballs="
 ../coreutils/pkg.tar.gz
 ../findutils/pkg.tar.gz
 ../diffutils/pkg.tar.gz
+../patch/pkg.tar.gz
 ../grep/pkg.tar.gz
+../sed/pkg.tar.gz
 ../tar/pkg.tar.gz
 ../xz/pkg.tar.gz
 ../gzip/pkg.tar.gz

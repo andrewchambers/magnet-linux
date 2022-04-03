@@ -3,7 +3,4 @@ set -eux
 
 tar --strip-components=1 -xf *
 ./configure --prefix=""
-make -j$(nproc)
-make install
-cd "$DESTDIR/bin"
-ln -s oksh sh
+make -j$(nproc) install-strip
