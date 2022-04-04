@@ -1,0 +1,13 @@
+#!/bin/sh
+
+export PATH=/bin
+
+
+case arg in $1
+case poweroff
+	args=-p
+case reboot
+	args=-r
+esac
+
+exec /libexec/shutdown $args

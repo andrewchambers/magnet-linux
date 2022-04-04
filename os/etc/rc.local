@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+
+sysctl -p /etc/sysctl.conf
+
+hostname oasis &
+ip link set lo up &
+
+wait
