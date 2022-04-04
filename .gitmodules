@@ -1,0 +1,6 @@
+[submodule "deps/redo-c"]
+	path = deps/redo-c
+	url = https://github.com/leahneukirchen/redo-c
+[submodule "deps/src/redo-c"]
+	path = deps/src/redo-c
+	url = https://github.com/leahneukirchen/redo-c

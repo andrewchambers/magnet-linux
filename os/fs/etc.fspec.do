@@ -1,14 +1,14 @@
 exec > "$3"
-
 redo-always
-
+IFS="
+"
 for f in $(find etc)
 do
   echo "/$f"
   if test -f "$f"
   then
-  	echo "type=file"
-  	echo "source=./$f"
+    echo "type=file"
+    echo "source=$PWD/$f"
   elif test -d "$f"
   then
     echo "type=dir"
