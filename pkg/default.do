@@ -9,6 +9,7 @@ pkgdir="$(dirname "$1")"
 out="$(readlink -f "$3")"
 
 cd "$pkgdir"
+umask 022
 
 case $filename in
   run-closure)
@@ -66,7 +67,7 @@ case $filename in
       done | xargs -r cat
     ) | sha256sum | cut -c 1-64 >"$3"
     ;;
-  pkg.tar.gz)
+  pkg.filespec)
     redo-ifchange \
       build \
       build-closure \
@@ -84,23 +85,34 @@ case $filename in
     sha256sum --quiet -c files
 
     for closed_over in $(cat build-closure run-closure); do
-      echo "$closed_over/pkg.tar.gz"
+      echo "$closed_over/pkg.filespec"
     done | xargs -r redo-ifchange
 
     echo "preparing build chroot..."
-    rm -rf chroot
-    mkdir -p \
+    if test -e chroot
+    then
+      chmod -R 700 chroot
+      rm -rf chroot
+    fi
+
+    mkdir \
       chroot \
       chroot/dev \
       chroot/proc \
       chroot/tmp \
       chroot/var \
       chroot/etc \
+      chroot/home \
       chroot/home/build \
       chroot/destdir
 
-    for closed_over in $(cat build-closure); do
-      tar -C chroot -xf "$closed_over/pkg.tar.gz"
+    # Check for duplicate files in the build env.
+    fspec-sort -u $(printf "%s/pkg.filespec\n" $(cat build-closure)) > /dev/null
+
+    for pkg in $(cat build-closure)
+    do
+      fspec-tar -C "$pkg/pkg" < "$pkg/pkg.filespec" \
+        | tar -C chroot -xf -
     done
 
     for file in $(cat files | cut -f 2- -d " " | sed 's/^[[:space:]]*//')
@@ -126,7 +138,12 @@ case $filename in
       -- \
       /tmp/build 2>&1 | tee build.log
 
-    tar -C chroot/destdir -czf "$out" .
+    cd pkgroot
+
+    filespec-fromdirs -r . . \
+      | grep -v '^[gu]id:'  \
+      | fspec-b3sum \
+      > "$3"
 
     chmod -R 700 chroot
     rm -rf chroot

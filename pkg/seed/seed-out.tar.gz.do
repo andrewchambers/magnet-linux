@@ -37,6 +37,6 @@ do
   tar -C ./seed-out.tmp -xzf $t
 done
 
-tar -C ./seed-out.tmp -cvzf "$3" .
+fspec-fromdir ./seed-out.tmp | fspec-tar | gzip > "$3"
 chmod -R 700 ./seed-out.tmp/
 rm -rf ./seed-out.tmp
