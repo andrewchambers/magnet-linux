@@ -89,13 +89,18 @@ case $filename in
     done | xargs -r redo-ifchange
 
     echo "preparing build chroot..."
-    if test -e chroot
-    then
-      chmod -R 700 chroot
-      rm -rf chroot
-    fi
+    
+    for dir in pkg chroot
+    do
+      if test -e "$dir"
+      then
+        chmod -R 700 "$dir"
+        rm -rf "$dir"
+      fi
+    done
 
     mkdir \
+      pkg \
       chroot \
       chroot/dev \
       chroot/proc \
@@ -106,13 +111,13 @@ case $filename in
       chroot/home/build \
       chroot/destdir
 
-    # Check for duplicate files in the build env.
-    fspec-sort -u $(printf "%s/pkg.filespec\n" $(cat build-closure)) > /dev/null
+    # Check for duplicate files in the build environment.
+    filespec-sort -u $(printf "%s/pkg.filespec\n" $(cat build-closure)) > /dev/null
 
     for pkg in $(cat build-closure)
     do
-      fspec-tar -C "$pkg/pkg" < "$pkg/pkg.filespec" \
-        | tar -C chroot -xf -
+      filespec-tar -C "$pkg/pkg" "$pkg/pkg.filespec" \
+        | tar -C ./chroot -xf -
     done
 
     for file in $(cat files | cut -f 2- -d " " | sed 's/^[[:space:]]*//')
@@ -132,18 +137,17 @@ case $filename in
       --setenv HOME /home/build \
       --setenv DESTDIR /destdir \
       --bind ./chroot /  \
+      --bind ./pkg /destdir  \
       --dev /dev \
       --proc /proc \
       --chdir /home/build \
       -- \
       /tmp/build 2>&1 | tee build.log
 
-    cd pkgroot
-
-    filespec-fromdirs -r . . \
+    filespec-fromdirs -r pkg pkg \
       | grep -v '^[gu]id:'  \
-      | fspec-b3sum \
-      > "$3"
+      | filespec-b3sum -C pkg \
+      > "$out"
 
     chmod -R 700 chroot
     rm -rf chroot
@@ -154,6 +158,9 @@ case $filename in
   build)
     echo "$1 is a mandatory file."
     exit 1
+    ;;
+  all)
+    redo-ifchange pkg.filespec
     ;;
   *)
     redo-ifchange files
