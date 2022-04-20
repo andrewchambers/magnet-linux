@@ -66,3 +66,6 @@ sha256: e90f2d99553a9c19911abdb4305bf8217106a957e3994436428572c8dfe8fda6
 
 url: https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz
 sha256: fd4829912cddd12f84181c3451cc752be224643e87fac497b69edddadc49b4f2
+
+url: http://ftp.gnu.org/gnu/patch/patch-2.7.tar.xz
+sha256: 5c2c91fe41542962126f0be150aa4fa349485cf2edc0c7ea7dbc24cb817111ae

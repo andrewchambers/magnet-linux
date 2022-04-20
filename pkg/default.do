@@ -9,13 +9,12 @@ pkgdir="$(dirname "$1")"
 out="$(readlink -f "$3")"
 
 cd "$pkgdir"
-umask 022
 
 case $filename in
   run-closure)
     redo-ifchange run-deps
     deps="$(cat run-deps)"
-
+    
     for dep in $deps; do
       echo "$dep/run-closure"
     done | xargs -r redo-ifchange
@@ -68,6 +67,8 @@ case $filename in
     ) | sha256sum | cut -c 1-64 >"$3"
     ;;
   pkg.filespec)
+    umask 022
+
     redo-ifchange \
       build \
       build-closure \
@@ -84,13 +85,11 @@ case $filename in
 
     sha256sum --quiet -c files
 
-    for closed_over in $(cat build-closure run-closure); do
-      echo "$closed_over/pkg.filespec"
-    done | xargs -r redo-ifchange
+    redo-ifchange $(printf "%s/pkg.filespec" $(cat build-closure run-closure))
 
     echo "preparing build chroot..."
     
-    for dir in pkg chroot
+    for dir in chroot
     do
       if test -e "$dir"
       then
@@ -100,7 +99,6 @@ case $filename in
     done
 
     mkdir \
-      pkg \
       chroot \
       chroot/dev \
       chroot/proc \
@@ -116,8 +114,7 @@ case $filename in
 
     for pkg in $(cat build-closure)
     do
-      filespec-tar -C "$pkg/pkg" "$pkg/pkg.filespec" \
-        | tar -C ./chroot -xf -
+      tar -C ./chroot -xf "$pkg/pkg.tar.gz"
     done
 
     for file in $(cat files | cut -f 2- -d " " | sed 's/^[[:space:]]*//')
@@ -137,26 +134,24 @@ case $filename in
       --setenv HOME /home/build \
       --setenv DESTDIR /destdir \
       --bind ./chroot /  \
-      --bind ./pkg /destdir  \
       --dev /dev \
       --proc /proc \
       --chdir /home/build \
       -- \
       /tmp/build 2>&1 | tee build.log
 
-    filespec-fromdirs -r pkg pkg \
-      | grep -v '^[gu]id:'  \
-      | filespec-b3sum -C pkg \
+    filespec-fromdirs -r chroot/destdir chroot/destdir \
+      | filespec-b3sum -C chroot/destdir \
       > "$out"
+
+    filespec-tar -C chroot/destdir < "$out" \
+      | gzip > pkg.tar.gz
 
     chmod -R 700 chroot
     rm -rf chroot
     ;;
-  run-deps | build-deps | files)
-    touch "$out"
-    ;;
-  build)
-    echo "$1 is a mandatory file."
+  build | run-deps | build-deps | files)
+    echo "no default rule to build $1."
     exit 1
     ;;
   all)
