@@ -1,10 +1,7 @@
 ../pkg/oksh
-../pkg/gcc
 ../pkg/binutils
 ../pkg/coreutils
 ../pkg/findutils
-../pkg/diffutils
 ../pkg/sed
 ../pkg/grep
 ../pkg/musl
-../pkg/linux-headers

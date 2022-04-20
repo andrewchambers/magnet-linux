@@ -45,3 +45,23 @@ mode: 0600
 
 path: /etc/sysctl.conf
 type: reg
+
+path: /run
+type: dir
+
+path: /var/log
+type: dir
+
+path: /var/lock
+type: sym
+target: ../run/lock
+
+path: /var/cache
+type: dir
+
+path: /tmp
+type: dir
+
+path: /usr/bin/env
+type: sym
+target: ../../bin/env

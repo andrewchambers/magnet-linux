@@ -42,3 +42,6 @@ filespec-sort -p -u \
   | filespec-b3sum -C staging -c \
   | filespec-tar -C staging \
   | gzip > "$3"
+
+chmod -R 700 staging
+rm -rf staging
