@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *
+sed -i s,/sbin,/bin,g conf.mk
+sed -i s,/usr/,/,g conf.mk
+make -j$(nproc) install

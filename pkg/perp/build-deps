@@ -1,0 +1,9 @@
+../oksh
+../make
+../gcc
+../binutils
+../coreutils
+../linux-headers
+../tar
+../gzip
+../sed
