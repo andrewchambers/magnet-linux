@@ -3,7 +3,10 @@
 ../gcc
 ../binutils
 ../coreutils
+../linux-headers
 ../musl
 ../tar
 ../gzip
 ../sed
+../grep
+../gawk

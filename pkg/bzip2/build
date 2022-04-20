@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *
+make -j$(nproc) install PREFIX="$DESTDIR"

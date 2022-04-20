@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *
+export LDFLAGS="-static"
+make defconfig
+make -j$(nproc)
+mkdir "$DESTDIR/bin"
+mv busybox "$DESTDIR/bin"

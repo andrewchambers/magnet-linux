@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *
+./configure --prefix= \
+  --sbindir=/bin \
+  --disable-bash-completion \
+  --disable-makeinstall-chown \
+  --disable-makeinstall-setuid \
+  --disable-nls
+make -j$(nproc) install-strip PREFIX=/
+# XXX --sbindir flag was ignored?
+mv "$DESTDIR"/sbin/* "$DESTDIR"/bin
+rmdir "$DESTDIR"/sbin

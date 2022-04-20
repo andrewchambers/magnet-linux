@@ -4,4 +4,7 @@
 ../pkg/findutils
 ../pkg/sed
 ../pkg/grep
+../pkg/gzip
+../pkg/tar
 ../pkg/musl
+../pkg/perp

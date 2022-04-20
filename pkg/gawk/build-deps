@@ -7,3 +7,5 @@
 ../tar
 ../gzip
 ../sed
+../grep
+../mawk

@@ -3,7 +3,12 @@
 ../gcc
 ../binutils
 ../coreutils
+../diffutils
+../findutils
+../grep
+../linux-headers
+../gawk
 ../musl
 ../tar
-../gzip
+../bzip2
 ../sed

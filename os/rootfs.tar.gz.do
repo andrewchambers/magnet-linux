@@ -1,4 +1,4 @@
-set -eu
+set -eux
 set -o pipefail
 IFS="
 "
