@@ -5,6 +5,9 @@
 ../pkg/sed
 ../pkg/grep
 ../pkg/gzip
+../pkg/bzip2
+../pkg/gawk
 ../pkg/tar
 ../pkg/musl
 ../pkg/perp
+../pkg/util-linux
