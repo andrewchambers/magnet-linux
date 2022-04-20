@@ -13,47 +13,64 @@ cd "$pkgdir"
 case $filename in
   run-closure)
     redo-ifchange run-deps
-    deps="$(cat run-deps)"
-    
-    for dep in $deps; do
-      echo "$dep/run-closure"
-    done | xargs -r redo-ifchange
 
-    for dep in $deps; do
-      echo "$dep"
-      for closed_over in $(cat "$dep/run-closure"); do
-        echo "$dep/$closed_over"
-      done
-    done | xargs -r realpath --relative-to "." | sort -u > "$out"
+    if test -s run-deps
+    then
+      redo-ifchange $(
+        for dep in $(cat run-deps); do
+          if ! test -d "$dep"; then
+            echo "runtime dependency $dep of $pkgdir does not exist" >&2
+            exit 1
+          fi
+          echo "$dep/run-closure"
+        done
+      )
+      realpath --relative-to "." $(
+        for dep in $(cat run-deps); do
+          echo "$dep"
+          for closed_over in $(cat "$dep/run-closure"); do
+            echo "$dep/$closed_over"
+          done
+        done
+      ) | sort -u > "$out"
+    fi
+
+    touch "$out"
     ;;
   build-closure)
     redo-ifchange build-deps
-    deps="$(cat build-deps)"
+    
+    if test -s build-deps
+    then
+      redo-ifchange $(
+        for dep in $(cat build-deps); do
+          if ! test -d "$dep"; then
+            echo "build dependency $dep of $pkgdir does not exist" >&2
+            exit 1
+          fi
+          echo "$dep/run-closure"
+        done
+      )
+      realpath --relative-to "." $(
+        for dep in $(cat build-deps); do
+          echo "$dep"
+          for closed_over in $(cat "$dep/run-closure"); do
+            echo "$dep/$closed_over"
+          done
+        done
+      ) | sort -u > "$out"
+    fi
 
-    for dep in $deps; do
-      if ! test -d "$dep"; then
-        echo "build dependency $dep of $pkgdir does not exist"
-        exit 1
-      fi
-      echo "$dep/run-closure"
-    done | xargs -r redo-ifchange
-
-    for dep in $deps; do
-      echo "$dep"
-      for closed_over in $(cat "$dep/run-closure"); do
-        echo "$dep/$closed_over"
-      done
-    done | xargs -r realpath --relative-to "." | sort -u > "$out"
+    touch "$out"
     ;;
   pkg-hash)
     redo-ifchange \
       build \
       build-closure
-
-    build_closure="$(cat build-closure)"
-    for closed_over in $build_closure; do
-      echo "$closed_over/pkg-hash"
-    done | xargs -r redo-ifchange
+    if test -s build-closure
+    then
+      redo-ifchange $(printf "%s/pkg-hash\n" $(cat build-closure))
+    fi
     (
       echo subst-hash
       echo files
@@ -61,10 +78,11 @@ case $filename in
       echo build
       cat build
       echo build-closure
-      for closed_over in $build_closure; do
-        echo "$closed_over/pkg-hash"
-      done | xargs -r cat
-    ) | sha256sum | cut -c 1-64 >"$3"
+      if test -s build-closure
+      then
+        cat $(printf "%s/pkg-hash\n" $(cat build-closure))
+      fi
+    ) | sha256sum | cut -c 1-64 > "$out"
     ;;
   pkg.filespec)
     umask 022
@@ -75,28 +93,25 @@ case $filename in
       run-closure \
       files
 
-    if grep -q -e "^/" -e "\.\./" files
+    files=$(cut -f 2- -d " " < files | sed 's/^[[:space:]]*//')
+    if test -n "$files"
     then
-      echo "$pkgdir/files list must not contain ../ or ^/"
-      exit 1
+      redo-ifchange $files
     fi
-      
-    cut -f 2- -d " " < files | xargs -r redo-ifchange
 
     sha256sum --quiet -c files
 
-    redo-ifchange $(printf "%s/pkg.filespec" $(cat build-closure run-closure))
+    redo-ifchange $(
+      printf "%s/pkg.filespec\n" $(cat build-closure run-closure)
+    )
 
     echo "preparing build chroot..."
     
-    for dir in chroot
-    do
-      if test -e "$dir"
-      then
-        chmod -R 700 "$dir"
-        rm -rf "$dir"
-      fi
-    done
+    if test -e chroot
+    then
+      chmod -R 700 chroot
+      rm -rf chroot
+    fi
 
     mkdir \
       chroot \
@@ -110,7 +125,9 @@ case $filename in
       chroot/destdir
 
     # Check for duplicate files in the build environment.
-    filespec-sort -u $(printf "%s/pkg.filespec\n" $(cat build-closure)) > /dev/null
+    filespec-sort -u $(
+      printf "%s/pkg.filespec\n" $(cat build-closure)
+    ) > /dev/null
 
     for pkg in $(cat build-closure)
     do
