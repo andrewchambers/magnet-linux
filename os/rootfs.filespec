@@ -1,0 +1,47 @@
+%sort: path
+
+path: /
+type: dir
+mode: 0755
+
+path: /bin/init
+type: sym
+target: /bin/sinit
+
+path: /etc/fstab
+type: reg
+
+path: /etc/group
+type: reg
+
+path: /etc/hosts
+type: reg
+
+path: /etc/mtab
+type: sym
+target: ../proc/self/mounts
+
+path: /etc/passwd
+type: reg
+
+path: /etc/profile
+type: reg
+
+path: /etc/rc.init
+type: reg
+mode: 0755
+
+path: /etc/rc.local
+type: reg
+mode: 0755
+
+path: /etc/rc.shutdown
+type: reg
+mode: 0755
+
+path: /etc/shadow
+type: reg
+mode: 0600
+
+path: /etc/sysctl.conf
+type: reg

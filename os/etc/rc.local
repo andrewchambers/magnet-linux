@@ -3,7 +3,7 @@ set -eu
 
 sysctl -p /etc/sysctl.conf
 
-hostname oasis &
+hostname magnet &
 ip link set lo up &
 
 wait

@@ -1,2 +1,0 @@
-PermitRootLogin no
-Subsystem sftp /libexec/sftp-server

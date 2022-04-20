@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+
+PATH=/bin
+
+args=""
+case "$1" in
+	poweroff)
+		args=-p
+	;;
+	reboot)
+		args=-r
+	;;
+esac
+
+exec /libexec/shutdown $args

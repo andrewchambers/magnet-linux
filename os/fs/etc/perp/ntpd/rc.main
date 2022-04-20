@@ -1,3 +1,0 @@
-#!/bin/rc
-if(! ~ $1 start) exit
-exec ntpd -d >[2=1]
