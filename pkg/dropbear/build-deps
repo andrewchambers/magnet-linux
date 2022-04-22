@@ -4,10 +4,10 @@
 ../binutils
 ../coreutils
 ../findutils
-../linux-headers
+../gawk
 ../musl
 ../tar
-../gzip
 ../sed
 ../grep
-../gawk
+../zlib
+../bzip2

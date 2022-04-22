@@ -3,11 +3,11 @@
 ../gcc
 ../binutils
 ../coreutils
-../findutils
-../linux-headers
 ../musl
+../linux-headers
 ../tar
 ../gzip
 ../sed
 ../grep
 ../gawk
+../zlib

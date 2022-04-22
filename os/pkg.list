@@ -1,5 +1,4 @@
 ../pkg/oksh
-../pkg/binutils
 ../pkg/coreutils
 ../pkg/findutils
 ../pkg/sed
@@ -11,3 +10,4 @@
 ../pkg/musl
 ../pkg/perp
 ../pkg/util-linux
+../pkg/dropbear

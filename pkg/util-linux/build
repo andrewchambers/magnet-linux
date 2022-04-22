@@ -7,6 +7,7 @@ tar --strip-components=1 -xf *
   --disable-bash-completion \
   --disable-makeinstall-chown \
   --disable-makeinstall-setuid \
+  --disable-kill \
   --disable-nls
 make -j$(nproc) install-strip PREFIX=/
 # XXX --sbindir flag was ignored?

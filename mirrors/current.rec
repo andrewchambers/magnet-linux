@@ -87,3 +87,12 @@ sha256: 7fd4cd1e1fae9290fe089171181bbc6291dfd9bca939ca804f0ddb851c8b8237
 
 url: https://ftp.gnu.org/gnu/gawk/gawk-5.1.1.tar.gz
 sha256: 6168d8d1dc8f74bd17d9dc22fa9634c49070f232343b744901da15fb4f06bffd
+
+url: https://www.zlib.net/zlib-1.2.12.tar.gz
+sha256: 91844808532e5ce316b3c010929493c0244f3d37593afd6de04f71821d5136d9
+
+url: https://www.cpan.org/src/5.0/perl-5.34.1.tar.gz
+sha256: 357951a491b0ba1ce3611263922feec78ccd581dddc24a446b033e25acf242a1
+
+url: https://matt.ucc.asn.au/dropbear/dropbear-2022.82.tar.bz2
+sha256: 3a038d2bbc02bf28bbdd20c012091f741a3ec5cbe460691811d714876aad75d1

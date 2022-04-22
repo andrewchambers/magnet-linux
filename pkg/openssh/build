@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *
+./configure \
+  --without-openssl \
+  --prefix=""
+make -j$(nproc)
+make install-nosysconf
