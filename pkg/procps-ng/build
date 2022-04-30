@@ -1,0 +1,18 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *.tar.xz
+./configure \
+	--without-ncurses \
+	--disable-static \
+	--disable-w \
+	--disable-kill \
+	--disable-rpath \
+	--sbindir=/bin \
+	--prefix=/
+make -j$(nproc)
+make install DESTDIR="$DESTDIR"
+ 
+# uptime is provided by coreutils.
+rm "$DESTDIR/bin/uptime" \
+	"$DESTDIR/share/man/man1/uptime.1"

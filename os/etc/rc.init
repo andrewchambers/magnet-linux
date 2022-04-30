@@ -16,4 +16,4 @@ mkdir /run/lock
 
 /etc/rc.local
 
-exec perpboot /etc/perp
+exec perpboot

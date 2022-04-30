@@ -34,14 +34,8 @@ sha256: f79b0cfea71b37a8eeec8490db6c5f7ae7719c35587f21edb0617f370eeff633
 url: https://ftp.gnu.org/gnu/grep/grep-3.7.tar.xz
 sha256: 5c10da312460aec721984d5d83246d24520ec438dd48d7ab5a05dbc0d6d6823c
 
-url: https://busybox.net/downloads/binaries/1.35.0-x86_64-linux-musl/busybox
-sha256: 6e123e7f3202a8c1e9b1f94d8941580a25135382b99e8d3e34fb858bba311348
-
 url: https://busybox.net/downloads/busybox-1.35.0.tar.bz2
 sha256: faeeb244c35a348a334f4a59e44626ee870fb07b6884d68c10ae8bc19f83a694
-
-url: https://more.musl.cc/11/x86_64-linux-musl/x86_64-linux-musl-native.tgz
-sha256: eb1db6f0f3c2bdbdbfb993d7ef7e2eeef82ac1259f6a6e1757c33a97dbcef3ad
 
 url: https://ftp.gnu.org/gnu/binutils/binutils-2.38.tar.xz
 sha256: e316477a914f567eccc34d5d29785b8b0f5a10208d36bbacedcc39048ecfe024
@@ -52,8 +46,8 @@ sha256: ce30acdf4a41bc5bb30dd955e9eaa75fa216b4e3deb08889ed32433c7b3b97ce
 url: https://ftp.gnu.org/gnu/make/make-4.3.tar.gz
 sha256: e05fdde47c5f7ca45cb697e973894ff4f5d79e13b750ed57d7b66d8defc78e19
 
-url: https://musl.libc.org/releases/musl-1.2.2.tar.gz
-sha256: 9b969322012d796dc23dda27a35866034fa67d8fb67e0e2c45c913c3d43219dd
+url: https://musl.libc.org/releases/musl-1.2.3.tar.gz
+sha256: 7d5b0b6062521e4627e099e4c9dc8248d32a30285e959b7eecaa780cf8cfd4a4
 
 url: https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-11.2.0.tar.xz
 sha256: d08edc536b54c372a1010ff6619dd274c0f1603aa49212ba20f7aa2cda36fa8b
@@ -96,3 +90,15 @@ sha256: 357951a491b0ba1ce3611263922feec78ccd581dddc24a446b033e25acf242a1
 
 url: https://matt.ucc.asn.au/dropbear/dropbear-2022.82.tar.bz2
 sha256: 3a038d2bbc02bf28bbdd20c012091f741a3ec5cbe460691811d714876aad75d1
+
+url: file:///home/ac/Downloads/seed.tar.gz
+sha256: 902c38035cef862088f2711ad15c530641bab4fa6a2d4da5df9ffafc211e37f1
+
+url: file:///home/ac/Downloads/seed2.tar.gz
+sha256: 45f643dd52ad25ba034fba542bd3aeed331eaa2d12fb8d40510f90794c2e1d67
+
+url: https://dl.suckless.org/sinit/sinit-1.0.tar.gz
+sha256: 78c2120a97a5e93b80606c5403bd731152f8a344e47aa4ab74970c1c11dc6fc0
+
+url: https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.0.tar.xz/download
+sha256: 0f4d92794edb7a1c95bb3b8c1f823de62be5d0043459c2155fd07fa859c16513

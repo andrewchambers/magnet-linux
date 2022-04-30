@@ -1,47 +1,10 @@
 set -eux
 set -o pipefail
-IFS="
-"
 exec >&2
 
-redo-ifchange $(find etc) \
-  rootfs.filespec \
-  pkg.list
+redo-ifchange rootfs.filespec
 
-redo-ifchange $(printf "%s/pkg.filespec\n" $(cat pkg.list))
+filespec-b3sum -c rootfs.filespec \
+| filespec-tar \
+| gzip > "$3"
 
-closure=$(
-	realpath --relative-to "." $(
-		for pkg in $(cat pkg.list)
-		do
-			echo "$pkg"
-			for dep in $(cat $pkg/run-closure); do
-				echo "$pkg/$dep"
-			done
-		done
-	) | sort -u
-)
-
-if test -e staging
-then
-	chmod -R 700 staging
-	rm -rf staging	
-fi
-
-mkdir staging
-cp -r etc staging
-
-for pkg in $closure
-do
-	tar -C staging -xf "$pkg/pkg.tar.gz"
-done
-
-filespec-sort -p -u \
-  rootfs.filespec \
-  $(printf "%s/pkg.filespec\n" $closure) \
-  | filespec-b3sum -C staging -c \
-  | filespec-tar -C staging \
-  | gzip > "$3"
-
-chmod -R 700 staging
-rm -rf staging

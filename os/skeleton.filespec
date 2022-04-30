@@ -1,0 +1,128 @@
+
+path: /bin/init
+type: sym
+target: /bin/sinit
+
+path: /etc/fstab
+type: reg
+mode: 644
+
+path: /etc/group
+type: reg
+mode: 644
+
+path: /etc/hosts
+type: reg
+mode: 644
+
+path: /etc/mtab
+type: sym
+target: ../proc/self/mounts
+
+path: /etc/passwd
+type: reg
+mode: 644
+
+path: /etc/perp/.boot/rc.log
+type: sym
+target: ../.default/rc.log
+
+path: /etc/perp/.boot/rc.perp
+type: reg
+mode: 755
+
+path: /etc/perp/.default/rc.log
+type: reg
+mode: 755
+
+path: /etc/perp/.getty/rc.main
+type: reg
+mode: 755
+
+path: /etc/perp/getty@tty1
+type: dir
+mode: 1755
+
+path: /etc/perp/getty@tty1/rc.main
+type: sym
+target: ../.getty/rc.main
+
+path: /etc/perp/getty@tty2
+type: dir
+mode: 1755
+
+path: /etc/perp/getty@tty2/rc.main
+type: sym
+target: ../.getty/rc.main
+
+path: /etc/profile
+type: reg
+mode: 644
+
+path: /etc/rc.init
+type: reg
+mode: 755
+
+path: /etc/rc.local
+type: reg
+mode: 755
+
+path: /etc/rc.shutdown
+type: reg
+mode: 755
+
+path: /etc/shadow
+type: reg
+mode: 600
+
+path: /etc/sysctl.conf
+type: reg
+mode: 644
+
+path: /dev
+type: dir
+mode: 755
+
+path: /proc
+type: dir
+mode: 755
+
+path: /sys
+type: dir
+mode: 755
+
+path: /home
+type: dir
+mode: 755
+
+path: /root
+type: dir
+mode: 700
+
+path: /run
+type: dir
+mode: 755
+
+path: /var/log
+type: dir
+mode: 755
+
+path: /var/lock
+type: dir
+target: 755
+
+path: /var/run
+type: sym
+target: /run
+
+path: /var/cache
+type: dir
+mode: 755
+
+path: /tmp
+type: dir
+mode: 755
+
+path: /usr/bin/env
+type: sym
+target: ../../bin/env

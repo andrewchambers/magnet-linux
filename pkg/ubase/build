@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *
+make -j$(nproc) CFLAGS="-Os" LDFLAGS="-s -static"
+make install PREFIX= DESTDIR="$DESTDIR"

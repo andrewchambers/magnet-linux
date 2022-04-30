@@ -2,5 +2,11 @@
 set -eux
 
 tar --strip-components=1 -xf *
-./configure --prefix=""
-make -j$(nproc) install
+./configure \
+	--disable-syslog \
+	--sbindir=/bin \
+	--enable-static \
+	--prefix=""
+make -j$(nproc)
+make install
+strip "$DESTDIR"/bin/*

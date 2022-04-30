@@ -1,0 +1,13 @@
+../pkg/oksh
+../pkg/sbase
+../pkg/ubase
+../pkg/gzip
+../pkg/bzip2
+../pkg/xz
+../pkg/mawk
+../pkg/musl
+../pkg/perp
+../pkg/dropbear
+../pkg/sinit
+../pkg/iproute2
+../pkg/kilo

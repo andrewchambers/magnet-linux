@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eux
+
+gcc -static -O2 kilo.c -o kilo
+strip kilo
+mkdir -p "$DESTDIR/bin" 
+mv kilo "$DESTDIR/bin"

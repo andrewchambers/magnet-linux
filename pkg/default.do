@@ -1,4 +1,4 @@
-set -eu
+set -eux
 set -o pipefail
 exec >&2
 IFS="
@@ -131,7 +131,9 @@ case $filename in
 
     for pkg in $(cat build-closure)
     do
-      tar -C ./chroot -xf "$pkg/pkg.tar.gz"
+      filespec-b3sum -C "$pkg" -c "$pkg/pkg.filespec" \
+        | filespec-tar -C "$pkg" \
+        | tar -C ./chroot -xf -
     done
 
     for file in $(cat files | cut -f 2- -d " " | sed 's/^[[:space:]]*//')
@@ -157,12 +159,12 @@ case $filename in
       -- \
       /tmp/build 2>&1 | tee build.log
 
-    filespec-fromdirs -r chroot/destdir chroot/destdir \
-      | filespec-b3sum -C chroot/destdir \
-      > "$out"
+    test -d .pkgdata && rm -rf .pkgdata
 
-    filespec-tar -C chroot/destdir < "$out" \
-      | gzip > pkg.tar.gz
+    filespec-fromdirs -r chroot/destdir chroot/destdir \
+      | filespec-tar -C chroot/destdir \
+      | filespec-fromtar -H -d .pkgdata \
+      > "$out"
 
     chmod -R 700 chroot
     rm -rf chroot

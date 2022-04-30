@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *
+make config.h
+sed -i s,/bin/,/etc/,g config.h
+make install DESTDIR="$DESTDIR" PREFIX=

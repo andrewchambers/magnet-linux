@@ -1,0 +1,13 @@
+../oksh
+../make
+../gcc
+../binutils
+../coreutils
+../diffutils
+../musl
+../tar
+../xz
+../sed
+../grep
+../mawk
+../m4

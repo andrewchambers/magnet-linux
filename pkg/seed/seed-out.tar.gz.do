@@ -1,10 +1,8 @@
 #!/bin/sh
-set -eux
+set -eu
 
 exec >&2
 out="$(realpath $3)"
-IFS="
-"
 
 pkgs="
 ../gcc
@@ -18,34 +16,25 @@ pkgs="
 ../sed
 ../tar
 ../xz
+../gawk
 ../gzip
 ../make
 ../musl
 ../linux-headers
 "
 
-filespecs=$(printf "%s/pkg.filespec\n" $pkgs)
-
-redo-ifchange $filespecs
-# Check for duplicate files.
-fspec-sort -u $filespecs > /dev/null
-
-if test -e ./seed-out.tmp
-then
-  chmod -R 700 ./seed-out.tmp
-  rm -rf ./seed-out.tmp
-fi
-
-mkdir seed-out.tmp
+redo-ifchange $(printf "%s/pkg.filespec\n" $pkgs)
 
 for pkg in $pkgs
 do
-  tar -C ./seed-out.tmp -xf "$pkg/pkg.tar.gz"
-done
+	awk -v "pkg=$pkg" '
+		{ 
+			if ($1 == "source:") {
+				print("source: " pkg "/" substr($0, 9))
+			} else {
+				print($0)
+			}
+		}
+	' "$pkg/pkg.filespec" 
+done | filespec-sort -u | filespec-tar | gzip > "$3"
 
-fspec-fromdir -r ./seed-out.tmp ./seed-out.tmp \
-  | fspec-tar -C ./seed-out.tmp \
-  | gzip > "$3"
-
-chmod -R 700 ./seed-out.tmp
-rm -rf ./seed-out.tmp

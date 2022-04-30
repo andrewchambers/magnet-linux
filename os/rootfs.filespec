@@ -1,21 +1,1500 @@
-%sort: path
-
 path: /
 type: dir
-mode: 0755
+mode: 755
+
+path: /bin
+type: dir
+mode: 755
+
+path: /bin/[
+type: reg
+mode: 755
+source: .pkgdata/6e7da6f1e9b62c9b3ed24ec3cc80c94f37a50650d07c878d14bbf6b3556f09d8
+blake3: 6e7da6f1e9b62c9b3ed24ec3cc80c94f37a50650d07c878d14bbf6b3556f09d8
+
+path: /bin/basename
+type: reg
+mode: 755
+source: .pkgdata/80d3491252ab2a3f67bc076882f90a9ff5377376aaf4153705f5233858190ca8
+blake3: 80d3491252ab2a3f67bc076882f90a9ff5377376aaf4153705f5233858190ca8
+
+path: /bin/blkdiscard
+type: reg
+mode: 755
+source: .pkgdata/d564c6991d089741e5414a1674a598fec98bdde0f05014c292f2021746b97634
+blake3: d564c6991d089741e5414a1674a598fec98bdde0f05014c292f2021746b97634
+
+path: /bin/bridge
+type: reg
+mode: 755
+source: .pkgdata/d22ee1584c76e120f25df602820c70da62da539f1aca66e294786cc962374cf2
+blake3: d22ee1584c76e120f25df602820c70da62da539f1aca66e294786cc962374cf2
+
+path: /bin/bunzip2
+type: reg
+mode: 755
+source: .pkgdata/ae71755031ff31f84f0a04ee2110bdcab8c94dc25170869fedc9f017549a4864
+blake3: ae71755031ff31f84f0a04ee2110bdcab8c94dc25170869fedc9f017549a4864
+
+path: /bin/bzcat
+type: reg
+mode: 755
+source: .pkgdata/ae71755031ff31f84f0a04ee2110bdcab8c94dc25170869fedc9f017549a4864
+blake3: ae71755031ff31f84f0a04ee2110bdcab8c94dc25170869fedc9f017549a4864
+
+path: /bin/bzcmp
+type: sym
+mode: 777
+target: /destdir/bin/bzdiff
+
+path: /bin/bzdiff
+type: reg
+mode: 755
+source: .pkgdata/7f759491521f14c256a9fff6986d7e029531740a6d0fd337d44792b72f08d8a7
+blake3: 7f759491521f14c256a9fff6986d7e029531740a6d0fd337d44792b72f08d8a7
+
+path: /bin/bzegrep
+type: sym
+mode: 777
+target: /destdir/bin/bzgrep
+
+path: /bin/bzfgrep
+type: sym
+mode: 777
+target: /destdir/bin/bzgrep
+
+path: /bin/bzgrep
+type: reg
+mode: 755
+source: .pkgdata/2b327eeb79ad2c6fc801878ad1cb03a2e7a1439cdfa5bea039d600bf7e3b0c56
+blake3: 2b327eeb79ad2c6fc801878ad1cb03a2e7a1439cdfa5bea039d600bf7e3b0c56
+
+path: /bin/bzip2
+type: reg
+mode: 755
+source: .pkgdata/ae71755031ff31f84f0a04ee2110bdcab8c94dc25170869fedc9f017549a4864
+blake3: ae71755031ff31f84f0a04ee2110bdcab8c94dc25170869fedc9f017549a4864
+
+path: /bin/bzip2recover
+type: reg
+mode: 755
+source: .pkgdata/f8704ab31d4cf78ace84d9547f8ebfc2fbe1052cabce4dcdae9bef7ad61986ef
+blake3: f8704ab31d4cf78ace84d9547f8ebfc2fbe1052cabce4dcdae9bef7ad61986ef
+
+path: /bin/bzless
+type: sym
+mode: 777
+target: /destdir/bin/bzmore
+
+path: /bin/bzmore
+type: reg
+mode: 755
+source: .pkgdata/53a3d253e8bdeece11bb3fa59efdcc96d45f3f65ca30e95a9e35427122da6254
+blake3: 53a3d253e8bdeece11bb3fa59efdcc96d45f3f65ca30e95a9e35427122da6254
+
+path: /bin/cal
+type: reg
+mode: 755
+source: .pkgdata/17122e12c58d4e40e263f5af1e209b157efeb2965223b3b74baedcc3b3010729
+blake3: 17122e12c58d4e40e263f5af1e209b157efeb2965223b3b74baedcc3b3010729
+
+path: /bin/cat
+type: reg
+mode: 755
+source: .pkgdata/a37eeba36d30657a1afb4909b7debf5c2100f08b1d11b3f62c5277ec4c2c0be8
+blake3: a37eeba36d30657a1afb4909b7debf5c2100f08b1d11b3f62c5277ec4c2c0be8
+
+path: /bin/chgrp
+type: reg
+mode: 755
+source: .pkgdata/8fe05a6553ef496ddc19baf36b991bab93b95b00119ceb29e9b2451f80e0e508
+blake3: 8fe05a6553ef496ddc19baf36b991bab93b95b00119ceb29e9b2451f80e0e508
+
+path: /bin/chmod
+type: reg
+mode: 755
+source: .pkgdata/d5acb2ec9be689fa45766b6c0f108f9a8704f3bc074e2c27994dc9857578a82c
+blake3: d5acb2ec9be689fa45766b6c0f108f9a8704f3bc074e2c27994dc9857578a82c
+
+path: /bin/chown
+type: reg
+mode: 755
+source: .pkgdata/2ed7f1486dd68365c5029ddb7a1bdd6cd18ac2a97aab4e581a94108284d5e82c
+blake3: 2ed7f1486dd68365c5029ddb7a1bdd6cd18ac2a97aab4e581a94108284d5e82c
+
+path: /bin/chroot
+type: reg
+mode: 755
+source: .pkgdata/afc8ba12cf5afec68d990ce3d81a7fc292fe56f044304cdcef2f7ede7130ab36
+blake3: afc8ba12cf5afec68d990ce3d81a7fc292fe56f044304cdcef2f7ede7130ab36
+
+path: /bin/chvt
+type: reg
+mode: 755
+source: .pkgdata/9f22468da9a963bf8520a0e9f83802483d9ba978cfa7a5f313e429a4d85f55cd
+blake3: 9f22468da9a963bf8520a0e9f83802483d9ba978cfa7a5f313e429a4d85f55cd
+
+path: /bin/cksum
+type: reg
+mode: 755
+source: .pkgdata/c2846a62549f21bab92ed8aa7f3309ea78be392b3fa4774eee38b7688ef5efa6
+blake3: c2846a62549f21bab92ed8aa7f3309ea78be392b3fa4774eee38b7688ef5efa6
+
+path: /bin/clear
+type: reg
+mode: 755
+source: .pkgdata/f2b98e0404f226a8e7f18bc1616b3b2f9a0c4ab966d29ee6844a6348d1eafc47
+blake3: f2b98e0404f226a8e7f18bc1616b3b2f9a0c4ab966d29ee6844a6348d1eafc47
+
+path: /bin/cmp
+type: reg
+mode: 755
+source: .pkgdata/97897033f24c720fea2146c509afffb0695fcd48b81a44201e2c479777e9c90b
+blake3: 97897033f24c720fea2146c509afffb0695fcd48b81a44201e2c479777e9c90b
+
+path: /bin/cols
+type: reg
+mode: 755
+source: .pkgdata/d7a65a86fb7301e78dc9e888d90d840aa062f021b43351edb766cce23b7f0f67
+blake3: d7a65a86fb7301e78dc9e888d90d840aa062f021b43351edb766cce23b7f0f67
+
+path: /bin/comm
+type: reg
+mode: 755
+source: .pkgdata/6a5495c53e8dce387752a20837f64e9f5f7a8dca86e049b97a7adfe63957b78f
+blake3: 6a5495c53e8dce387752a20837f64e9f5f7a8dca86e049b97a7adfe63957b78f
+
+path: /bin/cp
+type: reg
+mode: 755
+source: .pkgdata/039649e2ff47e5c033f52403ad216fb6f7ac592dc4df8436ae5faa526bcc13a4
+blake3: 039649e2ff47e5c033f52403ad216fb6f7ac592dc4df8436ae5faa526bcc13a4
+
+path: /bin/cron
+type: reg
+mode: 755
+source: .pkgdata/c793cca69e0924d5a4e2db66d0db505ff911cedef373bceaede2bdbd6718c926
+blake3: c793cca69e0924d5a4e2db66d0db505ff911cedef373bceaede2bdbd6718c926
+
+path: /bin/ctrlaltdel
+type: reg
+mode: 755
+source: .pkgdata/eee810c4ef26599172396a830b08babdc69b4a69f85bdef1c2abefa52bc82fe8
+blake3: eee810c4ef26599172396a830b08babdc69b4a69f85bdef1c2abefa52bc82fe8
+
+path: /bin/ctstat
+type: sym
+mode: 777
+target: lnstat
+
+path: /bin/cut
+type: reg
+mode: 755
+source: .pkgdata/54de010524fbc7742f9f56e52b459a9f2e6c42e268977b67e83a66769f3c5456
+blake3: 54de010524fbc7742f9f56e52b459a9f2e6c42e268977b67e83a66769f3c5456
+
+path: /bin/date
+type: reg
+mode: 755
+source: .pkgdata/aeb76b6f3e711056290d13a24a0e45328642fa37c8e9793663f8bdb0ec5d7991
+blake3: aeb76b6f3e711056290d13a24a0e45328642fa37c8e9793663f8bdb0ec5d7991
+
+path: /bin/dbclient
+type: reg
+mode: 755
+source: .pkgdata/59815a1ad86fdeea81fbd3b9b16da9b714c11e63e0c3b0f7df796ebf55e2af38
+blake3: 59815a1ad86fdeea81fbd3b9b16da9b714c11e63e0c3b0f7df796ebf55e2af38
+
+path: /bin/dd
+type: reg
+mode: 755
+source: .pkgdata/512e9a76d2fc47335ad2814540c1e17e89daa0d06e0edc539e66f2f9e9805cfb
+blake3: 512e9a76d2fc47335ad2814540c1e17e89daa0d06e0edc539e66f2f9e9805cfb
+
+path: /bin/df
+type: reg
+mode: 755
+source: .pkgdata/d2014af84848c01c9d7bff3fff1889c32ab30f2fda75c5f68c5365e9360b5c20
+blake3: d2014af84848c01c9d7bff3fff1889c32ab30f2fda75c5f68c5365e9360b5c20
+
+path: /bin/dirname
+type: reg
+mode: 755
+source: .pkgdata/23f8e5a8ea09d0bca10a016077d85d58e7a34e106d318f972957bfc0427c6d62
+blake3: 23f8e5a8ea09d0bca10a016077d85d58e7a34e106d318f972957bfc0427c6d62
+
+path: /bin/dmesg
+type: reg
+mode: 755
+source: .pkgdata/1e1266a79978acdf801a9ba0d4c552622ad44fc90b7e1bdcfd0988352f3503ef
+blake3: 1e1266a79978acdf801a9ba0d4c552622ad44fc90b7e1bdcfd0988352f3503ef
+
+path: /bin/dropbear
+type: reg
+mode: 755
+source: .pkgdata/b03589f306319a1f9d1937b1137731072f09a6d9c7973dd7119e36c4e48c2235
+blake3: b03589f306319a1f9d1937b1137731072f09a6d9c7973dd7119e36c4e48c2235
+
+path: /bin/dropbearconvert
+type: reg
+mode: 755
+source: .pkgdata/ce951fb5a3a610c299ff5ace675f39704b3ee6b6e2c330f629697c9025a88d42
+blake3: ce951fb5a3a610c299ff5ace675f39704b3ee6b6e2c330f629697c9025a88d42
+
+path: /bin/dropbearkey
+type: reg
+mode: 755
+source: .pkgdata/23ac38d3b53cb2710709dcebeb56f47c503e65ecaa5dd13057a39c95f4454b31
+blake3: 23ac38d3b53cb2710709dcebeb56f47c503e65ecaa5dd13057a39c95f4454b31
+
+path: /bin/du
+type: reg
+mode: 755
+source: .pkgdata/ac47aa5d1de41a2f8538788fddfaee6dfc497338c73d5b03db32b6570813dfd8
+blake3: ac47aa5d1de41a2f8538788fddfaee6dfc497338c73d5b03db32b6570813dfd8
+
+path: /bin/echo
+type: reg
+mode: 755
+source: .pkgdata/9145f376a9706da1917a7ddcefd11919cc1b7f9ac902a66597d03d983c1f7ee1
+blake3: 9145f376a9706da1917a7ddcefd11919cc1b7f9ac902a66597d03d983c1f7ee1
+
+path: /bin/ed
+type: reg
+mode: 755
+source: .pkgdata/9864530fa1573808defe11a55e6bc0b58f68231db47a76d2492e8934ec899c19
+blake3: 9864530fa1573808defe11a55e6bc0b58f68231db47a76d2492e8934ec899c19
+
+path: /bin/eject
+type: reg
+mode: 755
+source: .pkgdata/cd3f414b473633cd241e51809dab70c42a9b11e8a5c0d89490e8a69b1a73993a
+blake3: cd3f414b473633cd241e51809dab70c42a9b11e8a5c0d89490e8a69b1a73993a
+
+path: /bin/env
+type: reg
+mode: 755
+source: .pkgdata/cdb20a5cd897afe42f6fc44defc8e657ba9fff63075336bd16bb398ef01b2ae6
+blake3: cdb20a5cd897afe42f6fc44defc8e657ba9fff63075336bd16bb398ef01b2ae6
+
+path: /bin/expand
+type: reg
+mode: 755
+source: .pkgdata/532af47db520b98ef04adfb2dd6e6c710d6f261b3a11c0d70227a0b446717b64
+blake3: 532af47db520b98ef04adfb2dd6e6c710d6f261b3a11c0d70227a0b446717b64
+
+path: /bin/expr
+type: reg
+mode: 755
+source: .pkgdata/120d6840ada24548b792b65430a92854cf98c7ac3c8cf552e4deb972754ce88e
+blake3: 120d6840ada24548b792b65430a92854cf98c7ac3c8cf552e4deb972754ce88e
+
+path: /bin/fallocate
+type: reg
+mode: 755
+source: .pkgdata/9df781f310a1eaec6160ddce5298b1f621a0375597c25e354d443b2d178c6acc
+blake3: 9df781f310a1eaec6160ddce5298b1f621a0375597c25e354d443b2d178c6acc
+
+path: /bin/false
+type: reg
+mode: 755
+source: .pkgdata/c6838834e86d2a096c9ca34c27ee6cc66f94f14e812d61c43c29df502d9edc83
+blake3: c6838834e86d2a096c9ca34c27ee6cc66f94f14e812d61c43c29df502d9edc83
+
+path: /bin/find
+type: reg
+mode: 755
+source: .pkgdata/308d70ea9425964b7b855a9c3a15a47000d9f13b9b17886a84b633c8d47e66d3
+blake3: 308d70ea9425964b7b855a9c3a15a47000d9f13b9b17886a84b633c8d47e66d3
+
+path: /bin/flock
+type: reg
+mode: 755
+source: .pkgdata/602a3fa03c6a0b9034cf185e9e65fc8a7ab6f255bb59e0847aef0a577105ba77
+blake3: 602a3fa03c6a0b9034cf185e9e65fc8a7ab6f255bb59e0847aef0a577105ba77
+
+path: /bin/fold
+type: reg
+mode: 755
+source: .pkgdata/ab1dab7823973b09040f8ffdbaa2e4d3af760a0919f172934fbbd232984ef3ce
+blake3: ab1dab7823973b09040f8ffdbaa2e4d3af760a0919f172934fbbd232984ef3ce
+
+path: /bin/free
+type: reg
+mode: 755
+source: .pkgdata/ece4ec91e4537128e140ace7db1bd6728e71f5115467494d2c912a12a778ff09
+blake3: ece4ec91e4537128e140ace7db1bd6728e71f5115467494d2c912a12a778ff09
+
+path: /bin/freeramdisk
+type: reg
+mode: 755
+source: .pkgdata/2698002d59fae9bfec380bf81ae603dc520e6309ce7edde2f0283cd7c263a1da
+blake3: 2698002d59fae9bfec380bf81ae603dc520e6309ce7edde2f0283cd7c263a1da
+
+path: /bin/fsfreeze
+type: reg
+mode: 755
+source: .pkgdata/c2609bc08a598e531bf7bf39c156993016b4c2ffc1cf8fda7a01b51a87101490
+blake3: c2609bc08a598e531bf7bf39c156993016b4c2ffc1cf8fda7a01b51a87101490
+
+path: /bin/genl
+type: reg
+mode: 755
+source: .pkgdata/14be1cae89bab7a4e3b617fc9a549a95b63f54c28bb9d8b57592cb3218991de0
+blake3: 14be1cae89bab7a4e3b617fc9a549a95b63f54c28bb9d8b57592cb3218991de0
+
+path: /bin/getconf
+type: reg
+mode: 755
+source: .pkgdata/747bf27918410e4731ddc4a3ede0a0217b05a928e58068768c829725d5220316
+blake3: 747bf27918410e4731ddc4a3ede0a0217b05a928e58068768c829725d5220316
+
+path: /bin/getty
+type: reg
+mode: 755
+source: .pkgdata/ed627767b827ce5eab63f5ad5b8b21312db5061a398d5a7ec51a0beba735dcc8
+blake3: ed627767b827ce5eab63f5ad5b8b21312db5061a398d5a7ec51a0beba735dcc8
+
+path: /bin/grep
+type: reg
+mode: 755
+source: .pkgdata/6c4f5500caa11c46fdac446e63976fe1f7ce79eca21bf6fa8beba375ec2ae795
+blake3: 6c4f5500caa11c46fdac446e63976fe1f7ce79eca21bf6fa8beba375ec2ae795
+
+path: /bin/gunzip
+type: reg
+mode: 755
+source: .pkgdata/c6956cfecc1bc09718c58c12c910f9a2379cbc5cf013a3f2fdff65befbf17356
+blake3: c6956cfecc1bc09718c58c12c910f9a2379cbc5cf013a3f2fdff65befbf17356
+
+path: /bin/gzexe
+type: reg
+mode: 755
+source: .pkgdata/ea8e20249c1dce711678e020c203d7b68d2a6798e612dd44990a76210e71f52f
+blake3: ea8e20249c1dce711678e020c203d7b68d2a6798e612dd44990a76210e71f52f
+
+path: /bin/gzip
+type: reg
+mode: 755
+source: .pkgdata/5b84564b04f96f758d7fa8edf77c4667dd23b96d680c312c42d6c06e88ce4284
+blake3: 5b84564b04f96f758d7fa8edf77c4667dd23b96d680c312c42d6c06e88ce4284
+
+path: /bin/halt
+type: reg
+mode: 755
+source: .pkgdata/4cc721fc9fa16e46a0c64e1c1afea4829140f4bf91235b146d954f6508671aa5
+blake3: 4cc721fc9fa16e46a0c64e1c1afea4829140f4bf91235b146d954f6508671aa5
+
+path: /bin/head
+type: reg
+mode: 755
+source: .pkgdata/6d1c720dbf560be6a9b777ece60bec0eeb7876487f835fa0ab1839d96bc66bc1
+blake3: 6d1c720dbf560be6a9b777ece60bec0eeb7876487f835fa0ab1839d96bc66bc1
+
+path: /bin/hostname
+type: reg
+mode: 755
+source: .pkgdata/f626322537a6ededea021866438110e6b478bec8765dae4c73b74e9e149cd514
+blake3: f626322537a6ededea021866438110e6b478bec8765dae4c73b74e9e149cd514
+
+path: /bin/hwclock
+type: reg
+mode: 755
+source: .pkgdata/21bc4b9fb931ed4efb05a56a99f92af046ac87a48475ee9911d64ec931c3735d
+blake3: 21bc4b9fb931ed4efb05a56a99f92af046ac87a48475ee9911d64ec931c3735d
+
+path: /bin/id
+type: reg
+mode: 755
+source: .pkgdata/5683f3f09f37a8c84af76f6bae11f0f2714a2f26d7e29b6942ecc8d2387dd89d
+blake3: 5683f3f09f37a8c84af76f6bae11f0f2714a2f26d7e29b6942ecc8d2387dd89d
+
+path: /bin/ifcfg
+type: reg
+mode: 755
+source: .pkgdata/25075ae5b6c0e2398f4a7120cd4b7b2082056c590d4f8804a50c8ad2ab51919f
+blake3: 25075ae5b6c0e2398f4a7120cd4b7b2082056c590d4f8804a50c8ad2ab51919f
+
+path: /bin/ifstat
+type: reg
+mode: 755
+source: .pkgdata/936f47fa48eed9a4f5f05f0e13b415a7e3128833b7282cac3acb9b38bfbd6575
+blake3: 936f47fa48eed9a4f5f05f0e13b415a7e3128833b7282cac3acb9b38bfbd6575
 
 path: /bin/init
 type: sym
 target: /bin/sinit
 
+path: /bin/insmod
+type: reg
+mode: 755
+source: .pkgdata/2b16277e3d5706ffbefa69b21461be4f529da10951cb2b85a20642fe80480ba4
+blake3: 2b16277e3d5706ffbefa69b21461be4f529da10951cb2b85a20642fe80480ba4
+
+path: /bin/install
+type: reg
+mode: 755
+source: .pkgdata/a17c75fbc062ed2059681881d0cf0bea451e6388f9f2cf6a2cc9eb26ba1bd690
+blake3: a17c75fbc062ed2059681881d0cf0bea451e6388f9f2cf6a2cc9eb26ba1bd690
+
+path: /bin/ip
+type: reg
+mode: 755
+source: .pkgdata/67c9caa339ec4b554af0a8919fba86e46c7fdcf3f23f7eddc3ccbe7aa1e3f755
+blake3: 67c9caa339ec4b554af0a8919fba86e46c7fdcf3f23f7eddc3ccbe7aa1e3f755
+
+path: /bin/join
+type: reg
+mode: 755
+source: .pkgdata/bad28d5f73e7c32607d98cf3a696cdb9234b3b326b46851dc00cb959c67fca85
+blake3: bad28d5f73e7c32607d98cf3a696cdb9234b3b326b46851dc00cb959c67fca85
+
+path: /bin/kill
+type: reg
+mode: 755
+source: .pkgdata/b42f16be12c32c3498050854bfb45271219a9bbb0a58a96dc12204eab736bcb1
+blake3: b42f16be12c32c3498050854bfb45271219a9bbb0a58a96dc12204eab736bcb1
+
+path: /bin/killall5
+type: reg
+mode: 755
+source: .pkgdata/5dd7f6a15c5e443ef328dcaa95229a0b3e138818dcc9b35824e707bb92db23e8
+blake3: 5dd7f6a15c5e443ef328dcaa95229a0b3e138818dcc9b35824e707bb92db23e8
+
+path: /bin/kilo
+type: reg
+mode: 755
+source: .pkgdata/39a868f10190e0ba4a4c742c0189357e5315316a06d19569d2f8af88ebb842b9
+blake3: 39a868f10190e0ba4a4c742c0189357e5315316a06d19569d2f8af88ebb842b9
+
+path: /bin/last
+type: reg
+mode: 755
+source: .pkgdata/afda7f13950bd0532b756020be17dc129c4217ffdc9f44eba5893a8e66c6f199
+blake3: afda7f13950bd0532b756020be17dc129c4217ffdc9f44eba5893a8e66c6f199
+
+path: /bin/lastlog
+type: reg
+mode: 755
+source: .pkgdata/3f9a6e9f056ae81a5c87c0649647a5a11aacf5e08f5b37b07a5eba0234f6e755
+blake3: 3f9a6e9f056ae81a5c87c0649647a5a11aacf5e08f5b37b07a5eba0234f6e755
+
+path: /bin/link
+type: reg
+mode: 755
+source: .pkgdata/31a7c2d82857980c5083f88690ad974a24e4cd248a2b27e43d314551e0592b99
+blake3: 31a7c2d82857980c5083f88690ad974a24e4cd248a2b27e43d314551e0592b99
+
+path: /bin/ln
+type: reg
+mode: 755
+source: .pkgdata/bae3b27be1e61c6bf83f6759de9fcbdf29fd0e1b1b5e30c6a92fcebf091b567c
+blake3: bae3b27be1e61c6bf83f6759de9fcbdf29fd0e1b1b5e30c6a92fcebf091b567c
+
+path: /bin/lnstat
+type: reg
+mode: 755
+source: .pkgdata/85ee8161630a603f9eba8836eddc911b4ac72261c42afd9395cc47309c9e99c8
+blake3: 85ee8161630a603f9eba8836eddc911b4ac72261c42afd9395cc47309c9e99c8
+
+path: /bin/logger
+type: reg
+mode: 755
+source: .pkgdata/ae782bac2f447df403bd57b0ee8ed78046f4599b49c56c12c0cc22ceb9ae7275
+blake3: ae782bac2f447df403bd57b0ee8ed78046f4599b49c56c12c0cc22ceb9ae7275
+
+path: /bin/login
+type: reg
+mode: 755
+source: .pkgdata/e519e38bed06df871a91d1b188bd131dbf036448cd066b4ab06306578082e3d9
+blake3: e519e38bed06df871a91d1b188bd131dbf036448cd066b4ab06306578082e3d9
+
+path: /bin/logname
+type: reg
+mode: 755
+source: .pkgdata/e1c96a16d9756c734c9d131f9b4ce357779ae59a254120522541e65b89ce3502
+blake3: e1c96a16d9756c734c9d131f9b4ce357779ae59a254120522541e65b89ce3502
+
+path: /bin/ls
+type: reg
+mode: 755
+source: .pkgdata/fe9274a218efc4274ab1d2f225d133ee6ae18842ba4a8d59d3e81e2ca2b5c115
+blake3: fe9274a218efc4274ab1d2f225d133ee6ae18842ba4a8d59d3e81e2ca2b5c115
+
+path: /bin/lsmod
+type: reg
+mode: 755
+source: .pkgdata/407483a9a2ce1d8627d289f3f21a5cec8a925ffb9a7a5881c2e54448a3d7ddc4
+blake3: 407483a9a2ce1d8627d289f3f21a5cec8a925ffb9a7a5881c2e54448a3d7ddc4
+
+path: /bin/lsusb
+type: reg
+mode: 755
+source: .pkgdata/0ba6412d59b42b42e569016484de0f4973506e1f9cdb8182c184fde14c4fb22b
+blake3: 0ba6412d59b42b42e569016484de0f4973506e1f9cdb8182c184fde14c4fb22b
+
+path: /bin/lzcat
+type: sym
+mode: 777
+target: xz
+
+path: /bin/lzcmp
+type: sym
+mode: 777
+target: xzdiff
+
+path: /bin/lzdiff
+type: sym
+mode: 777
+target: xzdiff
+
+path: /bin/lzegrep
+type: sym
+mode: 777
+target: xzgrep
+
+path: /bin/lzfgrep
+type: sym
+mode: 777
+target: xzgrep
+
+path: /bin/lzgrep
+type: sym
+mode: 777
+target: xzgrep
+
+path: /bin/lzless
+type: sym
+mode: 777
+target: xzless
+
+path: /bin/lzma
+type: sym
+mode: 777
+target: xz
+
+path: /bin/lzmadec
+type: reg
+mode: 755
+source: .pkgdata/3bdf2e1ff4d5b170b6d1c55e808f171c327243fa9c2a0bc3ced54f81d9d2f4bc
+blake3: 3bdf2e1ff4d5b170b6d1c55e808f171c327243fa9c2a0bc3ced54f81d9d2f4bc
+
+path: /bin/lzmainfo
+type: reg
+mode: 755
+source: .pkgdata/557c578410735e1ebe391128f9c1b6c7193d8d224db66e2756f204e029ebfebd
+blake3: 557c578410735e1ebe391128f9c1b6c7193d8d224db66e2756f204e029ebfebd
+
+path: /bin/lzmore
+type: sym
+mode: 777
+target: xzmore
+
+path: /bin/mawk
+type: reg
+mode: 755
+source: .pkgdata/bc88cd4a42a439fd91e4026e64ef3b5c235e510c759028691200a6741d66608c
+blake3: bc88cd4a42a439fd91e4026e64ef3b5c235e510c759028691200a6741d66608c
+
+path: /bin/md5sum
+type: reg
+mode: 755
+source: .pkgdata/2a54b7a27f7509cae06cb38b159b1f76b2c06e6913c00218c738d14b590f1357
+blake3: 2a54b7a27f7509cae06cb38b159b1f76b2c06e6913c00218c738d14b590f1357
+
+path: /bin/mesg
+type: reg
+mode: 755
+source: .pkgdata/011b114d00603b69823845c14768d552cc5132e181042f3f6f3d6f2489b5d781
+blake3: 011b114d00603b69823845c14768d552cc5132e181042f3f6f3d6f2489b5d781
+
+path: /bin/mkdir
+type: reg
+mode: 755
+source: .pkgdata/edc62e406805211b4d5f9b964c16c7c6a6b57496877bb8623ddd3ea271c8ad83
+blake3: edc62e406805211b4d5f9b964c16c7c6a6b57496877bb8623ddd3ea271c8ad83
+
+path: /bin/mkfifo
+type: reg
+mode: 755
+source: .pkgdata/ffc3c03aac4328f5a59ccdadc99f5c85ac9ea03151c78bebca4ae8d98ea557e9
+blake3: ffc3c03aac4328f5a59ccdadc99f5c85ac9ea03151c78bebca4ae8d98ea557e9
+
+path: /bin/mknod
+type: reg
+mode: 755
+source: .pkgdata/9366b78c032b29b48f806cfa2d131beda8df886baf1a0a5ddb1d62ce807c69b9
+blake3: 9366b78c032b29b48f806cfa2d131beda8df886baf1a0a5ddb1d62ce807c69b9
+
+path: /bin/mkswap
+type: reg
+mode: 755
+source: .pkgdata/ee06ef3db43bfa62289a52f26f770e97eb81aad7a43683a9887648859b29e45b
+blake3: ee06ef3db43bfa62289a52f26f770e97eb81aad7a43683a9887648859b29e45b
+
+path: /bin/mktemp
+type: reg
+mode: 755
+source: .pkgdata/7e57993fb2b7cfca6a1dfd679d4c5037a3dc00403389aa9f60e82e2c17ecaed5
+blake3: 7e57993fb2b7cfca6a1dfd679d4c5037a3dc00403389aa9f60e82e2c17ecaed5
+
+path: /bin/mount
+type: reg
+mode: 755
+source: .pkgdata/d29a4084c681213c4fdb4861232c1434a77df0b9ceea1f1f229c94c48229a559
+blake3: d29a4084c681213c4fdb4861232c1434a77df0b9ceea1f1f229c94c48229a559
+
+path: /bin/mountpoint
+type: reg
+mode: 755
+source: .pkgdata/5154c5140926237179637aae4a27f542fd97ed1b039685891ea321ac8d89ab9c
+blake3: 5154c5140926237179637aae4a27f542fd97ed1b039685891ea321ac8d89ab9c
+
+path: /bin/mv
+type: reg
+mode: 755
+source: .pkgdata/bbac819ca2e3ba100f25e49e86131b0f65e2f4ebe534ef762db599801212d14e
+blake3: bbac819ca2e3ba100f25e49e86131b0f65e2f4ebe534ef762db599801212d14e
+
+path: /bin/nice
+type: reg
+mode: 755
+source: .pkgdata/518736f3cf45082683c3139a6c20e11d123a28d41d98b235101ca5219a0ee054
+blake3: 518736f3cf45082683c3139a6c20e11d123a28d41d98b235101ca5219a0ee054
+
+path: /bin/nl
+type: reg
+mode: 755
+source: .pkgdata/f855b0ce5744460c95f952e87d3ec37e8dc54afdc1ab429ef938c65d74435299
+blake3: f855b0ce5744460c95f952e87d3ec37e8dc54afdc1ab429ef938c65d74435299
+
+path: /bin/nohup
+type: reg
+mode: 755
+source: .pkgdata/e305de152bd99ed9ca3de02c411934a6d5f84e5d0168ebb457574194c3c6a0d3
+blake3: e305de152bd99ed9ca3de02c411934a6d5f84e5d0168ebb457574194c3c6a0d3
+
+path: /bin/nologin
+type: reg
+mode: 755
+source: .pkgdata/75ffd00924adb221eb1decc1b6ee4e0fe594412c1ba0b31ff9449d9382170f8d
+blake3: 75ffd00924adb221eb1decc1b6ee4e0fe594412c1ba0b31ff9449d9382170f8d
+
+path: /bin/nstat
+type: reg
+mode: 755
+source: .pkgdata/1bc8da256e99d0ab9502a8b0aac52965291b1c04df7e0ae62924a0f036fcbf00
+blake3: 1bc8da256e99d0ab9502a8b0aac52965291b1c04df7e0ae62924a0f036fcbf00
+
+path: /bin/od
+type: reg
+mode: 755
+source: .pkgdata/4e7b054e4f7734c88d31e07c580e83ad80ec11065a54d43d3ba30ef1cd7102e3
+blake3: 4e7b054e4f7734c88d31e07c580e83ad80ec11065a54d43d3ba30ef1cd7102e3
+
+path: /bin/oksh
+type: reg
+mode: 755
+source: .pkgdata/ffa2adf2402a4cd2762045e6bd8878715aedf2d53322f376c6b60cd0138ac49e
+blake3: ffa2adf2402a4cd2762045e6bd8878715aedf2d53322f376c6b60cd0138ac49e
+
+path: /bin/pagesize
+type: reg
+mode: 755
+source: .pkgdata/a2f97136f48c0da821bedb971bddd944c2cfac605525622cb313035a200aabf4
+blake3: a2f97136f48c0da821bedb971bddd944c2cfac605525622cb313035a200aabf4
+
+path: /bin/passwd
+type: reg
+mode: 755
+source: .pkgdata/073ca75fb98a4df6d68275d1eb5606e36b87717c683b1d3b797c2c14e0939f4c
+blake3: 073ca75fb98a4df6d68275d1eb5606e36b87717c683b1d3b797c2c14e0939f4c
+
+path: /bin/paste
+type: reg
+mode: 755
+source: .pkgdata/a0efa57fc8155e9b68953a9eb5b56d08bc63b6e437ae3a2cd9decd94dcfe4690
+blake3: a0efa57fc8155e9b68953a9eb5b56d08bc63b6e437ae3a2cd9decd94dcfe4690
+
+path: /bin/pathchk
+type: reg
+mode: 755
+source: .pkgdata/3f7d837f5af7a014111a7121ac1ab2f89f711775fcd91283d5daa4e31cf6d31e
+blake3: 3f7d837f5af7a014111a7121ac1ab2f89f711775fcd91283d5daa4e31cf6d31e
+
+path: /bin/perp-setup
+type: reg
+mode: 755
+source: .pkgdata/597e338f3b4a1c6b9c975731576a6d30fdf60f2caa2fe5492d40cec7151b9e70
+blake3: 597e338f3b4a1c6b9c975731576a6d30fdf60f2caa2fe5492d40cec7151b9e70
+
+path: /bin/perpboot
+type: reg
+mode: 755
+source: .pkgdata/35424db45604bb06a85e4e92de08e3172303e8df6aa20eaf9456b1e60f1c7847
+blake3: 35424db45604bb06a85e4e92de08e3172303e8df6aa20eaf9456b1e60f1c7847
+
+path: /bin/perpctl
+type: reg
+mode: 755
+source: .pkgdata/9a3aa3bbf5c0ef14a3e38f4fd4938e645fc76b4977fdc172e5ccd3941b190424
+blake3: 9a3aa3bbf5c0ef14a3e38f4fd4938e645fc76b4977fdc172e5ccd3941b190424
+
+path: /bin/perpd
+type: reg
+mode: 755
+source: .pkgdata/e561d283cc01918ffb8264c8336d8e23b37ab6984579c4905a5d1f941cd69776
+blake3: e561d283cc01918ffb8264c8336d8e23b37ab6984579c4905a5d1f941cd69776
+
+path: /bin/perphup
+type: reg
+mode: 755
+source: .pkgdata/c39ee67f0c14a98ca5b0297fbac4020dba097a29690bd4ba4ca23645b06cccee
+blake3: c39ee67f0c14a98ca5b0297fbac4020dba097a29690bd4ba4ca23645b06cccee
+
+path: /bin/perpls
+type: reg
+mode: 755
+source: .pkgdata/b1ac3ab9aa36130118c3406f34cb446d27a55700441c9503c326aaad5007a7f0
+blake3: b1ac3ab9aa36130118c3406f34cb446d27a55700441c9503c326aaad5007a7f0
+
+path: /bin/perpok
+type: reg
+mode: 755
+source: .pkgdata/21feb45fd71b679eebdb1afcfa4e6709d4bdd143c432c667abde82e1671af6c3
+blake3: 21feb45fd71b679eebdb1afcfa4e6709d4bdd143c432c667abde82e1671af6c3
+
+path: /bin/perpstat
+type: reg
+mode: 755
+source: .pkgdata/5c330e430b2925a509ba2b2015fe63a7c3e9b938f3d48673a296218ef61386c6
+blake3: 5c330e430b2925a509ba2b2015fe63a7c3e9b938f3d48673a296218ef61386c6
+
+path: /bin/pidof
+type: reg
+mode: 755
+source: .pkgdata/3dca8080393e07cf1003e1eccba851747ad1d86b49074e948ae81616e9e3795f
+blake3: 3dca8080393e07cf1003e1eccba851747ad1d86b49074e948ae81616e9e3795f
+
+path: /bin/pivot_root
+type: reg
+mode: 755
+source: .pkgdata/74bdaae39eec93bbf5d113079ea55ca34af2cecf37244878e413afaa37d8baeb
+blake3: 74bdaae39eec93bbf5d113079ea55ca34af2cecf37244878e413afaa37d8baeb
+
+path: /bin/printenv
+type: reg
+mode: 755
+source: .pkgdata/fd8a2a4894acd82f282b133e9a631ec872cb6bbc287c18a034f0ede190c20ab0
+blake3: fd8a2a4894acd82f282b133e9a631ec872cb6bbc287c18a034f0ede190c20ab0
+
+path: /bin/printf
+type: reg
+mode: 755
+source: .pkgdata/9fbbdb141af63f773d76c9ce68a44c3ebcb4f4cf8ac73d66ab417a88483874b4
+blake3: 9fbbdb141af63f773d76c9ce68a44c3ebcb4f4cf8ac73d66ab417a88483874b4
+
+path: /bin/ps
+type: reg
+mode: 755
+source: .pkgdata/57b403675bc72a3681f671e793637e7cf93e78e0230752ccf608811eb0d88566
+blake3: 57b403675bc72a3681f671e793637e7cf93e78e0230752ccf608811eb0d88566
+
+path: /bin/pwd
+type: reg
+mode: 755
+source: .pkgdata/19b17fa94954146ff486d5f9dbd4263599c067c88de51dd731bf44ec220dc213
+blake3: 19b17fa94954146ff486d5f9dbd4263599c067c88de51dd731bf44ec220dc213
+
+path: /bin/pwdx
+type: reg
+mode: 755
+source: .pkgdata/de52b833dd0f64ebe8874ee50347de5afb7a5111346e47f45bf4948440332f15
+blake3: de52b833dd0f64ebe8874ee50347de5afb7a5111346e47f45bf4948440332f15
+
+path: /bin/readahead
+type: reg
+mode: 755
+source: .pkgdata/172290a7f5b83eb9490b0220d87c2829038ce86053e75c65e83953cd44acde99
+blake3: 172290a7f5b83eb9490b0220d87c2829038ce86053e75c65e83953cd44acde99
+
+path: /bin/readlink
+type: reg
+mode: 755
+source: .pkgdata/2e37244cb015b517499fc2ad707576fc4b424587c22c0865586a61112f7897ff
+blake3: 2e37244cb015b517499fc2ad707576fc4b424587c22c0865586a61112f7897ff
+
+path: /bin/renice
+type: reg
+mode: 755
+source: .pkgdata/b8bd6f5ea05e9fc5e207c9e09053dce1ef74be1f490590f196dad8317f85b901
+blake3: b8bd6f5ea05e9fc5e207c9e09053dce1ef74be1f490590f196dad8317f85b901
+
+path: /bin/respawn
+type: reg
+mode: 755
+source: .pkgdata/e70e18a764ef133951a052449413596925d6c5af931ed2ab8ace73b629832c7d
+blake3: e70e18a764ef133951a052449413596925d6c5af931ed2ab8ace73b629832c7d
+
+path: /bin/rev
+type: reg
+mode: 755
+source: .pkgdata/2d978a35bf0becdce2c4dad71ea04ee72575ba70720ef357663dde113137a3da
+blake3: 2d978a35bf0becdce2c4dad71ea04ee72575ba70720ef357663dde113137a3da
+
+path: /bin/rm
+type: reg
+mode: 755
+source: .pkgdata/10faf6069bf416576756c413ae2add13ebc9030cf9e03818dd9fdc72d784df78
+blake3: 10faf6069bf416576756c413ae2add13ebc9030cf9e03818dd9fdc72d784df78
+
+path: /bin/rmdir
+type: reg
+mode: 755
+source: .pkgdata/df01509c1bf0dcbfbcdd8fe342a33530c04fe7a73598a63a9bed16682284a62b
+blake3: df01509c1bf0dcbfbcdd8fe342a33530c04fe7a73598a63a9bed16682284a62b
+
+path: /bin/rmmod
+type: reg
+mode: 755
+source: .pkgdata/6bc932b8601e4bdfbce5ae384ea1d8d1e3795a300ee1da1f6ef07da66074fb6a
+blake3: 6bc932b8601e4bdfbce5ae384ea1d8d1e3795a300ee1da1f6ef07da66074fb6a
+
+path: /bin/routef
+type: reg
+mode: 755
+source: .pkgdata/9e270fe23b66873a4a6a4a8bd38decdfc4ca1bf22499e028929eb618954952be
+blake3: 9e270fe23b66873a4a6a4a8bd38decdfc4ca1bf22499e028929eb618954952be
+
+path: /bin/routel
+type: reg
+mode: 755
+source: .pkgdata/8c068de23f2fc06dff85f589fb18d07875910248f16ae56b98d3085bda1b5d1d
+blake3: 8c068de23f2fc06dff85f589fb18d07875910248f16ae56b98d3085bda1b5d1d
+
+path: /bin/rtacct
+type: reg
+mode: 755
+source: .pkgdata/17bc2328e6629cc28cc36a5e9d0037ea5c1e0626977e93a264f6f6f981e2a96e
+blake3: 17bc2328e6629cc28cc36a5e9d0037ea5c1e0626977e93a264f6f6f981e2a96e
+
+path: /bin/rtmon
+type: reg
+mode: 755
+source: .pkgdata/b487a15563d93aeb1e6c4fa105752496657feb7c2cb3b27108020b535604f565
+blake3: b487a15563d93aeb1e6c4fa105752496657feb7c2cb3b27108020b535604f565
+
+path: /bin/rtpr
+type: reg
+mode: 755
+source: .pkgdata/daeb881caa60da9c1457451daf2b62384bea0ad15b455a35ef28a0e7364dcf8d
+blake3: daeb881caa60da9c1457451daf2b62384bea0ad15b455a35ef28a0e7364dcf8d
+
+path: /bin/rtstat
+type: sym
+mode: 777
+target: lnstat
+
+path: /bin/runargs
+type: reg
+mode: 755
+source: .pkgdata/7126370fd12b228b2cd3d392defda48d9a623aad9938f8766640336d62de97fa
+blake3: 7126370fd12b228b2cd3d392defda48d9a623aad9938f8766640336d62de97fa
+
+path: /bin/runargv0
+type: reg
+mode: 755
+source: .pkgdata/1e6bac175405dc124ed1f206c05c5da3efd93c023ba49e1e82b2d2d543b87d7b
+blake3: 1e6bac175405dc124ed1f206c05c5da3efd93c023ba49e1e82b2d2d543b87d7b
+
+path: /bin/runchoom
+type: reg
+mode: 755
+source: .pkgdata/014f0b7c9073c2e53fc26971de5bec0b668a3441b0fa88209cf17157af6a5ef6
+blake3: 014f0b7c9073c2e53fc26971de5bec0b668a3441b0fa88209cf17157af6a5ef6
+
+path: /bin/rundetach
+type: reg
+mode: 755
+source: .pkgdata/167baf849706f3ede767bfcc759f21f072caa4cb9800e5397877264e573a0357
+blake3: 167baf849706f3ede767bfcc759f21f072caa4cb9800e5397877264e573a0357
+
+path: /bin/rundeux
+type: reg
+mode: 755
+source: .pkgdata/e490641a27e563cf28caa1b2273707efb71d25a2f602aec61509e4e67d9c563b
+blake3: e490641a27e563cf28caa1b2273707efb71d25a2f602aec61509e4e67d9c563b
+
+path: /bin/runenv
+type: reg
+mode: 755
+source: .pkgdata/28bb4dc1ad4b9a6ad710e030af2c8064acc56b7553abdbfae7bb845e5e62827a
+blake3: 28bb4dc1ad4b9a6ad710e030af2c8064acc56b7553abdbfae7bb845e5e62827a
+
+path: /bin/runfile
+type: reg
+mode: 755
+source: .pkgdata/20322623faba58207bd0d98f6c7166def26247acf7b4c49cef323d4d04ff24da
+blake3: 20322623faba58207bd0d98f6c7166def26247acf7b4c49cef323d4d04ff24da
+
+path: /bin/runlimit
+type: reg
+mode: 755
+source: .pkgdata/7036c9803a184d6a8a61ca5ab4cea3a83e8ad74587d48eeda84c24301dde3c05
+blake3: 7036c9803a184d6a8a61ca5ab4cea3a83e8ad74587d48eeda84c24301dde3c05
+
+path: /bin/runlock
+type: reg
+mode: 755
+source: .pkgdata/9aabbbf79992f25337a670df4bc7886beaef7ccfdb025e86e3c36cd89f599f5e
+blake3: 9aabbbf79992f25337a670df4bc7886beaef7ccfdb025e86e3c36cd89f599f5e
+
+path: /bin/runpause
+type: reg
+mode: 755
+source: .pkgdata/69d59e1949fb6f716143015339e31f07e535290f3e030408e39610c810e4dfcb
+blake3: 69d59e1949fb6f716143015339e31f07e535290f3e030408e39610c810e4dfcb
+
+path: /bin/runsession
+type: reg
+mode: 755
+source: .pkgdata/8189c301405f1f9a4caec5b2d6e5d31d92d2cb6a11b6648ce26ef25295b0f0e7
+blake3: 8189c301405f1f9a4caec5b2d6e5d31d92d2cb6a11b6648ce26ef25295b0f0e7
+
+path: /bin/runtool
+type: reg
+mode: 755
+source: .pkgdata/934b7aee0369d4dda1bf38b2d63fb040c0024c33d3a7f584dfb6f57b84575492
+blake3: 934b7aee0369d4dda1bf38b2d63fb040c0024c33d3a7f584dfb6f57b84575492
+
+path: /bin/runtrap
+type: reg
+mode: 755
+source: .pkgdata/ffe79dac2fab9a62048847fb7467ab34741717f347785b850f1d4d8d626bb9e4
+blake3: ffe79dac2fab9a62048847fb7467ab34741717f347785b850f1d4d8d626bb9e4
+
+path: /bin/runuid
+type: reg
+mode: 755
+source: .pkgdata/783212d8431f245deca94fd10baf8ec39f7a33ae0f9bb2c32b4eaf1c7d8ddd38
+blake3: 783212d8431f245deca94fd10baf8ec39f7a33ae0f9bb2c32b4eaf1c7d8ddd38
+
+path: /bin/sed
+type: reg
+mode: 755
+source: .pkgdata/896ee1f562b42f9c586b7c45b87d04adadcb0bba09fa75d16fe60cb12162ea79
+blake3: 896ee1f562b42f9c586b7c45b87d04adadcb0bba09fa75d16fe60cb12162ea79
+
+path: /bin/seq
+type: reg
+mode: 755
+source: .pkgdata/9fcf75ca1f6e466e2116b3144520e2dde0b67496aa0bf4a30c421ed56d9d9242
+blake3: 9fcf75ca1f6e466e2116b3144520e2dde0b67496aa0bf4a30c421ed56d9d9242
+
+path: /bin/setsid
+type: reg
+mode: 755
+source: .pkgdata/833fb78f373e45fe4cd5532307b09c2c32d9efc5e893fc52ccb71e904b076b69
+blake3: 833fb78f373e45fe4cd5532307b09c2c32d9efc5e893fc52ccb71e904b076b69
+
+path: /bin/sh
+type: sym
+mode: 777
+target: oksh
+
+path: /bin/sha1sum
+type: reg
+mode: 755
+source: .pkgdata/448031b0f3f48aaf22159d28460a331dc4aba6b6ed35e260813822868bf1ab48
+blake3: 448031b0f3f48aaf22159d28460a331dc4aba6b6ed35e260813822868bf1ab48
+
+path: /bin/sha224sum
+type: reg
+mode: 755
+source: .pkgdata/40204d160ad7ba1d954f2c1f4cd82b467a5d4c79e13e3c32bf6e121a42d28fb7
+blake3: 40204d160ad7ba1d954f2c1f4cd82b467a5d4c79e13e3c32bf6e121a42d28fb7
+
+path: /bin/sha256sum
+type: reg
+mode: 755
+source: .pkgdata/c53c49eaf6bc38cb149f2f133827be09d3e15c39ff0842e4edae4fe4d6ae648b
+blake3: c53c49eaf6bc38cb149f2f133827be09d3e15c39ff0842e4edae4fe4d6ae648b
+
+path: /bin/sha384sum
+type: reg
+mode: 755
+source: .pkgdata/4aa8730e5c2a4af9d5eac85bda010ef3d48096977c99637fe9c32cd68b9853a6
+blake3: 4aa8730e5c2a4af9d5eac85bda010ef3d48096977c99637fe9c32cd68b9853a6
+
+path: /bin/sha512-224sum
+type: reg
+mode: 755
+source: .pkgdata/5feb9737bc4a6deb9af71cfff0758f471f171a395913a5478f5d467240d7edf0
+blake3: 5feb9737bc4a6deb9af71cfff0758f471f171a395913a5478f5d467240d7edf0
+
+path: /bin/sha512-256sum
+type: reg
+mode: 755
+source: .pkgdata/2aa499df14b7a1914cc9836d0d3604520c815449072e9ff747df20bd0665206d
+blake3: 2aa499df14b7a1914cc9836d0d3604520c815449072e9ff747df20bd0665206d
+
+path: /bin/sha512sum
+type: reg
+mode: 755
+source: .pkgdata/3d997d6e2da0ab2b6c27a45d5270d27c7969c90c77363056835e12480b4395e4
+blake3: 3d997d6e2da0ab2b6c27a45d5270d27c7969c90c77363056835e12480b4395e4
+
+path: /bin/sinit
+type: reg
+mode: 755
+source: .pkgdata/88ca7109508c1583a51edab42f4e5036b5c07db5d147a75122c884e23820c052
+blake3: 88ca7109508c1583a51edab42f4e5036b5c07db5d147a75122c884e23820c052
+
+path: /bin/sissylog
+type: reg
+mode: 755
+source: .pkgdata/923bda3f7d09abe8b6c584d8a0c29fe053594572a3ecbbdb78c705df55543564
+blake3: 923bda3f7d09abe8b6c584d8a0c29fe053594572a3ecbbdb78c705df55543564
+
+path: /bin/sleep
+type: reg
+mode: 755
+source: .pkgdata/ceff25849eed523fdef8428cee467e773ecbeaa510cc121bd089a82ed952bca1
+blake3: ceff25849eed523fdef8428cee467e773ecbeaa510cc121bd089a82ed952bca1
+
+path: /bin/sort
+type: reg
+mode: 755
+source: .pkgdata/9d91659c04798631abeb4014e109e25e18440fc709b666be0cfa027f049b5dca
+blake3: 9d91659c04798631abeb4014e109e25e18440fc709b666be0cfa027f049b5dca
+
+path: /bin/split
+type: reg
+mode: 755
+source: .pkgdata/e011292b6053466e85f62e792697c69c76150bcf6124c67e5c3e1c838faea6cc
+blake3: e011292b6053466e85f62e792697c69c76150bcf6124c67e5c3e1c838faea6cc
+
+path: /bin/sponge
+type: reg
+mode: 755
+source: .pkgdata/ccbe3cadbe78d574e7ba560aac43f24bd41dd97d29c6823d3bc936eef045bcae
+blake3: ccbe3cadbe78d574e7ba560aac43f24bd41dd97d29c6823d3bc936eef045bcae
+
+path: /bin/ss
+type: reg
+mode: 755
+source: .pkgdata/bc6beabaac1ff1ed780a44422cdfbc815f8013486f2080d2722c069b1a73b912
+blake3: bc6beabaac1ff1ed780a44422cdfbc815f8013486f2080d2722c069b1a73b912
+
+path: /bin/stat
+type: reg
+mode: 755
+source: .pkgdata/6bd19c1aab6085ab021e5d4969c5552b2c11d10b27fa9e3d9dfe9f6ebb20e7ce
+blake3: 6bd19c1aab6085ab021e5d4969c5552b2c11d10b27fa9e3d9dfe9f6ebb20e7ce
+
+path: /bin/strings
+type: reg
+mode: 755
+source: .pkgdata/2393c2054497fb3f3c1f9a336184916f41cb4eedbbb48fd0d859bb75d7f52a70
+blake3: 2393c2054497fb3f3c1f9a336184916f41cb4eedbbb48fd0d859bb75d7f52a70
+
+path: /bin/stty
+type: reg
+mode: 755
+source: .pkgdata/7d3e4c335d1755e911bfd2a8b8150f8045c93b3c5cd1b2eeaed17c527da50044
+blake3: 7d3e4c335d1755e911bfd2a8b8150f8045c93b3c5cd1b2eeaed17c527da50044
+
+path: /bin/su
+type: reg
+mode: 755
+source: .pkgdata/89fa60dcde93c6462292b7f1acefb9a36fa4e82fbb912febc6964edcbd3daff3
+blake3: 89fa60dcde93c6462292b7f1acefb9a36fa4e82fbb912febc6964edcbd3daff3
+
+path: /bin/swaplabel
+type: reg
+mode: 755
+source: .pkgdata/15f1b4b793575ae7e0e924d4d09b8aa34ee2ca54cc92e25a989b5d7d9243dcb9
+blake3: 15f1b4b793575ae7e0e924d4d09b8aa34ee2ca54cc92e25a989b5d7d9243dcb9
+
+path: /bin/swapoff
+type: reg
+mode: 755
+source: .pkgdata/c005a1b8b9ef362890fb17a4b7cf1a7ff8c9ddba7a8f65e30e351e146d67ac1b
+blake3: c005a1b8b9ef362890fb17a4b7cf1a7ff8c9ddba7a8f65e30e351e146d67ac1b
+
+path: /bin/swapon
+type: reg
+mode: 755
+source: .pkgdata/c141aab2d3540e8109b9fae1d70f491185882dcabf01cd1520f1dff64356614b
+blake3: c141aab2d3540e8109b9fae1d70f491185882dcabf01cd1520f1dff64356614b
+
+path: /bin/switch_root
+type: reg
+mode: 755
+source: .pkgdata/d9d9f22c77d8103700234fee66a964a1c3438a269b0a68ade122ccf0bd98c4b3
+blake3: d9d9f22c77d8103700234fee66a964a1c3438a269b0a68ade122ccf0bd98c4b3
+
+path: /bin/sync
+type: reg
+mode: 755
+source: .pkgdata/07c0d1e2f44310a000238c3486a159c04e067572fa430d56547ad4b071449acc
+blake3: 07c0d1e2f44310a000238c3486a159c04e067572fa430d56547ad4b071449acc
+
+path: /bin/sysctl
+type: reg
+mode: 755
+source: .pkgdata/c448d2c8c8b18b9e65a675a94e03f9ccc23ee69c8bd9312c077a0a84fef133b1
+blake3: c448d2c8c8b18b9e65a675a94e03f9ccc23ee69c8bd9312c077a0a84fef133b1
+
+path: /bin/tail
+type: reg
+mode: 755
+source: .pkgdata/1222290f5f2af377d539781a648cc30f9115855e5117b64c0bf7b7e185b50427
+blake3: 1222290f5f2af377d539781a648cc30f9115855e5117b64c0bf7b7e185b50427
+
+path: /bin/tar
+type: reg
+mode: 755
+source: .pkgdata/f787e0979f2eef866dc496b6ada3772fd923176281f122e7bfc29a0cb545e59e
+blake3: f787e0979f2eef866dc496b6ada3772fd923176281f122e7bfc29a0cb545e59e
+
+path: /bin/tc
+type: reg
+mode: 755
+source: .pkgdata/26814403620fb3c2aec9a7eeda6b9b827ade9350715d598ce2d5599473910431
+blake3: 26814403620fb3c2aec9a7eeda6b9b827ade9350715d598ce2d5599473910431
+
+path: /bin/tee
+type: reg
+mode: 755
+source: .pkgdata/fc4d006ddda11b597296693a235b3ac2534df632158bc61f8ea81737bf9909e6
+blake3: fc4d006ddda11b597296693a235b3ac2534df632158bc61f8ea81737bf9909e6
+
+path: /bin/test
+type: reg
+mode: 755
+source: .pkgdata/6e7da6f1e9b62c9b3ed24ec3cc80c94f37a50650d07c878d14bbf6b3556f09d8
+blake3: 6e7da6f1e9b62c9b3ed24ec3cc80c94f37a50650d07c878d14bbf6b3556f09d8
+
+path: /bin/tftp
+type: reg
+mode: 755
+source: .pkgdata/62f9d1078623fc9a89ac3466b2ad637b2f5494653577ba7a0da8fa1568cbd623
+blake3: 62f9d1078623fc9a89ac3466b2ad637b2f5494653577ba7a0da8fa1568cbd623
+
+path: /bin/time
+type: reg
+mode: 755
+source: .pkgdata/e59ea2f1a5475d73ad2ab59d15bbb0d93d7dddb7b4c00d5ef263d0d108c53437
+blake3: e59ea2f1a5475d73ad2ab59d15bbb0d93d7dddb7b4c00d5ef263d0d108c53437
+
+path: /bin/tinylog
+type: reg
+mode: 755
+source: .pkgdata/16b11a313eb030020d12b7517f6425d3eb100878c328219b54e69ebaecaa648b
+blake3: 16b11a313eb030020d12b7517f6425d3eb100878c328219b54e69ebaecaa648b
+
+path: /bin/tinylog_run
+type: reg
+mode: 755
+source: .pkgdata/5ab2b3a9859587de261108461048c4820ef6d386a31b2fd7eae309d66c7f34e2
+blake3: 5ab2b3a9859587de261108461048c4820ef6d386a31b2fd7eae309d66c7f34e2
+
+path: /bin/touch
+type: reg
+mode: 755
+source: .pkgdata/9dbd86dd56df2e370678b77657e7b0e0fb719148d6aad34b2324fed1cb4bf1ca
+blake3: 9dbd86dd56df2e370678b77657e7b0e0fb719148d6aad34b2324fed1cb4bf1ca
+
+path: /bin/tr
+type: reg
+mode: 755
+source: .pkgdata/f0d2f1e1921526cbadab62b26f5f8b90286b356cf4c36ad118613490324c99cc
+blake3: f0d2f1e1921526cbadab62b26f5f8b90286b356cf4c36ad118613490324c99cc
+
+path: /bin/true
+type: reg
+mode: 755
+source: .pkgdata/29c8967e45eb6cf1c1554f3e782074f5fe031a9e177e0dadeeb486e463516fc8
+blake3: 29c8967e45eb6cf1c1554f3e782074f5fe031a9e177e0dadeeb486e463516fc8
+
+path: /bin/truncate
+type: reg
+mode: 755
+source: .pkgdata/e2ef7bcc505f960e37dcf3b2ee5cf03a58905022ed407b1efb281049a81c5ba8
+blake3: e2ef7bcc505f960e37dcf3b2ee5cf03a58905022ed407b1efb281049a81c5ba8
+
+path: /bin/tsort
+type: reg
+mode: 755
+source: .pkgdata/2ae0665d4f3f42a7adef73dc82a86e3159fdecce10f1d35560200eca2e5059c4
+blake3: 2ae0665d4f3f42a7adef73dc82a86e3159fdecce10f1d35560200eca2e5059c4
+
+path: /bin/tty
+type: reg
+mode: 755
+source: .pkgdata/2d181adf2a643e26e13264fedacaf590dd1b6f3fcbd21dfa541a8f3b9b3d8e3d
+blake3: 2d181adf2a643e26e13264fedacaf590dd1b6f3fcbd21dfa541a8f3b9b3d8e3d
+
+path: /bin/umount
+type: reg
+mode: 755
+source: .pkgdata/ae392bd98c61e57c65357282bf46565e1d310a73bdf70a24cd724dc034baef42
+blake3: ae392bd98c61e57c65357282bf46565e1d310a73bdf70a24cd724dc034baef42
+
+path: /bin/uname
+type: reg
+mode: 755
+source: .pkgdata/c663f247c241ebfec052dc69dce36ceddc0c18247cda280cedfc3df54422c1a3
+blake3: c663f247c241ebfec052dc69dce36ceddc0c18247cda280cedfc3df54422c1a3
+
+path: /bin/uncompress
+type: reg
+mode: 755
+source: .pkgdata/c6956cfecc1bc09718c58c12c910f9a2379cbc5cf013a3f2fdff65befbf17356
+blake3: c6956cfecc1bc09718c58c12c910f9a2379cbc5cf013a3f2fdff65befbf17356
+
+path: /bin/unexpand
+type: reg
+mode: 755
+source: .pkgdata/e1558b187e63d8b985c2dbbae28d3b71919053227476d16689196b787b55b937
+blake3: e1558b187e63d8b985c2dbbae28d3b71919053227476d16689196b787b55b937
+
+path: /bin/uniq
+type: reg
+mode: 755
+source: .pkgdata/e17299f89dd468f54477b4c08dbcc6e93e4a2b19f7b04bae7ade847724da464b
+blake3: e17299f89dd468f54477b4c08dbcc6e93e4a2b19f7b04bae7ade847724da464b
+
+path: /bin/unlink
+type: reg
+mode: 755
+source: .pkgdata/8964b2901a71b1de2d8f0191d370ecc96b872d52d9c963a4df610bf049cd2c17
+blake3: 8964b2901a71b1de2d8f0191d370ecc96b872d52d9c963a4df610bf049cd2c17
+
+path: /bin/unlzma
+type: sym
+mode: 777
+target: xz
+
+path: /bin/unshare
+type: reg
+mode: 755
+source: .pkgdata/db53048201c4a8649e5045032eadfc333fa1044990bbd6cbc5fea744022a2a2d
+blake3: db53048201c4a8649e5045032eadfc333fa1044990bbd6cbc5fea744022a2a2d
+
+path: /bin/unxz
+type: sym
+mode: 777
+target: xz
+
+path: /bin/uptime
+type: reg
+mode: 755
+source: .pkgdata/858a113f9d3b845d34abfb929b842eabc9bcc8be44c5088b780150eb79201642
+blake3: 858a113f9d3b845d34abfb929b842eabc9bcc8be44c5088b780150eb79201642
+
+path: /bin/uudecode
+type: reg
+mode: 755
+source: .pkgdata/b3cd61b8c0240947834c65e9941f66c01ff795226cd662bfe161ca305bea7f38
+blake3: b3cd61b8c0240947834c65e9941f66c01ff795226cd662bfe161ca305bea7f38
+
+path: /bin/uuencode
+type: reg
+mode: 755
+source: .pkgdata/3169c28cb57a3e11854e2ba80ea30c019dedcdb02dbf4ae4d80501d733f1258d
+blake3: 3169c28cb57a3e11854e2ba80ea30c019dedcdb02dbf4ae4d80501d733f1258d
+
+path: /bin/vmstat
+type: reg
+mode: 755
+source: .pkgdata/85ea6ce6d0a46a07da73a02b8d6439a7486f2697cc3b555b4b35607b30539fae
+blake3: 85ea6ce6d0a46a07da73a02b8d6439a7486f2697cc3b555b4b35607b30539fae
+
+path: /bin/vtallow
+type: reg
+mode: 755
+source: .pkgdata/2c2279bece27224155c674994e09456f7cce76997c6c540bbb516379a27f0d3f
+blake3: 2c2279bece27224155c674994e09456f7cce76997c6c540bbb516379a27f0d3f
+
+path: /bin/watch
+type: reg
+mode: 755
+source: .pkgdata/3ad7cdbbcf1ffa9b639dda37e304663b928371ee7726eaefb5696b7af2871c76
+blake3: 3ad7cdbbcf1ffa9b639dda37e304663b928371ee7726eaefb5696b7af2871c76
+
+path: /bin/wc
+type: reg
+mode: 755
+source: .pkgdata/a8272f7d9c989b230da3afdc700f31d6ac3a9111809727044850a163b690a2a0
+blake3: a8272f7d9c989b230da3afdc700f31d6ac3a9111809727044850a163b690a2a0
+
+path: /bin/which
+type: reg
+mode: 755
+source: .pkgdata/f88b6bb951f538eac2332e136009d3504a5d6188af27883450982868b3ff2b85
+blake3: f88b6bb951f538eac2332e136009d3504a5d6188af27883450982868b3ff2b85
+
+path: /bin/who
+type: reg
+mode: 755
+source: .pkgdata/5880db9ec1e3b1765ad89871b34ff1c5a3dbe0fb83a76d12461b829a0d38d31f
+blake3: 5880db9ec1e3b1765ad89871b34ff1c5a3dbe0fb83a76d12461b829a0d38d31f
+
+path: /bin/whoami
+type: reg
+mode: 755
+source: .pkgdata/de34327aca74f3649af57f799b9d9bf03ddc195c6f6c566a67571fcd1c007e7a
+blake3: de34327aca74f3649af57f799b9d9bf03ddc195c6f6c566a67571fcd1c007e7a
+
+path: /bin/xargs
+type: reg
+mode: 755
+source: .pkgdata/2997295412f3b577403526834b5dbbf44400f4a5969c4e71c4065821662252f1
+blake3: 2997295412f3b577403526834b5dbbf44400f4a5969c4e71c4065821662252f1
+
+path: /bin/xz
+type: reg
+mode: 755
+source: .pkgdata/414f3b0fc40e4ccb7fe2cb750692b9e9a51df36e9e270855f84c2f958e79b1b7
+blake3: 414f3b0fc40e4ccb7fe2cb750692b9e9a51df36e9e270855f84c2f958e79b1b7
+
+path: /bin/xzcat
+type: sym
+mode: 777
+target: xz
+
+path: /bin/xzcmp
+type: sym
+mode: 777
+target: xzdiff
+
+path: /bin/xzdec
+type: reg
+mode: 755
+source: .pkgdata/1fa2eae243bc47dfeca81c87a716144f68954b300e44751652f77dfcbfffd15b
+blake3: 1fa2eae243bc47dfeca81c87a716144f68954b300e44751652f77dfcbfffd15b
+
+path: /bin/xzdiff
+type: reg
+mode: 755
+source: .pkgdata/396d5cfbf549d4f0d43b8d7d84a300dce34804dfaa5374361a3d54d57184564c
+blake3: 396d5cfbf549d4f0d43b8d7d84a300dce34804dfaa5374361a3d54d57184564c
+
+path: /bin/xzegrep
+type: sym
+mode: 777
+target: xzgrep
+
+path: /bin/xzfgrep
+type: sym
+mode: 777
+target: xzgrep
+
+path: /bin/xzgrep
+type: reg
+mode: 755
+source: .pkgdata/f05253ca113810919832df6e471884c84666c7aa626fc823937aa17fba47d6dd
+blake3: f05253ca113810919832df6e471884c84666c7aa626fc823937aa17fba47d6dd
+
+path: /bin/xzless
+type: reg
+mode: 755
+source: .pkgdata/d44559d6779abea78d5e640772e2fef10e086aa5bb58e862257f544dfed95e00
+blake3: d44559d6779abea78d5e640772e2fef10e086aa5bb58e862257f544dfed95e00
+
+path: /bin/xzmore
+type: reg
+mode: 755
+source: .pkgdata/447ba21d08461bf6083a869fd0cae65c4122010f17dbb73d1d7e68792de497ef
+blake3: 447ba21d08461bf6083a869fd0cae65c4122010f17dbb73d1d7e68792de497ef
+
+path: /bin/yes
+type: reg
+mode: 755
+source: .pkgdata/d9ad3b3f97120c64d7a60a67b854935c5233c260c23b31ebf9840399c1b2ad36
+blake3: d9ad3b3f97120c64d7a60a67b854935c5233c260c23b31ebf9840399c1b2ad36
+
+path: /bin/zcat
+type: reg
+mode: 755
+source: .pkgdata/de55b4ebee533b3d677a9308c02f7157bae869e4429ccbdc85266cc1deaba21d
+blake3: de55b4ebee533b3d677a9308c02f7157bae869e4429ccbdc85266cc1deaba21d
+
+path: /bin/zcmp
+type: reg
+mode: 755
+source: .pkgdata/aa365d769bf49e7204776b66e1c1635aea8f96d949cf575b0103c480a0df60dd
+blake3: aa365d769bf49e7204776b66e1c1635aea8f96d949cf575b0103c480a0df60dd
+
+path: /bin/zdiff
+type: reg
+mode: 755
+source: .pkgdata/b120926a4aeda3aba99406080dde5df29de8b2760b0df58a1049b9217a213eed
+blake3: b120926a4aeda3aba99406080dde5df29de8b2760b0df58a1049b9217a213eed
+
+path: /bin/zegrep
+type: reg
+mode: 755
+source: .pkgdata/e877cbcbcd7ca8310e4a3f87f85c16f72087a9c7c38cb51ac5f5f18296606bcd
+blake3: e877cbcbcd7ca8310e4a3f87f85c16f72087a9c7c38cb51ac5f5f18296606bcd
+
+path: /bin/zfgrep
+type: reg
+mode: 755
+source: .pkgdata/082469083d9af780d238a0aa78149e163fefa421960380e231847cf1b7c48c23
+blake3: 082469083d9af780d238a0aa78149e163fefa421960380e231847cf1b7c48c23
+
+path: /bin/zforce
+type: reg
+mode: 755
+source: .pkgdata/9389d0bad40b976e9407972d41cbdd71b141f0ac0434192e2ed6d8959199d8d1
+blake3: 9389d0bad40b976e9407972d41cbdd71b141f0ac0434192e2ed6d8959199d8d1
+
+path: /bin/zgrep
+type: reg
+mode: 755
+source: .pkgdata/144f5ba00938c848eaa8bc2753f2454e6434e3029c41fb270e352ad05612ecf8
+blake3: 144f5ba00938c848eaa8bc2753f2454e6434e3029c41fb270e352ad05612ecf8
+
+path: /bin/zless
+type: reg
+mode: 755
+source: .pkgdata/5ef5ff93033be588e974804d38fface97877c22ef63ffa204187b262d76f7134
+blake3: 5ef5ff93033be588e974804d38fface97877c22ef63ffa204187b262d76f7134
+
+path: /bin/zmore
+type: reg
+mode: 755
+source: .pkgdata/bde2a0b37c9082a1961630bf79992e7987142c5bc927efc75780b80213932c0a
+blake3: bde2a0b37c9082a1961630bf79992e7987142c5bc927efc75780b80213932c0a
+
+path: /bin/znew
+type: reg
+mode: 755
+source: .pkgdata/5c374eb0defdf011d9190b20681ccdef87578d7c12036c6ed8f9f33c20794222
+blake3: 5c374eb0defdf011d9190b20681ccdef87578d7c12036c6ed8f9f33c20794222
+
+path: /dev
+type: dir
+mode: 755
+
+path: /etc
+type: dir
+mode: 755
+
 path: /etc/fstab
 type: reg
+mode: 644
 
 path: /etc/group
 type: reg
+mode: 644
 
 path: /etc/hosts
 type: reg
+mode: 644
 
 path: /etc/mtab
 type: sym
@@ -23,45 +1502,3958 @@ target: ../proc/self/mounts
 
 path: /etc/passwd
 type: reg
+mode: 644
+
+path: /etc/perp
+type: dir
+mode: 755
+
+path: /etc/perp/.boot
+type: dir
+mode: 755
+
+path: /etc/perp/.boot/rc.log
+type: sym
+target: ../.default/rc.log
+
+path: /etc/perp/.boot/rc.perp
+type: reg
+mode: 755
+
+path: /etc/perp/.default
+type: dir
+mode: 755
+
+path: /etc/perp/.default/rc.log
+type: reg
+mode: 755
+
+path: /etc/perp/.getty
+type: dir
+mode: 755
+
+path: /etc/perp/.getty/rc.main
+type: reg
+mode: 755
+
+path: /etc/perp/getty@tty1
+type: dir
+mode: 1755
+
+path: /etc/perp/getty@tty1/rc.main
+type: sym
+target: ../.getty/rc.main
+
+path: /etc/perp/getty@tty2
+type: dir
+mode: 1755
+
+path: /etc/perp/getty@tty2/rc.main
+type: sym
+target: ../.getty/rc.main
 
 path: /etc/profile
 type: reg
+mode: 644
 
 path: /etc/rc.init
 type: reg
-mode: 0755
+mode: 755
 
 path: /etc/rc.local
 type: reg
-mode: 0755
+mode: 755
 
 path: /etc/rc.shutdown
 type: reg
-mode: 0755
+mode: 755
 
 path: /etc/shadow
 type: reg
-mode: 0600
+mode: 600
 
 path: /etc/sysctl.conf
 type: reg
+mode: 644
+
+path: /home
+type: dir
+mode: 755
+
+path: /include
+type: dir
+mode: 755
+
+path: /include/aio.h
+type: reg
+mode: 644
+source: .pkgdata/fe999a441f87386c497f43f04772fa5816130a8cb7ec2b727aa3e754cd8f784c
+blake3: fe999a441f87386c497f43f04772fa5816130a8cb7ec2b727aa3e754cd8f784c
+
+path: /include/alloca.h
+type: reg
+mode: 644
+source: .pkgdata/6acb97df92f77409011bfa711acb49c0d441919b8bd21309029c7a3c5e6d4df5
+blake3: 6acb97df92f77409011bfa711acb49c0d441919b8bd21309029c7a3c5e6d4df5
+
+path: /include/ar.h
+type: reg
+mode: 644
+source: .pkgdata/4c3d0132955639fe68b2cc72e83a4dac7b67414a6bc37d353ec04e85f09f6f4e
+blake3: 4c3d0132955639fe68b2cc72e83a4dac7b67414a6bc37d353ec04e85f09f6f4e
+
+path: /include/arpa
+type: dir
+mode: 755
+
+path: /include/arpa/ftp.h
+type: reg
+mode: 644
+source: .pkgdata/e5f42d5c4569a86626138d82db9c1b5132d47451543c6dd0b6bfbfc8ba562ef8
+blake3: e5f42d5c4569a86626138d82db9c1b5132d47451543c6dd0b6bfbfc8ba562ef8
+
+path: /include/arpa/inet.h
+type: reg
+mode: 644
+source: .pkgdata/5b9dda92a8434d8a3c88de2993879e1a4bfa6764ddfb5fb83b0884f486f46b67
+blake3: 5b9dda92a8434d8a3c88de2993879e1a4bfa6764ddfb5fb83b0884f486f46b67
+
+path: /include/arpa/nameser.h
+type: reg
+mode: 644
+source: .pkgdata/b102a0d8199cb964d46f82796c3df09b92790bd9e893b6492343579ca710ff87
+blake3: b102a0d8199cb964d46f82796c3df09b92790bd9e893b6492343579ca710ff87
+
+path: /include/arpa/nameser_compat.h
+type: reg
+mode: 644
+source: .pkgdata/463c016a9f75a72d69b42a438201bb1763f7b48b6e9ef019d1c75ae37efb657d
+blake3: 463c016a9f75a72d69b42a438201bb1763f7b48b6e9ef019d1c75ae37efb657d
+
+path: /include/arpa/telnet.h
+type: reg
+mode: 644
+source: .pkgdata/90f1183540139e25e8e49fba15bc46c28bc9944afc15493252c266151959bee5
+blake3: 90f1183540139e25e8e49fba15bc46c28bc9944afc15493252c266151959bee5
+
+path: /include/arpa/tftp.h
+type: reg
+mode: 644
+source: .pkgdata/d4991ce502e4102565ca77d99225e5c8bc52685b1d6ca0b67ea59dd6a3dd48e8
+blake3: d4991ce502e4102565ca77d99225e5c8bc52685b1d6ca0b67ea59dd6a3dd48e8
+
+path: /include/assert.h
+type: reg
+mode: 644
+source: .pkgdata/f77ddc0066a77cc25152a5f75e03e41b1cf0dfa6a21d9c0346f9f190de767daa
+blake3: f77ddc0066a77cc25152a5f75e03e41b1cf0dfa6a21d9c0346f9f190de767daa
+
+path: /include/bits
+type: dir
+mode: 755
+
+path: /include/bits/alltypes.h
+type: reg
+mode: 644
+source: .pkgdata/b584487a7ff8ba8e56aed8d20a7788cd86b58910669d59ea518e6d2ed8396b8f
+blake3: b584487a7ff8ba8e56aed8d20a7788cd86b58910669d59ea518e6d2ed8396b8f
+
+path: /include/bits/dirent.h
+type: reg
+mode: 644
+source: .pkgdata/d2fceb3cdb1e712727868bd6cbc4e1aa3b60d68e874907cbc721d76ac39bd15c
+blake3: d2fceb3cdb1e712727868bd6cbc4e1aa3b60d68e874907cbc721d76ac39bd15c
+
+path: /include/bits/errno.h
+type: reg
+mode: 644
+source: .pkgdata/7df000e92b93482f5f49c01ea22ca945c74822a1a61086ec6303460bbfcb04ee
+blake3: 7df000e92b93482f5f49c01ea22ca945c74822a1a61086ec6303460bbfcb04ee
+
+path: /include/bits/fcntl.h
+type: reg
+mode: 644
+source: .pkgdata/668b77a95929581cc23669ccbc100d565e05ba34d977b0293692095cf67c9d50
+blake3: 668b77a95929581cc23669ccbc100d565e05ba34d977b0293692095cf67c9d50
+
+path: /include/bits/fenv.h
+type: reg
+mode: 644
+source: .pkgdata/7eb26bf423c16f6873ce45f31943888c34e1cdca1a3b6fbdefd60d291ec220b7
+blake3: 7eb26bf423c16f6873ce45f31943888c34e1cdca1a3b6fbdefd60d291ec220b7
+
+path: /include/bits/float.h
+type: reg
+mode: 644
+source: .pkgdata/6d0735ec1765509eb13bcf4ff8b9f99438bb97064634c69f40ab908cf821a014
+blake3: 6d0735ec1765509eb13bcf4ff8b9f99438bb97064634c69f40ab908cf821a014
+
+path: /include/bits/hwcap.h
+type: reg
+mode: 644
+source: .pkgdata/af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262
+blake3: af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262
+
+path: /include/bits/io.h
+type: reg
+mode: 644
+source: .pkgdata/64f4b636f7589cb266a532143f12cfe0c108c8be8bb5c01bb1409354ea740ae6
+blake3: 64f4b636f7589cb266a532143f12cfe0c108c8be8bb5c01bb1409354ea740ae6
+
+path: /include/bits/ioctl.h
+type: reg
+mode: 644
+source: .pkgdata/62332c4f022a8646aa2e37244b17ec6b935b6813159742ba67a9f4451af1249f
+blake3: 62332c4f022a8646aa2e37244b17ec6b935b6813159742ba67a9f4451af1249f
+
+path: /include/bits/ioctl_fix.h
+type: reg
+mode: 644
+source: .pkgdata/af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262
+blake3: af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262
+
+path: /include/bits/ipc.h
+type: reg
+mode: 644
+source: .pkgdata/83c2805fa36dc7bf89bbda6e701f746c339d24365f31f1f4fe86f389c3979cf9
+blake3: 83c2805fa36dc7bf89bbda6e701f746c339d24365f31f1f4fe86f389c3979cf9
+
+path: /include/bits/ipcstat.h
+type: reg
+mode: 644
+source: .pkgdata/9a3dd9ab3084517d2c359979e5097925c775aa74215a1441fb9a0f4c1b6390ef
+blake3: 9a3dd9ab3084517d2c359979e5097925c775aa74215a1441fb9a0f4c1b6390ef
+
+path: /include/bits/kd.h
+type: reg
+mode: 644
+source: .pkgdata/02e2f6190f99460fc73b4a61ebc70622392d9e5c8e852de9092517419e0b5b8c
+blake3: 02e2f6190f99460fc73b4a61ebc70622392d9e5c8e852de9092517419e0b5b8c
+
+path: /include/bits/limits.h
+type: reg
+mode: 644
+source: .pkgdata/e3db316054a320fad56b8c69769edae30b88d7c75a8a98b877aa3528af0214a8
+blake3: e3db316054a320fad56b8c69769edae30b88d7c75a8a98b877aa3528af0214a8
+
+path: /include/bits/link.h
+type: reg
+mode: 644
+source: .pkgdata/c80d1522a8ebd011bd59aa76d19bc201ba7fe408cf868bfe32d2f7fc9880f8a4
+blake3: c80d1522a8ebd011bd59aa76d19bc201ba7fe408cf868bfe32d2f7fc9880f8a4
+
+path: /include/bits/mman.h
+type: reg
+mode: 644
+source: .pkgdata/248cc3a881b35623286e742c33281a0065d431504f6f2ea3a186c002205a312f
+blake3: 248cc3a881b35623286e742c33281a0065d431504f6f2ea3a186c002205a312f
+
+path: /include/bits/msg.h
+type: reg
+mode: 644
+source: .pkgdata/46d64674bbd07041f09902c61cef7a266a13cd7b494211aadb47d3d4834f0118
+blake3: 46d64674bbd07041f09902c61cef7a266a13cd7b494211aadb47d3d4834f0118
+
+path: /include/bits/poll.h
+type: reg
+mode: 644
+source: .pkgdata/af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262
+blake3: af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262
+
+path: /include/bits/posix.h
+type: reg
+mode: 644
+source: .pkgdata/6ef2657e71df4cd2d08a0426c93ee60da74acf7e0f1296835b9a1b2001054915
+blake3: 6ef2657e71df4cd2d08a0426c93ee60da74acf7e0f1296835b9a1b2001054915
+
+path: /include/bits/ptrace.h
+type: reg
+mode: 644
+source: .pkgdata/45d924e742c1a3cf65ef62514cf876e6aab48f799f9c60098a31e1266f2a647c
+blake3: 45d924e742c1a3cf65ef62514cf876e6aab48f799f9c60098a31e1266f2a647c
+
+path: /include/bits/reg.h
+type: reg
+mode: 644
+source: .pkgdata/35a535940642491fa4be816b492a6bae8739f84a738257c1bae723625ecb9838
+blake3: 35a535940642491fa4be816b492a6bae8739f84a738257c1bae723625ecb9838
+
+path: /include/bits/resource.h
+type: reg
+mode: 644
+source: .pkgdata/af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262
+blake3: af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262
+
+path: /include/bits/sem.h
+type: reg
+mode: 644
+source: .pkgdata/765b3dbdbbfb495ec567b9906cdbf08a00df01a0163de27b799e8883b8caeb40
+blake3: 765b3dbdbbfb495ec567b9906cdbf08a00df01a0163de27b799e8883b8caeb40
+
+path: /include/bits/setjmp.h
+type: reg
+mode: 644
+source: .pkgdata/77b60f7e939ce3c9af85d12ca838a391ce84f0925452137537f591657d22e567
+blake3: 77b60f7e939ce3c9af85d12ca838a391ce84f0925452137537f591657d22e567
+
+path: /include/bits/shm.h
+type: reg
+mode: 644
+source: .pkgdata/ee4706c97c0e4d42c68eb10d3ab98279e532fda10e32cd5bfc9d855c9ba6f9d9
+blake3: ee4706c97c0e4d42c68eb10d3ab98279e532fda10e32cd5bfc9d855c9ba6f9d9
+
+path: /include/bits/signal.h
+type: reg
+mode: 644
+source: .pkgdata/f38bf9374fbe99e6561cf0738f423f23b3ff9cf2f9b19624412f62292b785278
+blake3: f38bf9374fbe99e6561cf0738f423f23b3ff9cf2f9b19624412f62292b785278
+
+path: /include/bits/socket.h
+type: reg
+mode: 644
+source: .pkgdata/af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262
+blake3: af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262
+
+path: /include/bits/soundcard.h
+type: reg
+mode: 644
+source: .pkgdata/139c43bb8370bde43c1c0f3886c013f0d388b1867c0cce37fdbb77033edd0308
+blake3: 139c43bb8370bde43c1c0f3886c013f0d388b1867c0cce37fdbb77033edd0308
+
+path: /include/bits/stat.h
+type: reg
+mode: 644
+source: .pkgdata/71662f446fb671e3acdbdbfcc0cf10adbead74c250aa5cc0f78bd6273691c729
+blake3: 71662f446fb671e3acdbdbfcc0cf10adbead74c250aa5cc0f78bd6273691c729
+
+path: /include/bits/statfs.h
+type: reg
+mode: 644
+source: .pkgdata/620a8c29baa74ea7d1a9a13c3aaddd35f32644d61588671ebbb299ddfb6a2a20
+blake3: 620a8c29baa74ea7d1a9a13c3aaddd35f32644d61588671ebbb299ddfb6a2a20
+
+path: /include/bits/stdint.h
+type: reg
+mode: 644
+source: .pkgdata/7b94eb3b9122f00eedba49980926763ce6b594ad80114da7cedc046d72813deb
+blake3: 7b94eb3b9122f00eedba49980926763ce6b594ad80114da7cedc046d72813deb
+
+path: /include/bits/syscall.h
+type: reg
+mode: 644
+source: .pkgdata/e7e277f09765de16cd0b39fb6ffe4ba06b1e319f96a366c88647dce5bd61fbf6
+blake3: e7e277f09765de16cd0b39fb6ffe4ba06b1e319f96a366c88647dce5bd61fbf6
+
+path: /include/bits/termios.h
+type: reg
+mode: 644
+source: .pkgdata/05f1f6fcb8de0a3321a14706253732fd290301fbf9cff6c376da920ffd311f53
+blake3: 05f1f6fcb8de0a3321a14706253732fd290301fbf9cff6c376da920ffd311f53
+
+path: /include/bits/user.h
+type: reg
+mode: 644
+source: .pkgdata/46039d2e07bfedfa2c7f88d0a3cc4a77082564fc7384de229fe7867c9152ff11
+blake3: 46039d2e07bfedfa2c7f88d0a3cc4a77082564fc7384de229fe7867c9152ff11
+
+path: /include/bits/vt.h
+type: reg
+mode: 644
+source: .pkgdata/adff523cb96908543c742e4bac98b376b9d6ec8ca67ba4d03639c9c99a48f391
+blake3: adff523cb96908543c742e4bac98b376b9d6ec8ca67ba4d03639c9c99a48f391
+
+path: /include/byteswap.h
+type: reg
+mode: 644
+source: .pkgdata/9bbb466eef84b953d8b7aa35f8cb4c7d3dec3d3ba7c9ba96503a43932ec3780b
+blake3: 9bbb466eef84b953d8b7aa35f8cb4c7d3dec3d3ba7c9ba96503a43932ec3780b
+
+path: /include/bzlib.h
+type: reg
+mode: 644
+source: .pkgdata/77dd7e818457ea3c896aac5d9c2a9dc32e6b450d42db3824728266f3c83d4cee
+blake3: 77dd7e818457ea3c896aac5d9c2a9dc32e6b450d42db3824728266f3c83d4cee
+
+path: /include/complex.h
+type: reg
+mode: 644
+source: .pkgdata/a8b916bb0ef0c2d2753fb7c94acbbf097d1f1b3d792b3ad8b9840107804385be
+blake3: a8b916bb0ef0c2d2753fb7c94acbbf097d1f1b3d792b3ad8b9840107804385be
+
+path: /include/cpio.h
+type: reg
+mode: 644
+source: .pkgdata/e9637dcf19ebabced9c6fda48b7aeb52fa97d7810c45921813a699601b4e32f1
+blake3: e9637dcf19ebabced9c6fda48b7aeb52fa97d7810c45921813a699601b4e32f1
+
+path: /include/crypt.h
+type: reg
+mode: 644
+source: .pkgdata/67244c13c4f1fc211ef6ccc7667ec63a07ff815a736478945d80a118b015870c
+blake3: 67244c13c4f1fc211ef6ccc7667ec63a07ff815a736478945d80a118b015870c
+
+path: /include/ctype.h
+type: reg
+mode: 644
+source: .pkgdata/7ea9b0552eaf7d6c124471c5d53705ef8c8b81857af87a33f16db74090f4efe8
+blake3: 7ea9b0552eaf7d6c124471c5d53705ef8c8b81857af87a33f16db74090f4efe8
+
+path: /include/dirent.h
+type: reg
+mode: 644
+source: .pkgdata/1d72129bbf6aea4e6f5f55a91dc950994d476fa01691c93d5626db7c2c15900e
+blake3: 1d72129bbf6aea4e6f5f55a91dc950994d476fa01691c93d5626db7c2c15900e
+
+path: /include/dlfcn.h
+type: reg
+mode: 644
+source: .pkgdata/d2b76366fcdf23be215e6d425fb3e06126d23db5ff98bbdb209b1854e2b9242f
+blake3: d2b76366fcdf23be215e6d425fb3e06126d23db5ff98bbdb209b1854e2b9242f
+
+path: /include/elf.h
+type: reg
+mode: 644
+source: .pkgdata/218b14943bf84c57932f6e7ac66ffa5c456f4d58d9330e44cc66e0f0322402ba
+blake3: 218b14943bf84c57932f6e7ac66ffa5c456f4d58d9330e44cc66e0f0322402ba
+
+path: /include/endian.h
+type: reg
+mode: 644
+source: .pkgdata/001cd335bdecbeb52a0c59eaa46eaf889ba5f056227c8f6fb1895d9dd0f5f022
+blake3: 001cd335bdecbeb52a0c59eaa46eaf889ba5f056227c8f6fb1895d9dd0f5f022
+
+path: /include/err.h
+type: reg
+mode: 644
+source: .pkgdata/c71b7264e4de99c4408ca14e67c9b3bac882a60fe600470a64b1eda90d0704a5
+blake3: c71b7264e4de99c4408ca14e67c9b3bac882a60fe600470a64b1eda90d0704a5
+
+path: /include/errno.h
+type: reg
+mode: 644
+source: .pkgdata/82a08378b1d6e6021a77c00ac54afa4cbc794a7fcea2cc164d9dafb7292c9b75
+blake3: 82a08378b1d6e6021a77c00ac54afa4cbc794a7fcea2cc164d9dafb7292c9b75
+
+path: /include/fcntl.h
+type: reg
+mode: 644
+source: .pkgdata/d8e3e42d7ee51941d9aa1737daeee0bf0ae48edcc5e20e5b00f0302e774c1ede
+blake3: d8e3e42d7ee51941d9aa1737daeee0bf0ae48edcc5e20e5b00f0302e774c1ede
+
+path: /include/features.h
+type: reg
+mode: 644
+source: .pkgdata/971689a41544e9a58375edf0cd0254142c0ca1b5c05e37bfc1a9e3f757381e2d
+blake3: 971689a41544e9a58375edf0cd0254142c0ca1b5c05e37bfc1a9e3f757381e2d
+
+path: /include/fenv.h
+type: reg
+mode: 644
+source: .pkgdata/dff655c89a9df5e627ee526ed564951238a55d09b6e946a0e1690eac60ed9937
+blake3: dff655c89a9df5e627ee526ed564951238a55d09b6e946a0e1690eac60ed9937
+
+path: /include/float.h
+type: reg
+mode: 644
+source: .pkgdata/a9d749fad99f4fe45097ab83e554030c1b37be68296bd3030b13a147b04273e7
+blake3: a9d749fad99f4fe45097ab83e554030c1b37be68296bd3030b13a147b04273e7
+
+path: /include/fmtmsg.h
+type: reg
+mode: 644
+source: .pkgdata/eafe4ac2169a963ed4bebf381f433de7d0889f3ef76a54dde1a3c3d844ade0a0
+blake3: eafe4ac2169a963ed4bebf381f433de7d0889f3ef76a54dde1a3c3d844ade0a0
+
+path: /include/fnmatch.h
+type: reg
+mode: 644
+source: .pkgdata/e33f606edc229fb45538f2b683c0fcdc2b9b384a7fa0aa98a8660f00cde96f11
+blake3: e33f606edc229fb45538f2b683c0fcdc2b9b384a7fa0aa98a8660f00cde96f11
+
+path: /include/ftw.h
+type: reg
+mode: 644
+source: .pkgdata/15a477d4e525ec7996107d23689f9549b3fbad2f707993ece45bb074526ce850
+blake3: 15a477d4e525ec7996107d23689f9549b3fbad2f707993ece45bb074526ce850
+
+path: /include/getopt.h
+type: reg
+mode: 644
+source: .pkgdata/c5e3aace7c1aec983dd6b53cb32156968718b1b7642b92dc120881c6583ee3db
+blake3: c5e3aace7c1aec983dd6b53cb32156968718b1b7642b92dc120881c6583ee3db
+
+path: /include/glob.h
+type: reg
+mode: 644
+source: .pkgdata/ba7a642e9d3b300970e3c180f634beb8610cd3e94e425c7e29c1357c61a4f9eb
+blake3: ba7a642e9d3b300970e3c180f634beb8610cd3e94e425c7e29c1357c61a4f9eb
+
+path: /include/grp.h
+type: reg
+mode: 644
+source: .pkgdata/eb519c991686c32381cc091187cad88c90dde8eb2ec50264abda3501c7d4abb0
+blake3: eb519c991686c32381cc091187cad88c90dde8eb2ec50264abda3501c7d4abb0
+
+path: /include/iconv.h
+type: reg
+mode: 644
+source: .pkgdata/7af708c8d3ba96bb8b95257ce7f735b2570ea3c84fbf5126277d3d7b5bfca14e
+blake3: 7af708c8d3ba96bb8b95257ce7f735b2570ea3c84fbf5126277d3d7b5bfca14e
+
+path: /include/ifaddrs.h
+type: reg
+mode: 644
+source: .pkgdata/91d13cc5acca5799e4bc96541152d313e998fb129e29542dcd84f0910dc2ee10
+blake3: 91d13cc5acca5799e4bc96541152d313e998fb129e29542dcd84f0910dc2ee10
+
+path: /include/inttypes.h
+type: reg
+mode: 644
+source: .pkgdata/dbff8473973d98501f1a06d304f2a0b48be8ca692711093f36e0237b348ab58f
+blake3: dbff8473973d98501f1a06d304f2a0b48be8ca692711093f36e0237b348ab58f
+
+path: /include/iso646.h
+type: reg
+mode: 644
+source: .pkgdata/15fb3130f6499a9c98a9f5d8f25fb11609f73216b9528f5ec4cae3504ef5735d
+blake3: 15fb3130f6499a9c98a9f5d8f25fb11609f73216b9528f5ec4cae3504ef5735d
+
+path: /include/langinfo.h
+type: reg
+mode: 644
+source: .pkgdata/a22ff5787f53755b6b3876bb71a02417b31867ff5b25cff6fe5dac87cb9a94a5
+blake3: a22ff5787f53755b6b3876bb71a02417b31867ff5b25cff6fe5dac87cb9a94a5
+
+path: /include/lastlog.h
+type: reg
+mode: 644
+source: .pkgdata/edafe9afcf25a5460225735878353f07461e4f9e4bbc26ca27cf8312413d065c
+blake3: edafe9afcf25a5460225735878353f07461e4f9e4bbc26ca27cf8312413d065c
+
+path: /include/libgen.h
+type: reg
+mode: 644
+source: .pkgdata/95a7108a71b04f2aa77cb6b66d75b5e40fc10f8a347c2201f07f620acf3394ac
+blake3: 95a7108a71b04f2aa77cb6b66d75b5e40fc10f8a347c2201f07f620acf3394ac
+
+path: /include/libintl.h
+type: reg
+mode: 644
+source: .pkgdata/c6d500ddd2fa41ba653c6304f623c62526bbbf31787672de187e571713530266
+blake3: c6d500ddd2fa41ba653c6304f623c62526bbbf31787672de187e571713530266
+
+path: /include/limits.h
+type: reg
+mode: 644
+source: .pkgdata/5aa5b9d277ad1eb2f3d0eb7cda6b90526aac3381ad438ab27301a596fca17aaf
+blake3: 5aa5b9d277ad1eb2f3d0eb7cda6b90526aac3381ad438ab27301a596fca17aaf
+
+path: /include/link.h
+type: reg
+mode: 644
+source: .pkgdata/2185cbb0c35489ed207d185537b5d212e1b192ae484bff15a5b5f97e1b8b9175
+blake3: 2185cbb0c35489ed207d185537b5d212e1b192ae484bff15a5b5f97e1b8b9175
+
+path: /include/locale.h
+type: reg
+mode: 644
+source: .pkgdata/4fa54a7f04953e73ecb45476baba9558649ab1eb391050a289f743216ac39ab0
+blake3: 4fa54a7f04953e73ecb45476baba9558649ab1eb391050a289f743216ac39ab0
+
+path: /include/lzma
+type: dir
+mode: 755
+
+path: /include/lzma/base.h
+type: reg
+mode: 644
+source: .pkgdata/7e4ccde0c131e807f362f149cf2ded9bc6c42e0fe3d4d456a0731d0491db6b3e
+blake3: 7e4ccde0c131e807f362f149cf2ded9bc6c42e0fe3d4d456a0731d0491db6b3e
+
+path: /include/lzma/bcj.h
+type: reg
+mode: 644
+source: .pkgdata/758b73a347015cf70667558431f678cee5eddb5a884060b545bcd36895235e5d
+blake3: 758b73a347015cf70667558431f678cee5eddb5a884060b545bcd36895235e5d
+
+path: /include/lzma/block.h
+type: reg
+mode: 644
+source: .pkgdata/88a903ce82208a14488aa9e579e21b02d7231dde65e85a02bda976527e1879b1
+blake3: 88a903ce82208a14488aa9e579e21b02d7231dde65e85a02bda976527e1879b1
+
+path: /include/lzma/check.h
+type: reg
+mode: 644
+source: .pkgdata/047edb79f325a8f750bb091ec92d4ac2e065941d71446e7acf3a6af832715a38
+blake3: 047edb79f325a8f750bb091ec92d4ac2e065941d71446e7acf3a6af832715a38
+
+path: /include/lzma/container.h
+type: reg
+mode: 644
+source: .pkgdata/2ccd7a04d1bbcf0158c60642fe06d6a6153af664986e8fe5b1b6887132693c70
+blake3: 2ccd7a04d1bbcf0158c60642fe06d6a6153af664986e8fe5b1b6887132693c70
+
+path: /include/lzma/delta.h
+type: reg
+mode: 644
+source: .pkgdata/5c96e029a8c2b5ae6569958bc4303dbb9ce9cf960f70bbef463df65ca835c367
+blake3: 5c96e029a8c2b5ae6569958bc4303dbb9ce9cf960f70bbef463df65ca835c367
+
+path: /include/lzma/filter.h
+type: reg
+mode: 644
+source: .pkgdata/c3f97643932059bbcf5d15330a5b99cf677094478886c6a600d52d2330ab2c78
+blake3: c3f97643932059bbcf5d15330a5b99cf677094478886c6a600d52d2330ab2c78
+
+path: /include/lzma/hardware.h
+type: reg
+mode: 644
+source: .pkgdata/8297d438d049f6bf5e618f38bd6afe2dcc801948b8a65a50729bbd9c7c3dec5a
+blake3: 8297d438d049f6bf5e618f38bd6afe2dcc801948b8a65a50729bbd9c7c3dec5a
+
+path: /include/lzma/index.h
+type: reg
+mode: 644
+source: .pkgdata/3a206eb2dd32b0a120f6a7921019807482c6ed47f67cf977beb40d1a3e601241
+blake3: 3a206eb2dd32b0a120f6a7921019807482c6ed47f67cf977beb40d1a3e601241
+
+path: /include/lzma/index_hash.h
+type: reg
+mode: 644
+source: .pkgdata/281b16ce9adb8070557e216c0bc0ea0f92175e8363a3a47911bc9b01cfce6fe4
+blake3: 281b16ce9adb8070557e216c0bc0ea0f92175e8363a3a47911bc9b01cfce6fe4
+
+path: /include/lzma/lzma12.h
+type: reg
+mode: 644
+source: .pkgdata/a7fae078c757b75c59a8fd4a2096a4e7039ad89c8463b1d91ffe4401c0c66142
+blake3: a7fae078c757b75c59a8fd4a2096a4e7039ad89c8463b1d91ffe4401c0c66142
+
+path: /include/lzma/stream_flags.h
+type: reg
+mode: 644
+source: .pkgdata/9c9e5c2abd584bf3b1f9b8372681d4478f9a2e5f84c074f7ef5d6f74bbcb3337
+blake3: 9c9e5c2abd584bf3b1f9b8372681d4478f9a2e5f84c074f7ef5d6f74bbcb3337
+
+path: /include/lzma/version.h
+type: reg
+mode: 644
+source: .pkgdata/8550be26bc1848ad4859069c15ac499b560e97b62743487e401c25a167398515
+blake3: 8550be26bc1848ad4859069c15ac499b560e97b62743487e401c25a167398515
+
+path: /include/lzma/vli.h
+type: reg
+mode: 644
+source: .pkgdata/f7e6d00424f0c3d8a5d0abfe3515186df90a809be08ecaa4da7758ac3b28fa28
+blake3: f7e6d00424f0c3d8a5d0abfe3515186df90a809be08ecaa4da7758ac3b28fa28
+
+path: /include/lzma.h
+type: reg
+mode: 644
+source: .pkgdata/e7185e654092d40b72a3854d3f5d321dcf9b54ce8cd673a3cce1f6bce361d31a
+blake3: e7185e654092d40b72a3854d3f5d321dcf9b54ce8cd673a3cce1f6bce361d31a
+
+path: /include/malloc.h
+type: reg
+mode: 644
+source: .pkgdata/5fd8aa18b4fe5af9b2f862c5040d43ca298d66c710dd9ba64e6dbaa899d0aa29
+blake3: 5fd8aa18b4fe5af9b2f862c5040d43ca298d66c710dd9ba64e6dbaa899d0aa29
+
+path: /include/math.h
+type: reg
+mode: 644
+source: .pkgdata/61368cc75a9da6604c4f573325c0da2ffff7324c514ce789f5b61d1cbbc5c55c
+blake3: 61368cc75a9da6604c4f573325c0da2ffff7324c514ce789f5b61d1cbbc5c55c
+
+path: /include/memory.h
+type: reg
+mode: 644
+source: .pkgdata/711716bfe45550f05b40f58bf8a1e4a8ac2263257e108d84a12093ff8e240b81
+blake3: 711716bfe45550f05b40f58bf8a1e4a8ac2263257e108d84a12093ff8e240b81
+
+path: /include/mntent.h
+type: reg
+mode: 644
+source: .pkgdata/48f521b214010f76de85efa10486e55080ed6e0c82a6d0c4914dcd380f5777c4
+blake3: 48f521b214010f76de85efa10486e55080ed6e0c82a6d0c4914dcd380f5777c4
+
+path: /include/monetary.h
+type: reg
+mode: 644
+source: .pkgdata/136b729e7a2caf3edbf8d78904d0d20a562a47deb636d87deb53d665f609dc2a
+blake3: 136b729e7a2caf3edbf8d78904d0d20a562a47deb636d87deb53d665f609dc2a
+
+path: /include/mqueue.h
+type: reg
+mode: 644
+source: .pkgdata/e91849ee1cc3331e022cea492dadbc485b87212ce201ba332e5d4fd014f2b303
+blake3: e91849ee1cc3331e022cea492dadbc485b87212ce201ba332e5d4fd014f2b303
+
+path: /include/net
+type: dir
+mode: 755
+
+path: /include/net/ethernet.h
+type: reg
+mode: 644
+source: .pkgdata/495637f897087c6ed3eba5a04fddf7727e6aa7f443e06bdfe737925604e087e9
+blake3: 495637f897087c6ed3eba5a04fddf7727e6aa7f443e06bdfe737925604e087e9
+
+path: /include/net/if.h
+type: reg
+mode: 644
+source: .pkgdata/a9aad846dc1b628353baec5d80e6b1097197cf16a25a497774b372aaf202049d
+blake3: a9aad846dc1b628353baec5d80e6b1097197cf16a25a497774b372aaf202049d
+
+path: /include/net/if_arp.h
+type: reg
+mode: 644
+source: .pkgdata/6606d1dcfe98929974089f23dc3f0f462d0776c4b6c6b16507edcc6f072d302b
+blake3: 6606d1dcfe98929974089f23dc3f0f462d0776c4b6c6b16507edcc6f072d302b
+
+path: /include/net/route.h
+type: reg
+mode: 644
+source: .pkgdata/f6d26988faa5ed2e44d8c3a9610539fa18b8c7f50ad9ac5318cabeb350284858
+blake3: f6d26988faa5ed2e44d8c3a9610539fa18b8c7f50ad9ac5318cabeb350284858
+
+path: /include/netdb.h
+type: reg
+mode: 644
+source: .pkgdata/2cc89aa18875c0227ac57d0b9036106bb3d48e86b664a50458cd2750c2f718a1
+blake3: 2cc89aa18875c0227ac57d0b9036106bb3d48e86b664a50458cd2750c2f718a1
+
+path: /include/netinet
+type: dir
+mode: 755
+
+path: /include/netinet/ether.h
+type: reg
+mode: 644
+source: .pkgdata/080031d6344e8178d648dadf187e1f1276cd664fb1b5ec85d1311529f2b37a66
+blake3: 080031d6344e8178d648dadf187e1f1276cd664fb1b5ec85d1311529f2b37a66
+
+path: /include/netinet/icmp6.h
+type: reg
+mode: 644
+source: .pkgdata/90fa56e7e5893c9c692a6a653dbae5f9d10b8c1827b67a59f3f217b5ce3f9c5c
+blake3: 90fa56e7e5893c9c692a6a653dbae5f9d10b8c1827b67a59f3f217b5ce3f9c5c
+
+path: /include/netinet/if_ether.h
+type: reg
+mode: 644
+source: .pkgdata/8104bf08b51b498af1aae2a5287add0d48e89fbd12291ef73f5a5e915349e17d
+blake3: 8104bf08b51b498af1aae2a5287add0d48e89fbd12291ef73f5a5e915349e17d
+
+path: /include/netinet/igmp.h
+type: reg
+mode: 644
+source: .pkgdata/a313f424f9fed82c56cc72213e703393d237660e35046430d2d0d9aa0d654947
+blake3: a313f424f9fed82c56cc72213e703393d237660e35046430d2d0d9aa0d654947
+
+path: /include/netinet/in.h
+type: reg
+mode: 644
+source: .pkgdata/a4a5b75691c8fd3dc461cbcd0b52be5f0832590bc16c81cc7d507e63a0531552
+blake3: a4a5b75691c8fd3dc461cbcd0b52be5f0832590bc16c81cc7d507e63a0531552
+
+path: /include/netinet/in_systm.h
+type: reg
+mode: 644
+source: .pkgdata/7f85dbeb71b5a8c84ca7df7a56ae0161daec21a1b98b5e1bbf0b616b613a30fb
+blake3: 7f85dbeb71b5a8c84ca7df7a56ae0161daec21a1b98b5e1bbf0b616b613a30fb
+
+path: /include/netinet/ip.h
+type: reg
+mode: 644
+source: .pkgdata/b6585224db8b59cb611d5da3174fe099d9375542a92596bc0161004c87e2a8d8
+blake3: b6585224db8b59cb611d5da3174fe099d9375542a92596bc0161004c87e2a8d8
+
+path: /include/netinet/ip6.h
+type: reg
+mode: 644
+source: .pkgdata/65534e607d45189ebe12b87878215af37bc8fa347e301765268c2f392221b775
+blake3: 65534e607d45189ebe12b87878215af37bc8fa347e301765268c2f392221b775
+
+path: /include/netinet/ip_icmp.h
+type: reg
+mode: 644
+source: .pkgdata/543862d0ee7dc394d729366f804ed48af4ea61899e4233c171378822b75d5f5a
+blake3: 543862d0ee7dc394d729366f804ed48af4ea61899e4233c171378822b75d5f5a
+
+path: /include/netinet/tcp.h
+type: reg
+mode: 644
+source: .pkgdata/ef4d56b9115ef7c67f8ca0e8c3c491c593fd0a62c2f38574f153827ac2579fc4
+blake3: ef4d56b9115ef7c67f8ca0e8c3c491c593fd0a62c2f38574f153827ac2579fc4
+
+path: /include/netinet/udp.h
+type: reg
+mode: 644
+source: .pkgdata/06b77f39b774117b25bc9e62186a6b6a2acaec16f9c791278121ce8950f7fd12
+blake3: 06b77f39b774117b25bc9e62186a6b6a2acaec16f9c791278121ce8950f7fd12
+
+path: /include/netpacket
+type: dir
+mode: 755
+
+path: /include/netpacket/packet.h
+type: reg
+mode: 644
+source: .pkgdata/72aa07904147262465666639706be5796c61c5ffcca6fa0364598e5c4c2a9533
+blake3: 72aa07904147262465666639706be5796c61c5ffcca6fa0364598e5c4c2a9533
+
+path: /include/nl_types.h
+type: reg
+mode: 644
+source: .pkgdata/b983ee0072db3e1635d7cfe419538d2c10684c708aa1989a8d9ae7533b8b2403
+blake3: b983ee0072db3e1635d7cfe419538d2c10684c708aa1989a8d9ae7533b8b2403
+
+path: /include/paths.h
+type: reg
+mode: 644
+source: .pkgdata/10c063cb51547260195e0afea5d56794eabd995ce19b4722dceeaa1350179f31
+blake3: 10c063cb51547260195e0afea5d56794eabd995ce19b4722dceeaa1350179f31
+
+path: /include/poll.h
+type: reg
+mode: 644
+source: .pkgdata/91ed4778027210c419eba6627b6de83dea60ff9eb833ea5dabbde453fc453166
+blake3: 91ed4778027210c419eba6627b6de83dea60ff9eb833ea5dabbde453fc453166
+
+path: /include/pthread.h
+type: reg
+mode: 644
+source: .pkgdata/66b81436ba4985953bd97aa2475509ab10a34e4b9a72dff3b477324bc28609e0
+blake3: 66b81436ba4985953bd97aa2475509ab10a34e4b9a72dff3b477324bc28609e0
+
+path: /include/pty.h
+type: reg
+mode: 644
+source: .pkgdata/43ddee2051514e7274b8dca4dda9a1dca658e7b6d6ae4ab4cf3620246b538d84
+blake3: 43ddee2051514e7274b8dca4dda9a1dca658e7b6d6ae4ab4cf3620246b538d84
+
+path: /include/pwd.h
+type: reg
+mode: 644
+source: .pkgdata/165edfcdd308d8de4d8c991b27a0bd671e4afcd556077e8c82b44dce36f0b14a
+blake3: 165edfcdd308d8de4d8c991b27a0bd671e4afcd556077e8c82b44dce36f0b14a
+
+path: /include/regex.h
+type: reg
+mode: 644
+source: .pkgdata/1db7d8c10a77af6cba976796b0c1aae8d2ece415aebfa812e2ca96334b1b0344
+blake3: 1db7d8c10a77af6cba976796b0c1aae8d2ece415aebfa812e2ca96334b1b0344
+
+path: /include/resolv.h
+type: reg
+mode: 644
+source: .pkgdata/e1c7cb1c908db4ee6cac17ef2ac191da842394a13f037dcd4c2efe76e5fdcded
+blake3: e1c7cb1c908db4ee6cac17ef2ac191da842394a13f037dcd4c2efe76e5fdcded
+
+path: /include/sched.h
+type: reg
+mode: 644
+source: .pkgdata/39741a6318c39b80ec36221eb80d2c288b4c9f3fce4b90fc1d45aeb5d521104b
+blake3: 39741a6318c39b80ec36221eb80d2c288b4c9f3fce4b90fc1d45aeb5d521104b
+
+path: /include/scsi
+type: dir
+mode: 755
+
+path: /include/scsi/scsi.h
+type: reg
+mode: 644
+source: .pkgdata/4c300a6ceba837c1131371151e6f2a3d8a560c9f14161550cf42448b9b529d3c
+blake3: 4c300a6ceba837c1131371151e6f2a3d8a560c9f14161550cf42448b9b529d3c
+
+path: /include/scsi/scsi_ioctl.h
+type: reg
+mode: 644
+source: .pkgdata/f89ff6d176d4d300bac58d97bf75133ff86c7a7623c382418453f740a3ec258e
+blake3: f89ff6d176d4d300bac58d97bf75133ff86c7a7623c382418453f740a3ec258e
+
+path: /include/scsi/sg.h
+type: reg
+mode: 644
+source: .pkgdata/04cb94075293be02f17934febdfaa97cb578419cba0e78f6ee25571f34a5d41b
+blake3: 04cb94075293be02f17934febdfaa97cb578419cba0e78f6ee25571f34a5d41b
+
+path: /include/search.h
+type: reg
+mode: 644
+source: .pkgdata/b61db25f7c163a53d8f14b49d08e10bea5c5de18a363a95ee52dd8cac4033057
+blake3: b61db25f7c163a53d8f14b49d08e10bea5c5de18a363a95ee52dd8cac4033057
+
+path: /include/semaphore.h
+type: reg
+mode: 644
+source: .pkgdata/c724261b2a81f4c7ce082d6aade167a916fa1a00c920f5bfcb744a7a8d62f18b
+blake3: c724261b2a81f4c7ce082d6aade167a916fa1a00c920f5bfcb744a7a8d62f18b
+
+path: /include/setjmp.h
+type: reg
+mode: 644
+source: .pkgdata/5aa23b6ba9228467e51c5fb64326143572c808bca58e7263632d32465622b91f
+blake3: 5aa23b6ba9228467e51c5fb64326143572c808bca58e7263632d32465622b91f
+
+path: /include/shadow.h
+type: reg
+mode: 644
+source: .pkgdata/6a22672ecc39ed0c50d083ea62bd1e58c00c37ab4f0ea0310a1f1750c95d445b
+blake3: 6a22672ecc39ed0c50d083ea62bd1e58c00c37ab4f0ea0310a1f1750c95d445b
+
+path: /include/signal.h
+type: reg
+mode: 644
+source: .pkgdata/42598982362e9c57ccbe11d6e5c742f71b7e2740f2279cf202d69567d392bb97
+blake3: 42598982362e9c57ccbe11d6e5c742f71b7e2740f2279cf202d69567d392bb97
+
+path: /include/spawn.h
+type: reg
+mode: 644
+source: .pkgdata/bffd076194ef7d92990b455303f84f17d1eb1723356943e5c48759df73e506f9
+blake3: bffd076194ef7d92990b455303f84f17d1eb1723356943e5c48759df73e506f9
+
+path: /include/stdalign.h
+type: reg
+mode: 644
+source: .pkgdata/819cf95ae5706372568fcae4c0ab8bed5f789d73c789ac5cb9f2016d5a7b9dce
+blake3: 819cf95ae5706372568fcae4c0ab8bed5f789d73c789ac5cb9f2016d5a7b9dce
+
+path: /include/stdarg.h
+type: reg
+mode: 644
+source: .pkgdata/b90909b1b6d6301abea93eed5c4c1742f61b37b7b0831c7bb7c439a1cf41fab8
+blake3: b90909b1b6d6301abea93eed5c4c1742f61b37b7b0831c7bb7c439a1cf41fab8
+
+path: /include/stdbool.h
+type: reg
+mode: 644
+source: .pkgdata/8791ed227e7f6067bd7c71d6ba2b5fb51cde93d37d4d708321ae1acefb3695f5
+blake3: 8791ed227e7f6067bd7c71d6ba2b5fb51cde93d37d4d708321ae1acefb3695f5
+
+path: /include/stdc-predef.h
+type: reg
+mode: 644
+source: .pkgdata/92e4cecec35e61cf2c31a015f8a2d3c80ef9a896acdac171db41fdf558087339
+blake3: 92e4cecec35e61cf2c31a015f8a2d3c80ef9a896acdac171db41fdf558087339
+
+path: /include/stddef.h
+type: reg
+mode: 644
+source: .pkgdata/ff20d3376e103f8107561715f65882bda74672203038a73467430950edc0a03f
+blake3: ff20d3376e103f8107561715f65882bda74672203038a73467430950edc0a03f
+
+path: /include/stdint.h
+type: reg
+mode: 644
+source: .pkgdata/42259408f981f084888ec0c5d5706defb3dc3b599564527d9c7a1eaa2bb4771e
+blake3: 42259408f981f084888ec0c5d5706defb3dc3b599564527d9c7a1eaa2bb4771e
+
+path: /include/stdio.h
+type: reg
+mode: 644
+source: .pkgdata/fd8a7b7f8a921894d45f6f834540249db62b43c145dfbedeb43c3b3c6366a02e
+blake3: fd8a7b7f8a921894d45f6f834540249db62b43c145dfbedeb43c3b3c6366a02e
+
+path: /include/stdio_ext.h
+type: reg
+mode: 644
+source: .pkgdata/68c3d78f4daae0d1b86bcb03317597c70457dc1bb7b4e23655915e7f9f5866b6
+blake3: 68c3d78f4daae0d1b86bcb03317597c70457dc1bb7b4e23655915e7f9f5866b6
+
+path: /include/stdlib.h
+type: reg
+mode: 644
+source: .pkgdata/fb756f4edf7095eb30af03b256074aeb674728b3e3a252f413c6b864397b292d
+blake3: fb756f4edf7095eb30af03b256074aeb674728b3e3a252f413c6b864397b292d
+
+path: /include/stdnoreturn.h
+type: reg
+mode: 644
+source: .pkgdata/8c3414287be11e9045bb1fff65c6832e5f130353e145ef337d086d715afd8405
+blake3: 8c3414287be11e9045bb1fff65c6832e5f130353e145ef337d086d715afd8405
+
+path: /include/string.h
+type: reg
+mode: 644
+source: .pkgdata/a4e7a4183cfeeeb65656d1edeb439b6fc57f05a4e208cd16877499264feafd85
+blake3: a4e7a4183cfeeeb65656d1edeb439b6fc57f05a4e208cd16877499264feafd85
+
+path: /include/strings.h
+type: reg
+mode: 644
+source: .pkgdata/95d254dbff6a60fc66d00d6f64e82d1a28b3b023ecc52c7c46c6411531707432
+blake3: 95d254dbff6a60fc66d00d6f64e82d1a28b3b023ecc52c7c46c6411531707432
+
+path: /include/stropts.h
+type: reg
+mode: 644
+source: .pkgdata/e3e11660429a81d5a7522640bf45fd97d1ce0889eba5ef8af18eafbcdc750909
+blake3: e3e11660429a81d5a7522640bf45fd97d1ce0889eba5ef8af18eafbcdc750909
+
+path: /include/sys
+type: dir
+mode: 755
+
+path: /include/sys/acct.h
+type: reg
+mode: 644
+source: .pkgdata/95af7926c13615c5733190ad214c6e668dcb6f87e0c7880ccef6f0a78924c476
+blake3: 95af7926c13615c5733190ad214c6e668dcb6f87e0c7880ccef6f0a78924c476
+
+path: /include/sys/auxv.h
+type: reg
+mode: 644
+source: .pkgdata/f169feda9af17cefb4cc38c42a9c79186d6b4178ff555121c0eac72a0d42e666
+blake3: f169feda9af17cefb4cc38c42a9c79186d6b4178ff555121c0eac72a0d42e666
+
+path: /include/sys/cachectl.h
+type: reg
+mode: 644
+source: .pkgdata/e896ca12d355f9209a30c789ca20a6b1cfb1bef35ba66c9a4f99ed92dcb3d8bd
+blake3: e896ca12d355f9209a30c789ca20a6b1cfb1bef35ba66c9a4f99ed92dcb3d8bd
+
+path: /include/sys/dir.h
+type: reg
+mode: 644
+source: .pkgdata/5566931945c4986885908401f731b20769d8f59b9f3bbedaeb25d52237a6e073
+blake3: 5566931945c4986885908401f731b20769d8f59b9f3bbedaeb25d52237a6e073
+
+path: /include/sys/epoll.h
+type: reg
+mode: 644
+source: .pkgdata/69b2993cac0544e489190a64eaeacd30c691b04cfc767ad7ca92a72da78efd05
+blake3: 69b2993cac0544e489190a64eaeacd30c691b04cfc767ad7ca92a72da78efd05
+
+path: /include/sys/errno.h
+type: reg
+mode: 644
+source: .pkgdata/5331fb25aabd915a480aa253492f880d1b6037a235dcb794fe1b82907e9cf413
+blake3: 5331fb25aabd915a480aa253492f880d1b6037a235dcb794fe1b82907e9cf413
+
+path: /include/sys/eventfd.h
+type: reg
+mode: 644
+source: .pkgdata/9b0dfe8d40218cbb913d9af104ae0c859eac26cd110fa3a1fb02e4fff775f321
+blake3: 9b0dfe8d40218cbb913d9af104ae0c859eac26cd110fa3a1fb02e4fff775f321
+
+path: /include/sys/fanotify.h
+type: reg
+mode: 644
+source: .pkgdata/1b355fde14964fb55c86be8993e7481776197c2707cac3022190c5192b63ac5d
+blake3: 1b355fde14964fb55c86be8993e7481776197c2707cac3022190c5192b63ac5d
+
+path: /include/sys/fcntl.h
+type: reg
+mode: 644
+source: .pkgdata/74cbf08205454ace389885e7757d23258a761707c04e4912f5a86ab684148a30
+blake3: 74cbf08205454ace389885e7757d23258a761707c04e4912f5a86ab684148a30
+
+path: /include/sys/file.h
+type: reg
+mode: 644
+source: .pkgdata/6fe28f018db1a9a31ef1f4cc7fbbf32c2fc7372bc46b10d3464854990734343e
+blake3: 6fe28f018db1a9a31ef1f4cc7fbbf32c2fc7372bc46b10d3464854990734343e
+
+path: /include/sys/fsuid.h
+type: reg
+mode: 644
+source: .pkgdata/2b1e470b7f982dd20fe9920a5a7d1d7e541ce442d1fed1fda4091d392046b1e7
+blake3: 2b1e470b7f982dd20fe9920a5a7d1d7e541ce442d1fed1fda4091d392046b1e7
+
+path: /include/sys/inotify.h
+type: reg
+mode: 644
+source: .pkgdata/9678bf6518a69108266821c2bd3166c035a11d61ec188faea65a980dbc05274b
+blake3: 9678bf6518a69108266821c2bd3166c035a11d61ec188faea65a980dbc05274b
+
+path: /include/sys/io.h
+type: reg
+mode: 644
+source: .pkgdata/4075b5700b47f2d883b1c5aa20a2a30d25792e625639005afcfb86133680c1bd
+blake3: 4075b5700b47f2d883b1c5aa20a2a30d25792e625639005afcfb86133680c1bd
+
+path: /include/sys/ioctl.h
+type: reg
+mode: 644
+source: .pkgdata/92291a0bbe41d9147dcd30407d65513ac4be090012643913aa228e0850d46854
+blake3: 92291a0bbe41d9147dcd30407d65513ac4be090012643913aa228e0850d46854
+
+path: /include/sys/ipc.h
+type: reg
+mode: 644
+source: .pkgdata/e8bcaaf513a92f5005d4430ee67e67d7593808d92c77ec641acd4f3aaacd8332
+blake3: e8bcaaf513a92f5005d4430ee67e67d7593808d92c77ec641acd4f3aaacd8332
+
+path: /include/sys/kd.h
+type: reg
+mode: 644
+source: .pkgdata/ef44b5672b3a599f02dfda566f90fa74e73c3277e16d0f8ed917ac3779feec7b
+blake3: ef44b5672b3a599f02dfda566f90fa74e73c3277e16d0f8ed917ac3779feec7b
+
+path: /include/sys/klog.h
+type: reg
+mode: 644
+source: .pkgdata/6ec2f7bc322eee6371086c0cd77885aa2d2f07ab72de88747431fc7e9c66eba7
+blake3: 6ec2f7bc322eee6371086c0cd77885aa2d2f07ab72de88747431fc7e9c66eba7
+
+path: /include/sys/membarrier.h
+type: reg
+mode: 644
+source: .pkgdata/116a08efd51eb3d56e98d24cafc7aad4eaccca7bb77ede1b1ecc93c31ee1f66a
+blake3: 116a08efd51eb3d56e98d24cafc7aad4eaccca7bb77ede1b1ecc93c31ee1f66a
+
+path: /include/sys/mman.h
+type: reg
+mode: 644
+source: .pkgdata/5fb86d936f6b1b83b07a68ceae2e0a5e6e115bd88eeaf6f508ce5d1e9f440d12
+blake3: 5fb86d936f6b1b83b07a68ceae2e0a5e6e115bd88eeaf6f508ce5d1e9f440d12
+
+path: /include/sys/mount.h
+type: reg
+mode: 644
+source: .pkgdata/453a2ac078ed46fc78acf0602c401aad3f6b15f6c2e3de76d9e6f378d43dfcb2
+blake3: 453a2ac078ed46fc78acf0602c401aad3f6b15f6c2e3de76d9e6f378d43dfcb2
+
+path: /include/sys/msg.h
+type: reg
+mode: 644
+source: .pkgdata/358043323e30fb3dd53e9268dc9e82ba1e9a3b0b30102e2df89dee3fa54b558e
+blake3: 358043323e30fb3dd53e9268dc9e82ba1e9a3b0b30102e2df89dee3fa54b558e
+
+path: /include/sys/mtio.h
+type: reg
+mode: 644
+source: .pkgdata/486dd0fd49c19960708f0e4765f06f25b54e045b5a1ee33a677e1124b0cda0d1
+blake3: 486dd0fd49c19960708f0e4765f06f25b54e045b5a1ee33a677e1124b0cda0d1
+
+path: /include/sys/param.h
+type: reg
+mode: 644
+source: .pkgdata/a6fe5f924862ec8d5a6dc54b7f15c83972b9a794ca64773f22894874567ca339
+blake3: a6fe5f924862ec8d5a6dc54b7f15c83972b9a794ca64773f22894874567ca339
+
+path: /include/sys/personality.h
+type: reg
+mode: 644
+source: .pkgdata/c190ee2b60c54e5c20bcb7c7507c191b8fa6131bf1b9371fa902b3304b3962cf
+blake3: c190ee2b60c54e5c20bcb7c7507c191b8fa6131bf1b9371fa902b3304b3962cf
+
+path: /include/sys/poll.h
+type: reg
+mode: 644
+source: .pkgdata/0aa580508c8cf72bc2715db32d86f5e02e313282e8ea58b5609e30fa85036cd9
+blake3: 0aa580508c8cf72bc2715db32d86f5e02e313282e8ea58b5609e30fa85036cd9
+
+path: /include/sys/prctl.h
+type: reg
+mode: 644
+source: .pkgdata/5266cf14e016e0d77b9e54fce1e96e5fd287a3fb940f1c0d6b2c1cdbe97d4cce
+blake3: 5266cf14e016e0d77b9e54fce1e96e5fd287a3fb940f1c0d6b2c1cdbe97d4cce
+
+path: /include/sys/procfs.h
+type: reg
+mode: 644
+source: .pkgdata/2114d683b8a673fbdf5d64ad6b451ced59494fcbdffef7b40fa41ce0408d58f9
+blake3: 2114d683b8a673fbdf5d64ad6b451ced59494fcbdffef7b40fa41ce0408d58f9
+
+path: /include/sys/ptrace.h
+type: reg
+mode: 644
+source: .pkgdata/47d833398c8e8ac21af6896b6baf6b91cc63fa8d145c2d0ee25f0c54566ebc23
+blake3: 47d833398c8e8ac21af6896b6baf6b91cc63fa8d145c2d0ee25f0c54566ebc23
+
+path: /include/sys/quota.h
+type: reg
+mode: 644
+source: .pkgdata/7603e770472995c301bd145d51c64eccd47f7cb3d5172b6782a7895714f8534d
+blake3: 7603e770472995c301bd145d51c64eccd47f7cb3d5172b6782a7895714f8534d
+
+path: /include/sys/random.h
+type: reg
+mode: 644
+source: .pkgdata/bcb6acd8569e0c6a779af26a75ea3a7b8178edb8db8d68545ffb8ac54f20e833
+blake3: bcb6acd8569e0c6a779af26a75ea3a7b8178edb8db8d68545ffb8ac54f20e833
+
+path: /include/sys/reboot.h
+type: reg
+mode: 644
+source: .pkgdata/87c05727c8680d8261d3906cbb2c5ad649c1255ef7f907ab8d7f55838c77aeb3
+blake3: 87c05727c8680d8261d3906cbb2c5ad649c1255ef7f907ab8d7f55838c77aeb3
+
+path: /include/sys/reg.h
+type: reg
+mode: 644
+source: .pkgdata/76bed43b4ccb2e8844b0e18ebc0e793fb7a1654e35264fae6a35330095f39a95
+blake3: 76bed43b4ccb2e8844b0e18ebc0e793fb7a1654e35264fae6a35330095f39a95
+
+path: /include/sys/resource.h
+type: reg
+mode: 644
+source: .pkgdata/acb8c3957e3f95d0eb49460a4b8d729fd933f43a04e08936c1808cbb592a5a60
+blake3: acb8c3957e3f95d0eb49460a4b8d729fd933f43a04e08936c1808cbb592a5a60
+
+path: /include/sys/select.h
+type: reg
+mode: 644
+source: .pkgdata/3eebf5ce570c3b14de2166e4bf87a9fcdd1c44aece839c240b9f97f5fefcdaaf
+blake3: 3eebf5ce570c3b14de2166e4bf87a9fcdd1c44aece839c240b9f97f5fefcdaaf
+
+path: /include/sys/sem.h
+type: reg
+mode: 644
+source: .pkgdata/62e6fa2edf45bcb6eaeeef393c0a64f78c3285c1ae5ca3779032999a9df69a98
+blake3: 62e6fa2edf45bcb6eaeeef393c0a64f78c3285c1ae5ca3779032999a9df69a98
+
+path: /include/sys/sendfile.h
+type: reg
+mode: 644
+source: .pkgdata/f3fb7171675f66bd1873b42366bb47fd093a71d2b1bb131f0657fdd752449aa4
+blake3: f3fb7171675f66bd1873b42366bb47fd093a71d2b1bb131f0657fdd752449aa4
+
+path: /include/sys/shm.h
+type: reg
+mode: 644
+source: .pkgdata/2f95c68355d5bd858355d99481bc0808b39459ad7cad438c843d06c8496da8e6
+blake3: 2f95c68355d5bd858355d99481bc0808b39459ad7cad438c843d06c8496da8e6
+
+path: /include/sys/signal.h
+type: reg
+mode: 644
+source: .pkgdata/ad4b0ee85d3f2e01118e72d6e121ba55f5f7a9aaa37619c33f60abe097811fa0
+blake3: ad4b0ee85d3f2e01118e72d6e121ba55f5f7a9aaa37619c33f60abe097811fa0
+
+path: /include/sys/signalfd.h
+type: reg
+mode: 644
+source: .pkgdata/73bce82b1ed94d342f99526c2531777f70c0828f17b092d2a470eedfd5e26775
+blake3: 73bce82b1ed94d342f99526c2531777f70c0828f17b092d2a470eedfd5e26775
+
+path: /include/sys/socket.h
+type: reg
+mode: 644
+source: .pkgdata/d6fdc0d2cff3013edb4ea0893574be2ba03b2615dc54fcf56e29704969ecce09
+blake3: d6fdc0d2cff3013edb4ea0893574be2ba03b2615dc54fcf56e29704969ecce09
+
+path: /include/sys/soundcard.h
+type: reg
+mode: 644
+source: .pkgdata/dbe9c70ce90528f731a0a6ca9563542278f218efb40b0f130ad20be1333bc102
+blake3: dbe9c70ce90528f731a0a6ca9563542278f218efb40b0f130ad20be1333bc102
+
+path: /include/sys/stat.h
+type: reg
+mode: 644
+source: .pkgdata/9724035f74d50015e6db4242a04e307c5199af6378d0131b66f68511ff8a0292
+blake3: 9724035f74d50015e6db4242a04e307c5199af6378d0131b66f68511ff8a0292
+
+path: /include/sys/statfs.h
+type: reg
+mode: 644
+source: .pkgdata/1f3daec174c14732d2f8c3bddf6ba23be8bff27330d3fc0cacd4575150c6e7cf
+blake3: 1f3daec174c14732d2f8c3bddf6ba23be8bff27330d3fc0cacd4575150c6e7cf
+
+path: /include/sys/statvfs.h
+type: reg
+mode: 644
+source: .pkgdata/cfea4677a1fd60f51d3403d2e537008deaf44f360fc3ca50e01e3adc03ea7752
+blake3: cfea4677a1fd60f51d3403d2e537008deaf44f360fc3ca50e01e3adc03ea7752
+
+path: /include/sys/stropts.h
+type: reg
+mode: 644
+source: .pkgdata/08f12adba380c6649032652514154cbb98d5c759f70e98435de74fdfb14e16ce
+blake3: 08f12adba380c6649032652514154cbb98d5c759f70e98435de74fdfb14e16ce
+
+path: /include/sys/swap.h
+type: reg
+mode: 644
+source: .pkgdata/2883789372e24fa295e57ee108220db7a182f44a98e05fa2f0275d051e8de46b
+blake3: 2883789372e24fa295e57ee108220db7a182f44a98e05fa2f0275d051e8de46b
+
+path: /include/sys/syscall.h
+type: reg
+mode: 644
+source: .pkgdata/1a224c51179bb43da1b8e2c06ff72cb6284e37de0264fd3ac3ea438a5f5d7e97
+blake3: 1a224c51179bb43da1b8e2c06ff72cb6284e37de0264fd3ac3ea438a5f5d7e97
+
+path: /include/sys/sysinfo.h
+type: reg
+mode: 644
+source: .pkgdata/8b7637268033f2a8329fda11a666c2f92f5e8927461639dbd1baaa4d3d39c0d1
+blake3: 8b7637268033f2a8329fda11a666c2f92f5e8927461639dbd1baaa4d3d39c0d1
+
+path: /include/sys/syslog.h
+type: reg
+mode: 644
+source: .pkgdata/9c9ec42ba26bb30886048adab1a1dd470282a019c3e4c61ae166cdfbb0264be1
+blake3: 9c9ec42ba26bb30886048adab1a1dd470282a019c3e4c61ae166cdfbb0264be1
+
+path: /include/sys/sysmacros.h
+type: reg
+mode: 644
+source: .pkgdata/20d3f73367af91a634644eea71bbce2638ee601f4fd5920318ffa1994a9c501e
+blake3: 20d3f73367af91a634644eea71bbce2638ee601f4fd5920318ffa1994a9c501e
+
+path: /include/sys/termios.h
+type: reg
+mode: 644
+source: .pkgdata/7c379be254473dc2856d8d3738e632f46b87da58d5e8084c8d1d986a83b4f18d
+blake3: 7c379be254473dc2856d8d3738e632f46b87da58d5e8084c8d1d986a83b4f18d
+
+path: /include/sys/time.h
+type: reg
+mode: 644
+source: .pkgdata/a81fb1218929cafed3818663fccddabb60ccf0bd176cf2afbcaeba1856d24af7
+blake3: a81fb1218929cafed3818663fccddabb60ccf0bd176cf2afbcaeba1856d24af7
+
+path: /include/sys/timeb.h
+type: reg
+mode: 644
+source: .pkgdata/bfac1b3932d28913d44c84336e7f82665b6168327354edbe610ea56213eb4f45
+blake3: bfac1b3932d28913d44c84336e7f82665b6168327354edbe610ea56213eb4f45
+
+path: /include/sys/timerfd.h
+type: reg
+mode: 644
+source: .pkgdata/bcdfaa634f8eb4e23be61e701075f766a1e192862ea0bd14dad4578c5c2818a3
+blake3: bcdfaa634f8eb4e23be61e701075f766a1e192862ea0bd14dad4578c5c2818a3
+
+path: /include/sys/times.h
+type: reg
+mode: 644
+source: .pkgdata/80ceabd7e68cb324a97cbda13bbe34f04d549a929da769a75d5b449942b6efa3
+blake3: 80ceabd7e68cb324a97cbda13bbe34f04d549a929da769a75d5b449942b6efa3
+
+path: /include/sys/timex.h
+type: reg
+mode: 644
+source: .pkgdata/fa19cde94cf2801b64a74b248e1b478c43377d35f90f970287442056d23feafc
+blake3: fa19cde94cf2801b64a74b248e1b478c43377d35f90f970287442056d23feafc
+
+path: /include/sys/ttydefaults.h
+type: reg
+mode: 644
+source: .pkgdata/2f7a756e0a67cfdc38707af66de65a1ccc1a0891a540e3a4fce8380a4242639a
+blake3: 2f7a756e0a67cfdc38707af66de65a1ccc1a0891a540e3a4fce8380a4242639a
+
+path: /include/sys/types.h
+type: reg
+mode: 644
+source: .pkgdata/f56a57fa8bb35d04c7cfdf6e059043c3307f76afd31063ea05ad61680bf4359d
+blake3: f56a57fa8bb35d04c7cfdf6e059043c3307f76afd31063ea05ad61680bf4359d
+
+path: /include/sys/ucontext.h
+type: reg
+mode: 644
+source: .pkgdata/da0c65716aad7f69a649595ec78ff028dcc3b7526c84553d4ff92109e32ec949
+blake3: da0c65716aad7f69a649595ec78ff028dcc3b7526c84553d4ff92109e32ec949
+
+path: /include/sys/uio.h
+type: reg
+mode: 644
+source: .pkgdata/b792e10a6974aec5715d104c4428feb489553315816a2b81dd9f471fdad86f56
+blake3: b792e10a6974aec5715d104c4428feb489553315816a2b81dd9f471fdad86f56
+
+path: /include/sys/un.h
+type: reg
+mode: 644
+source: .pkgdata/533677932b0aff824c0dce2e46ed6ddc5a7d8b2f1bb4a1ead31f459a80bea270
+blake3: 533677932b0aff824c0dce2e46ed6ddc5a7d8b2f1bb4a1ead31f459a80bea270
+
+path: /include/sys/user.h
+type: reg
+mode: 644
+source: .pkgdata/a9cbe5ee52bddb9e65a89f2e6318a9aca2b1a0bde35f46b87f7952c125be9b14
+blake3: a9cbe5ee52bddb9e65a89f2e6318a9aca2b1a0bde35f46b87f7952c125be9b14
+
+path: /include/sys/utsname.h
+type: reg
+mode: 644
+source: .pkgdata/d326e9c0dd8d741b6d969b8fa16c44ad3610459463247ee83859b52556397804
+blake3: d326e9c0dd8d741b6d969b8fa16c44ad3610459463247ee83859b52556397804
+
+path: /include/sys/vfs.h
+type: reg
+mode: 644
+source: .pkgdata/09e11e2d081488400f4c21e24b435f41cba4f7b4acf21849dd4256d42428eb74
+blake3: 09e11e2d081488400f4c21e24b435f41cba4f7b4acf21849dd4256d42428eb74
+
+path: /include/sys/vt.h
+type: reg
+mode: 644
+source: .pkgdata/8414e83d3c4543611c0a35dc0438b8192ade5663f35970f78bb5ea834b7010e0
+blake3: 8414e83d3c4543611c0a35dc0438b8192ade5663f35970f78bb5ea834b7010e0
+
+path: /include/sys/wait.h
+type: reg
+mode: 644
+source: .pkgdata/e5b3d812000db26a81c439c7451e27ffeffbe5297f89f4c930e79c313f6960d4
+blake3: e5b3d812000db26a81c439c7451e27ffeffbe5297f89f4c930e79c313f6960d4
+
+path: /include/sys/xattr.h
+type: reg
+mode: 644
+source: .pkgdata/a9698cdf55e62b891a7b27e4b2a1e7400a5ddf01401ad213570f0772cf482b76
+blake3: a9698cdf55e62b891a7b27e4b2a1e7400a5ddf01401ad213570f0772cf482b76
+
+path: /include/syscall.h
+type: reg
+mode: 644
+source: .pkgdata/245e8f2147bed911ed6546949d7f8c1df379c874abbbeb490eeabfae92d2603f
+blake3: 245e8f2147bed911ed6546949d7f8c1df379c874abbbeb490eeabfae92d2603f
+
+path: /include/sysexits.h
+type: reg
+mode: 644
+source: .pkgdata/7441525c8b11213d7b1e12e7c0a28b8b926e11548297ec0c97419b086f5b624a
+blake3: 7441525c8b11213d7b1e12e7c0a28b8b926e11548297ec0c97419b086f5b624a
+
+path: /include/syslog.h
+type: reg
+mode: 644
+source: .pkgdata/c9b976c038e253ef5c36f547361f13f9c0b3e4819d4c340154a384b472fd5129
+blake3: c9b976c038e253ef5c36f547361f13f9c0b3e4819d4c340154a384b472fd5129
+
+path: /include/tar.h
+type: reg
+mode: 644
+source: .pkgdata/5bef0ac4288d2133fc327a577ecf7d4aac2931f0ed2f0287b62b5b05bb6d4abd
+blake3: 5bef0ac4288d2133fc327a577ecf7d4aac2931f0ed2f0287b62b5b05bb6d4abd
+
+path: /include/termios.h
+type: reg
+mode: 644
+source: .pkgdata/762e2fa5cc3e1a89e58b7d1d11513b564533847ea46a59dce1e48f7348399eb8
+blake3: 762e2fa5cc3e1a89e58b7d1d11513b564533847ea46a59dce1e48f7348399eb8
+
+path: /include/tgmath.h
+type: reg
+mode: 644
+source: .pkgdata/267876ad48dae4ae758ce1d32f463b09373e9092103e34a49889752738fb4726
+blake3: 267876ad48dae4ae758ce1d32f463b09373e9092103e34a49889752738fb4726
+
+path: /include/threads.h
+type: reg
+mode: 644
+source: .pkgdata/04a060b76aea6e708535cabac08111be841d0cb2bb0388c7700c816f2ecda0ff
+blake3: 04a060b76aea6e708535cabac08111be841d0cb2bb0388c7700c816f2ecda0ff
+
+path: /include/time.h
+type: reg
+mode: 644
+source: .pkgdata/bfb7057969cdefdd3f3682e9a5f66c59743c3eedafbdb5657e91bd288b4ba196
+blake3: bfb7057969cdefdd3f3682e9a5f66c59743c3eedafbdb5657e91bd288b4ba196
+
+path: /include/uchar.h
+type: reg
+mode: 644
+source: .pkgdata/c1113316641c968362e690772e181dea884e2ac80b2e129af1bd0d8b441a701e
+blake3: c1113316641c968362e690772e181dea884e2ac80b2e129af1bd0d8b441a701e
+
+path: /include/ucontext.h
+type: reg
+mode: 644
+source: .pkgdata/29a902f8a3461fa367795e1d687987c5a5cef73d2afbf3acc3a63612b83a5c6b
+blake3: 29a902f8a3461fa367795e1d687987c5a5cef73d2afbf3acc3a63612b83a5c6b
+
+path: /include/ulimit.h
+type: reg
+mode: 644
+source: .pkgdata/0258a5a78b11bff35930f80a595c078f7d8c0da7ae9f741b99ac6720cced9d70
+blake3: 0258a5a78b11bff35930f80a595c078f7d8c0da7ae9f741b99ac6720cced9d70
+
+path: /include/unistd.h
+type: reg
+mode: 644
+source: .pkgdata/857e3a08b4844cb4cf263c23ecb6cf2ad34a0bf9002d3570a6ceee8949fd401f
+blake3: 857e3a08b4844cb4cf263c23ecb6cf2ad34a0bf9002d3570a6ceee8949fd401f
+
+path: /include/utime.h
+type: reg
+mode: 644
+source: .pkgdata/b1d896612aeda23c472a3c82c562fd7139349643c561b5b4d2b29156709b0882
+blake3: b1d896612aeda23c472a3c82c562fd7139349643c561b5b4d2b29156709b0882
+
+path: /include/utmp.h
+type: reg
+mode: 644
+source: .pkgdata/a489755f670c7a42f81de6dd635d874e57aec361eebb4fd0e45383df32989cbd
+blake3: a489755f670c7a42f81de6dd635d874e57aec361eebb4fd0e45383df32989cbd
+
+path: /include/utmpx.h
+type: reg
+mode: 644
+source: .pkgdata/3d6fdc47e29f3b68d08409b96dd491a800754be051c90ba8d74fcd720c86c613
+blake3: 3d6fdc47e29f3b68d08409b96dd491a800754be051c90ba8d74fcd720c86c613
+
+path: /include/values.h
+type: reg
+mode: 644
+source: .pkgdata/0eee1f295d45016d4d5b597bf367f02c6595cf7ebc8830529e90caa541ff0554
+blake3: 0eee1f295d45016d4d5b597bf367f02c6595cf7ebc8830529e90caa541ff0554
+
+path: /include/wait.h
+type: reg
+mode: 644
+source: .pkgdata/a7483d7c489a3e0a598030af882c5e3fd4a06403fa178b59b466d108e08b2d4c
+blake3: a7483d7c489a3e0a598030af882c5e3fd4a06403fa178b59b466d108e08b2d4c
+
+path: /include/wchar.h
+type: reg
+mode: 644
+source: .pkgdata/9f8205b9d1e989d0b604d45e905d581e0885c6da5f9c21f2f90369bd707e333f
+blake3: 9f8205b9d1e989d0b604d45e905d581e0885c6da5f9c21f2f90369bd707e333f
+
+path: /include/wctype.h
+type: reg
+mode: 644
+source: .pkgdata/c9ed0b3d77842fb7bac6966c24cdacb7c9c24d85033987f34565fea9ad0fa185
+blake3: c9ed0b3d77842fb7bac6966c24cdacb7c9c24d85033987f34565fea9ad0fa185
+
+path: /include/wordexp.h
+type: reg
+mode: 644
+source: .pkgdata/f8b5731f7638115ab820ceb4ad3655ab0f856f2ede1733e648d53b0694e01aee
+blake3: f8b5731f7638115ab820ceb4ad3655ab0f856f2ede1733e648d53b0694e01aee
+
+path: /lib
+type: dir
+mode: 755
+
+path: /lib/Scrt1.o
+type: reg
+mode: 644
+source: .pkgdata/18f3dc16849e478341b94c2799b0ff123adf8bc15b08131e1ca0f6889ad7ad53
+blake3: 18f3dc16849e478341b94c2799b0ff123adf8bc15b08131e1ca0f6889ad7ad53
+
+path: /lib/crt1.o
+type: reg
+mode: 644
+source: .pkgdata/68ea14b0b5bdd091b8318f567d1f6467669db3280c6db5adf3965943bcde6893
+blake3: 68ea14b0b5bdd091b8318f567d1f6467669db3280c6db5adf3965943bcde6893
+
+path: /lib/crti.o
+type: reg
+mode: 644
+source: .pkgdata/f403500226b43248b0b531facd2395c7ba7aed3d0276bc905b5b423306afde6d
+blake3: f403500226b43248b0b531facd2395c7ba7aed3d0276bc905b5b423306afde6d
+
+path: /lib/crtn.o
+type: reg
+mode: 644
+source: .pkgdata/f19295db2d66d800e472355de7f886dd3da18cb26f5e31205da2da4aab0eb203
+blake3: f19295db2d66d800e472355de7f886dd3da18cb26f5e31205da2da4aab0eb203
+
+path: /lib/ld-musl-x86_64.so.1
+type: sym
+mode: 777
+target: /lib/libc.so
+
+path: /lib/libbz2.a
+type: reg
+mode: 644
+source: .pkgdata/0748df285189a497e64414f2b0ae791593776ee137dfb724420d05b467780376
+blake3: 0748df285189a497e64414f2b0ae791593776ee137dfb724420d05b467780376
+
+path: /lib/libc.a
+type: reg
+mode: 644
+source: .pkgdata/98b1580fcdb5cd90fe8066805a77569195bbf96e8af314be5765b8f3e5b2fcd9
+blake3: 98b1580fcdb5cd90fe8066805a77569195bbf96e8af314be5765b8f3e5b2fcd9
+
+path: /lib/libc.so
+type: reg
+mode: 755
+source: .pkgdata/9dec23cc7df8ee18063d4b41e979ed0f86c39f6ed7fb323c01a6b18b6362bac4
+blake3: 9dec23cc7df8ee18063d4b41e979ed0f86c39f6ed7fb323c01a6b18b6362bac4
+
+path: /lib/libcrypt.a
+type: reg
+mode: 644
+source: .pkgdata/3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+blake3: 3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+
+path: /lib/libdl.a
+type: reg
+mode: 644
+source: .pkgdata/3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+blake3: 3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+
+path: /lib/liblzma.a
+type: reg
+mode: 644
+source: .pkgdata/dba3555681b2d04d937e997493fbd1f9cf01b260c1fed093756f95a57e03e933
+blake3: dba3555681b2d04d937e997493fbd1f9cf01b260c1fed093756f95a57e03e933
+
+path: /lib/liblzma.la
+type: reg
+mode: 755
+source: .pkgdata/2e8ff8aecef01abde953d7cc66def04c8c88344ec914f6e24a2c5f871df82ef5
+blake3: 2e8ff8aecef01abde953d7cc66def04c8c88344ec914f6e24a2c5f871df82ef5
+
+path: /lib/liblzma.so
+type: sym
+mode: 777
+target: liblzma.so.5.2.5
+
+path: /lib/liblzma.so.5
+type: sym
+mode: 777
+target: liblzma.so.5.2.5
+
+path: /lib/liblzma.so.5.2.5
+type: reg
+mode: 755
+source: .pkgdata/622fb48d34db1a9bdf359196eba7724255415e19ae4a1471f687bb0af86204b2
+blake3: 622fb48d34db1a9bdf359196eba7724255415e19ae4a1471f687bb0af86204b2
+
+path: /lib/libm.a
+type: reg
+mode: 644
+source: .pkgdata/3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+blake3: 3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+
+path: /lib/libpthread.a
+type: reg
+mode: 644
+source: .pkgdata/3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+blake3: 3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+
+path: /lib/libresolv.a
+type: reg
+mode: 644
+source: .pkgdata/3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+blake3: 3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+
+path: /lib/librt.a
+type: reg
+mode: 644
+source: .pkgdata/3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+blake3: 3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+
+path: /lib/libutil.a
+type: reg
+mode: 644
+source: .pkgdata/3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+blake3: 3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+
+path: /lib/libxnet.a
+type: reg
+mode: 644
+source: .pkgdata/3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+blake3: 3ba363b1c314e158a3ed3769a2d8c73272b3a01da712c43ecc25af2e4295a3bb
+
+path: /lib/pkgconfig
+type: dir
+mode: 755
+
+path: /lib/pkgconfig/liblzma.pc
+type: reg
+mode: 644
+source: .pkgdata/7c96c40d6edf95e34ff752598e42cb5603fd6fea01f2889f6023f8d18d495fdf
+blake3: 7c96c40d6edf95e34ff752598e42cb5603fd6fea01f2889f6023f8d18d495fdf
+
+path: /lib/rcrt1.o
+type: reg
+mode: 644
+source: .pkgdata/1b6bfd693f065016f7ba17941c1478083c685cd7f50cea349fb0e95e9397de7f
+blake3: 1b6bfd693f065016f7ba17941c1478083c685cd7f50cea349fb0e95e9397de7f
+
+path: /man
+type: dir
+mode: 755
+
+path: /man/man1
+type: dir
+mode: 755
+
+path: /man/man1/bzcmp.1
+type: reg
+mode: 644
+source: .pkgdata/baa6067fd82e0cf05f640b8adc580d7294ac3050591ca36ad83d0a9e130030d8
+blake3: baa6067fd82e0cf05f640b8adc580d7294ac3050591ca36ad83d0a9e130030d8
+
+path: /man/man1/bzdiff.1
+type: reg
+mode: 644
+source: .pkgdata/49d028a1f7939b35469b78646a3e73b6f6a8d0da6272429d54e410f774f0f8a4
+blake3: 49d028a1f7939b35469b78646a3e73b6f6a8d0da6272429d54e410f774f0f8a4
+
+path: /man/man1/bzegrep.1
+type: reg
+mode: 644
+source: .pkgdata/55475725d7c11e4ef236e496558de6e7d1ece803a6546d1d49e3afe1aac75a3d
+blake3: 55475725d7c11e4ef236e496558de6e7d1ece803a6546d1d49e3afe1aac75a3d
+
+path: /man/man1/bzfgrep.1
+type: reg
+mode: 644
+source: .pkgdata/55475725d7c11e4ef236e496558de6e7d1ece803a6546d1d49e3afe1aac75a3d
+blake3: 55475725d7c11e4ef236e496558de6e7d1ece803a6546d1d49e3afe1aac75a3d
+
+path: /man/man1/bzgrep.1
+type: reg
+mode: 644
+source: .pkgdata/8684cbef5075b3be7628d9c7cc42b582c71b8ac92e86f2a605bd59a151fa7540
+blake3: 8684cbef5075b3be7628d9c7cc42b582c71b8ac92e86f2a605bd59a151fa7540
+
+path: /man/man1/bzip2.1
+type: reg
+mode: 644
+source: .pkgdata/a96e21ba5d64274ef2345ab8db50b60ae71bbb2fc50670e4c7dbf6751ec8e7b5
+blake3: a96e21ba5d64274ef2345ab8db50b60ae71bbb2fc50670e4c7dbf6751ec8e7b5
+
+path: /man/man1/bzless.1
+type: reg
+mode: 644
+source: .pkgdata/9ce604209ca9bad7f0a6335170489203ee6a4d138d52033f53bc5cb5d180905d
+blake3: 9ce604209ca9bad7f0a6335170489203ee6a4d138d52033f53bc5cb5d180905d
+
+path: /man/man1/bzmore.1
+type: reg
+mode: 644
+source: .pkgdata/618f4bcd2fca7434957b0c1b52e4a4aa46bcc6cc5f36006c78f146f102a38d64
+blake3: 618f4bcd2fca7434957b0c1b52e4a4aa46bcc6cc5f36006c78f146f102a38d64
+
+path: /proc
+type: dir
+mode: 755
+
+path: /root
+type: dir
+mode: 700
 
 path: /run
 type: dir
+mode: 755
 
-path: /var/log
+path: /share
 type: dir
+mode: 755
 
-path: /var/lock
+path: /share/doc
+type: dir
+mode: 755
+
+path: /share/doc/xz
+type: dir
+mode: 755
+
+path: /share/doc/xz/AUTHORS
+type: reg
+mode: 644
+source: .pkgdata/4b421fafc0ff864611485ccdad9b46aa73e89becfac541b655a0f2feebcef63f
+blake3: 4b421fafc0ff864611485ccdad9b46aa73e89becfac541b655a0f2feebcef63f
+
+path: /share/doc/xz/COPYING
+type: reg
+mode: 644
+source: .pkgdata/48495019f789f30bd1daec31f570bad1f600c7dc2e2a21496e014365d9e71931
+blake3: 48495019f789f30bd1daec31f570bad1f600c7dc2e2a21496e014365d9e71931
+
+path: /share/doc/xz/COPYING.GPLv2
+type: reg
+mode: 644
+source: .pkgdata/5886b01395916aaa9c9857f7365778ddc4fde3108a794211b61ae3b5afb22bcc
+blake3: 5886b01395916aaa9c9857f7365778ddc4fde3108a794211b61ae3b5afb22bcc
+
+path: /share/doc/xz/NEWS
+type: reg
+mode: 644
+source: .pkgdata/197ede6dfcfd99dfdda94b8ad489d1eb767d3dbf350f9c08afefa5733a8abb11
+blake3: 197ede6dfcfd99dfdda94b8ad489d1eb767d3dbf350f9c08afefa5733a8abb11
+
+path: /share/doc/xz/README
+type: reg
+mode: 644
+source: .pkgdata/027d763c029c9f4a1b0af3e9a0de85463c1d9126a4d5ecddc7858697c31b59b8
+blake3: 027d763c029c9f4a1b0af3e9a0de85463c1d9126a4d5ecddc7858697c31b59b8
+
+path: /share/doc/xz/THANKS
+type: reg
+mode: 644
+source: .pkgdata/71d24bdb0ca861235a098db7632d2de8dc950e50b3a17b6783dbb5406e1fdd9d
+blake3: 71d24bdb0ca861235a098db7632d2de8dc950e50b3a17b6783dbb5406e1fdd9d
+
+path: /share/doc/xz/TODO
+type: reg
+mode: 644
+source: .pkgdata/4b826c410c67d166ab3e01442d393c556895fa79dbd49958de1bfa41c297453a
+blake3: 4b826c410c67d166ab3e01442d393c556895fa79dbd49958de1bfa41c297453a
+
+path: /share/doc/xz/examples
+type: dir
+mode: 755
+
+path: /share/doc/xz/examples/00_README.txt
+type: reg
+mode: 644
+source: .pkgdata/c52d581000b54e7699398c8ff9e089f9d862399f23b1491b1115e9efa4501bbc
+blake3: c52d581000b54e7699398c8ff9e089f9d862399f23b1491b1115e9efa4501bbc
+
+path: /share/doc/xz/examples/01_compress_easy.c
+type: reg
+mode: 644
+source: .pkgdata/8d653b85002a300fe77e0b2747cd8705a5a7e62963e30ce2b3f4d3e75ec3ed02
+blake3: 8d653b85002a300fe77e0b2747cd8705a5a7e62963e30ce2b3f4d3e75ec3ed02
+
+path: /share/doc/xz/examples/02_decompress.c
+type: reg
+mode: 644
+source: .pkgdata/44f5fafb803759649fe514316c2517ab972a960e3419a4274315c454c8243269
+blake3: 44f5fafb803759649fe514316c2517ab972a960e3419a4274315c454c8243269
+
+path: /share/doc/xz/examples/03_compress_custom.c
+type: reg
+mode: 644
+source: .pkgdata/3688d71705cd27b8699c316ed33980a1ac40cd2635339b024f2be05b25b183d6
+blake3: 3688d71705cd27b8699c316ed33980a1ac40cd2635339b024f2be05b25b183d6
+
+path: /share/doc/xz/examples/04_compress_easy_mt.c
+type: reg
+mode: 644
+source: .pkgdata/8d1beeb8218cba982774db011ca5179596ac025774b4e2955420c69ba0544ada
+blake3: 8d1beeb8218cba982774db011ca5179596ac025774b4e2955420c69ba0544ada
+
+path: /share/doc/xz/examples/Makefile
+type: reg
+mode: 644
+source: .pkgdata/99154effece53e125d5634667fef39ceb9d34fee3948e764993e09fc62aeccfb
+blake3: 99154effece53e125d5634667fef39ceb9d34fee3948e764993e09fc62aeccfb
+
+path: /share/doc/xz/examples_old
+type: dir
+mode: 755
+
+path: /share/doc/xz/examples_old/xz_pipe_comp.c
+type: reg
+mode: 644
+source: .pkgdata/f3f144664e15e931e4434ec8e45d02d01cdaeff6ab58b86a6c38e52f8ee28bf7
+blake3: f3f144664e15e931e4434ec8e45d02d01cdaeff6ab58b86a6c38e52f8ee28bf7
+
+path: /share/doc/xz/examples_old/xz_pipe_decomp.c
+type: reg
+mode: 644
+source: .pkgdata/b6620aa11d7fb6dd62cc901eaec9350bb762f709011cd086dc766e5512a8beaa
+blake3: b6620aa11d7fb6dd62cc901eaec9350bb762f709011cd086dc766e5512a8beaa
+
+path: /share/doc/xz/faq.txt
+type: reg
+mode: 644
+source: .pkgdata/2593b2be1bda8af9f56c1b34300effb1806b6d14a769b8dc0a44811f2223b918
+blake3: 2593b2be1bda8af9f56c1b34300effb1806b6d14a769b8dc0a44811f2223b918
+
+path: /share/doc/xz/history.txt
+type: reg
+mode: 644
+source: .pkgdata/b2af96d397258839e0ddbda4498182fc9585d3d7c97b4a3d697ba09ab86a38be
+blake3: b2af96d397258839e0ddbda4498182fc9585d3d7c97b4a3d697ba09ab86a38be
+
+path: /share/doc/xz/lzma-file-format.txt
+type: reg
+mode: 644
+source: .pkgdata/f66a86cd676db0451c074223711831a47a7f9e2249faf0d609713a0888ed6d6f
+blake3: f66a86cd676db0451c074223711831a47a7f9e2249faf0d609713a0888ed6d6f
+
+path: /share/doc/xz/xz-file-format.txt
+type: reg
+mode: 644
+source: .pkgdata/fb7f695d4823ced99be74095955c3b0cc7b454f1eece420307c2ba1806d8fc8c
+blake3: fb7f695d4823ced99be74095955c3b0cc7b454f1eece420307c2ba1806d8fc8c
+
+path: /share/info
+type: dir
+mode: 755
+
+path: /share/info/gzip.info
+type: reg
+mode: 644
+source: .pkgdata/150ef2feff4ab9b61d120e3a67f5443469d14709c4613415edf3a75e4de13081
+blake3: 150ef2feff4ab9b61d120e3a67f5443469d14709c4613415edf3a75e4de13081
+
+path: /share/man
+type: dir
+mode: 755
+
+path: /share/man/man1
+type: dir
+mode: 755
+
+path: /share/man/man1/basename.1
+type: reg
+mode: 644
+source: .pkgdata/74ddd84bb2e213a42e245b8d2113c1b45df100a8feef3565a1ea1cbdc317bde6
+blake3: 74ddd84bb2e213a42e245b8d2113c1b45df100a8feef3565a1ea1cbdc317bde6
+
+path: /share/man/man1/cal.1
+type: reg
+mode: 644
+source: .pkgdata/068326c454150a35b711c63fe1060da96de6961484032f96a140a84818a5e209
+blake3: 068326c454150a35b711c63fe1060da96de6961484032f96a140a84818a5e209
+
+path: /share/man/man1/cat.1
+type: reg
+mode: 644
+source: .pkgdata/b09c13a47afb7eb3bef435640421a24585550c849dae7028ce0fcb15d40f7bbe
+blake3: b09c13a47afb7eb3bef435640421a24585550c849dae7028ce0fcb15d40f7bbe
+
+path: /share/man/man1/chgrp.1
+type: reg
+mode: 644
+source: .pkgdata/180ff92ea32c9d625199e64693829d5cf032a80efc65f79e2f14a4c8773b6c5e
+blake3: 180ff92ea32c9d625199e64693829d5cf032a80efc65f79e2f14a4c8773b6c5e
+
+path: /share/man/man1/chmod.1
+type: reg
+mode: 644
+source: .pkgdata/a3b478c78b807f5e01a9a85dff9c5cc95c79a729566d877115a03a972c0ff98b
+blake3: a3b478c78b807f5e01a9a85dff9c5cc95c79a729566d877115a03a972c0ff98b
+
+path: /share/man/man1/chown.1
+type: reg
+mode: 644
+source: .pkgdata/6068744cac2149d1928ba018fec22e30756f52535975f20cd3648fadc0b6c04a
+blake3: 6068744cac2149d1928ba018fec22e30756f52535975f20cd3648fadc0b6c04a
+
+path: /share/man/man1/chroot.1
+type: reg
+mode: 644
+source: .pkgdata/b098c788d3d9cf52f5e3cc61c2dd83193bc709f16b1995e7f408286fad30c34c
+blake3: b098c788d3d9cf52f5e3cc61c2dd83193bc709f16b1995e7f408286fad30c34c
+
+path: /share/man/man1/chvt.1
+type: reg
+mode: 644
+source: .pkgdata/2fdaa4445b6417b5715002862ca7b5239c2448b79708823ac8326aca0e51f279
+blake3: 2fdaa4445b6417b5715002862ca7b5239c2448b79708823ac8326aca0e51f279
+
+path: /share/man/man1/cksum.1
+type: reg
+mode: 644
+source: .pkgdata/929822cf9a548c3f0a31abe25c0baafe96b1a100c7dd47442c89847eb9aa7c84
+blake3: 929822cf9a548c3f0a31abe25c0baafe96b1a100c7dd47442c89847eb9aa7c84
+
+path: /share/man/man1/clear.1
+type: reg
+mode: 644
+source: .pkgdata/89d2bffaaa4a394242a01e38e2f70ba4faf304c7403ca6cd25a5f6cda27dc774
+blake3: 89d2bffaaa4a394242a01e38e2f70ba4faf304c7403ca6cd25a5f6cda27dc774
+
+path: /share/man/man1/cmp.1
+type: reg
+mode: 644
+source: .pkgdata/1e485ef6b4660829622f2ca056097c4a0273da77bf23b580bd02e90ad2b3c5c7
+blake3: 1e485ef6b4660829622f2ca056097c4a0273da77bf23b580bd02e90ad2b3c5c7
+
+path: /share/man/man1/cols.1
+type: reg
+mode: 644
+source: .pkgdata/2f5bd108abd690f44519ff0a8dad2e77dda32f332689be2f93e13e95545f91cb
+blake3: 2f5bd108abd690f44519ff0a8dad2e77dda32f332689be2f93e13e95545f91cb
+
+path: /share/man/man1/comm.1
+type: reg
+mode: 644
+source: .pkgdata/25ed1889b86acc16d32294ddcdd354c5dcd245ffa1aff8fc4168e39b2bbaa918
+blake3: 25ed1889b86acc16d32294ddcdd354c5dcd245ffa1aff8fc4168e39b2bbaa918
+
+path: /share/man/man1/cp.1
+type: reg
+mode: 644
+source: .pkgdata/7934b80c32a08fca22fe89c0f440b132d0261b80357842ce560eecfa61fc0e38
+blake3: 7934b80c32a08fca22fe89c0f440b132d0261b80357842ce560eecfa61fc0e38
+
+path: /share/man/man1/cron.1
+type: reg
+mode: 644
+source: .pkgdata/4a769073bfe6b3c5fa127a2ae46406342decc3e27cb2acdc76f0695f9ed7ef3b
+blake3: 4a769073bfe6b3c5fa127a2ae46406342decc3e27cb2acdc76f0695f9ed7ef3b
+
+path: /share/man/man1/cut.1
+type: reg
+mode: 644
+source: .pkgdata/ebbb412d2a90de7cbbb7e3352d46fe920e089fc243b6e49d98fbf30857cb5f7c
+blake3: ebbb412d2a90de7cbbb7e3352d46fe920e089fc243b6e49d98fbf30857cb5f7c
+
+path: /share/man/man1/date.1
+type: reg
+mode: 644
+source: .pkgdata/8b8b13706cd6929a63533d8dc97cc3f6828b6017ee743f0d685eec4f89e4bc4e
+blake3: 8b8b13706cd6929a63533d8dc97cc3f6828b6017ee743f0d685eec4f89e4bc4e
+
+path: /share/man/man1/dbclient.1
+type: reg
+mode: 644
+source: .pkgdata/3a7121b4b37b86212c457925b79a27c77a942e3140c8f8316c142bd6a0cef061
+blake3: 3a7121b4b37b86212c457925b79a27c77a942e3140c8f8316c142bd6a0cef061
+
+path: /share/man/man1/dd.1
+type: reg
+mode: 644
+source: .pkgdata/c2aab44013f10539a6944a165668b787c1f563ede237feda26e83d8b31df172e
+blake3: c2aab44013f10539a6944a165668b787c1f563ede237feda26e83d8b31df172e
+
+path: /share/man/man1/df.1
+type: reg
+mode: 644
+source: .pkgdata/a973798ed9f53c71ffc8326f781c4d3e230f459e8aca5f4f2e72cae2839b3e83
+blake3: a973798ed9f53c71ffc8326f781c4d3e230f459e8aca5f4f2e72cae2839b3e83
+
+path: /share/man/man1/dirname.1
+type: reg
+mode: 644
+source: .pkgdata/b5ae55255cc0765384e7fba6b0332f96bba8e07620a84fd45dd8eef65c418a12
+blake3: b5ae55255cc0765384e7fba6b0332f96bba8e07620a84fd45dd8eef65c418a12
+
+path: /share/man/man1/dmesg.1
+type: reg
+mode: 644
+source: .pkgdata/719ceb5c9748f23dc99bbfa880a80a5465a82e6e7781ada3cd759afab68fa174
+blake3: 719ceb5c9748f23dc99bbfa880a80a5465a82e6e7781ada3cd759afab68fa174
+
+path: /share/man/man1/dropbearconvert.1
+type: reg
+mode: 644
+source: .pkgdata/c8a83a5dee00b4c4a5c6d5c945a9502bf31f99123fa8f76f06ac3e1f67d21124
+blake3: c8a83a5dee00b4c4a5c6d5c945a9502bf31f99123fa8f76f06ac3e1f67d21124
+
+path: /share/man/man1/dropbearkey.1
+type: reg
+mode: 644
+source: .pkgdata/d95032e951fe4bb45dc5b17bd2403ec13b1f55253242a9e5f150a50399107f1d
+blake3: d95032e951fe4bb45dc5b17bd2403ec13b1f55253242a9e5f150a50399107f1d
+
+path: /share/man/man1/du.1
+type: reg
+mode: 644
+source: .pkgdata/4b24cdaafb7960b12bc1d8b43687f752a344e5c287051aca9f7e1f6e9977134d
+blake3: 4b24cdaafb7960b12bc1d8b43687f752a344e5c287051aca9f7e1f6e9977134d
+
+path: /share/man/man1/echo.1
+type: reg
+mode: 644
+source: .pkgdata/1aac683a27d6f94cece0cfb304ef7671f891227341a7ba1c104e32eed8d28f74
+blake3: 1aac683a27d6f94cece0cfb304ef7671f891227341a7ba1c104e32eed8d28f74
+
+path: /share/man/man1/ed.1
+type: reg
+mode: 644
+source: .pkgdata/24a660fa2dcbee22054e9f9d2aa81495010bc73db48361e33903f10c5425d035
+blake3: 24a660fa2dcbee22054e9f9d2aa81495010bc73db48361e33903f10c5425d035
+
+path: /share/man/man1/eject.1
+type: reg
+mode: 644
+source: .pkgdata/bffcdef6782220392eb5358769757a199132d043b17632fc818ec4ee611c663a
+blake3: bffcdef6782220392eb5358769757a199132d043b17632fc818ec4ee611c663a
+
+path: /share/man/man1/env.1
+type: reg
+mode: 644
+source: .pkgdata/2e28873da982b526cfc5c0b345af867bc0cd744f7cb2617be99aad703e27c444
+blake3: 2e28873da982b526cfc5c0b345af867bc0cd744f7cb2617be99aad703e27c444
+
+path: /share/man/man1/expand.1
+type: reg
+mode: 644
+source: .pkgdata/9826d4fa7120be686285dd603aba199b57254066a9c294dcdecedd889bfc3836
+blake3: 9826d4fa7120be686285dd603aba199b57254066a9c294dcdecedd889bfc3836
+
+path: /share/man/man1/expr.1
+type: reg
+mode: 644
+source: .pkgdata/2e280adca5ccce58b16859243df04ae70dc213a6f88d546f073d2ac3590697f7
+blake3: 2e280adca5ccce58b16859243df04ae70dc213a6f88d546f073d2ac3590697f7
+
+path: /share/man/man1/fallocate.1
+type: reg
+mode: 644
+source: .pkgdata/bc3fc91f190a5be2311127a68b04a2cbbd11c6166aa2c82c49eb26034fcb9bda
+blake3: bc3fc91f190a5be2311127a68b04a2cbbd11c6166aa2c82c49eb26034fcb9bda
+
+path: /share/man/man1/false.1
+type: reg
+mode: 644
+source: .pkgdata/86d6ef7c2a819c26f495de8e70ef3e37b8aa6356ace705f09f128429cc703848
+blake3: 86d6ef7c2a819c26f495de8e70ef3e37b8aa6356ace705f09f128429cc703848
+
+path: /share/man/man1/find.1
+type: reg
+mode: 644
+source: .pkgdata/00593423432602ff76ed6b9143d26b12848f1c93eb1b0d401d95b1494d806110
+blake3: 00593423432602ff76ed6b9143d26b12848f1c93eb1b0d401d95b1494d806110
+
+path: /share/man/man1/flock.1
+type: reg
+mode: 644
+source: .pkgdata/438b3903eaaf488d3e43afd58b5ba0d8fb1e0acb4556270b7b65cb77046b0e4a
+blake3: 438b3903eaaf488d3e43afd58b5ba0d8fb1e0acb4556270b7b65cb77046b0e4a
+
+path: /share/man/man1/fold.1
+type: reg
+mode: 644
+source: .pkgdata/30f7b044a34dcf8f0539ee97e3e21406b1bf758f24493fa89abdfecce6f07b64
+blake3: 30f7b044a34dcf8f0539ee97e3e21406b1bf758f24493fa89abdfecce6f07b64
+
+path: /share/man/man1/free.1
+type: reg
+mode: 644
+source: .pkgdata/4dbccaf0992c239cd5e081b5cdc787c4f5cd33e5d59ef0a1cdddc6044f8df915
+blake3: 4dbccaf0992c239cd5e081b5cdc787c4f5cd33e5d59ef0a1cdddc6044f8df915
+
+path: /share/man/man1/getconf.1
+type: reg
+mode: 644
+source: .pkgdata/abf348e7d70cf0463de643b268343cdd6f986122a3be1f8a81a79e49d1df3c0a
+blake3: abf348e7d70cf0463de643b268343cdd6f986122a3be1f8a81a79e49d1df3c0a
+
+path: /share/man/man1/grep.1
+type: reg
+mode: 644
+source: .pkgdata/748b2299cb0cf6c38fae836bb77f7e7dab0107ea368e5e04184a871670453a64
+blake3: 748b2299cb0cf6c38fae836bb77f7e7dab0107ea368e5e04184a871670453a64
+
+path: /share/man/man1/gunzip.1
+type: reg
+mode: 644
+source: .pkgdata/e992a8389df796ffb0d87f22c9d98db89e9d3a60b1993d90da6f7602d492ba88
+blake3: e992a8389df796ffb0d87f22c9d98db89e9d3a60b1993d90da6f7602d492ba88
+
+path: /share/man/man1/gzexe.1
+type: reg
+mode: 644
+source: .pkgdata/016a1c1c08df041916b2aa0fc571e0f25aef1e31d75eac989d49d5099bcce3bc
+blake3: 016a1c1c08df041916b2aa0fc571e0f25aef1e31d75eac989d49d5099bcce3bc
+
+path: /share/man/man1/gzip.1
+type: reg
+mode: 644
+source: .pkgdata/5a601347eae806d85f34201c671105707a6f268cabb79588260c02b723ffa48b
+blake3: 5a601347eae806d85f34201c671105707a6f268cabb79588260c02b723ffa48b
+
+path: /share/man/man1/head.1
+type: reg
+mode: 644
+source: .pkgdata/fd8093c53982f83efa7128b341ac9a7bc809e0577c256480a1660b1a45add984
+blake3: fd8093c53982f83efa7128b341ac9a7bc809e0577c256480a1660b1a45add984
+
+path: /share/man/man1/hostname.1
+type: reg
+mode: 644
+source: .pkgdata/8c9897c6294949a1157addb2fc329337a0a8d532c00894c54198211881c0ffeb
+blake3: 8c9897c6294949a1157addb2fc329337a0a8d532c00894c54198211881c0ffeb
+
+path: /share/man/man1/id.1
+type: reg
+mode: 644
+source: .pkgdata/ce9ee7832431057b803d991952348fc22751d7232e0a4ad3eb0a372731fd5d3e
+blake3: ce9ee7832431057b803d991952348fc22751d7232e0a4ad3eb0a372731fd5d3e
+
+path: /share/man/man1/install.1
+type: reg
+mode: 644
+source: .pkgdata/b2af198c0a50630e7e1fc48a4ce44930c9b56fc5f756e49cc0b7e35a7a34c6cb
+blake3: b2af198c0a50630e7e1fc48a4ce44930c9b56fc5f756e49cc0b7e35a7a34c6cb
+
+path: /share/man/man1/join.1
+type: reg
+mode: 644
+source: .pkgdata/7d3d6a9ddb7d930ddfd2aefeff5494e05c997e73fbe8e23cbb8ba3335ef49c4e
+blake3: 7d3d6a9ddb7d930ddfd2aefeff5494e05c997e73fbe8e23cbb8ba3335ef49c4e
+
+path: /share/man/man1/kill.1
+type: reg
+mode: 644
+source: .pkgdata/12d4875678fec57059f97d4bcf0fefdc8b095da8b58483bd86f664f8006cc412
+blake3: 12d4875678fec57059f97d4bcf0fefdc8b095da8b58483bd86f664f8006cc412
+
+path: /share/man/man1/link.1
+type: reg
+mode: 644
+source: .pkgdata/a06025d8fd176982878c23eaca2345b6bb96ae8045c36aab65666e8c4d5ad122
+blake3: a06025d8fd176982878c23eaca2345b6bb96ae8045c36aab65666e8c4d5ad122
+
+path: /share/man/man1/ln.1
+type: reg
+mode: 644
+source: .pkgdata/fb93be0368b2dd70d2b6cd7a1631a5c12d9e851555c7c8846f2464beb852f314
+blake3: fb93be0368b2dd70d2b6cd7a1631a5c12d9e851555c7c8846f2464beb852f314
+
+path: /share/man/man1/logger.1
+type: reg
+mode: 644
+source: .pkgdata/c4d631dc4cf512be87202dadf38bbd5c346e45494bcc7c08f27208a864434059
+blake3: c4d631dc4cf512be87202dadf38bbd5c346e45494bcc7c08f27208a864434059
+
+path: /share/man/man1/login.1
+type: reg
+mode: 644
+source: .pkgdata/fff031df0157b28d7170e6185e535b801b987e6fff78968e330a25894448a116
+blake3: fff031df0157b28d7170e6185e535b801b987e6fff78968e330a25894448a116
+
+path: /share/man/man1/logname.1
+type: reg
+mode: 644
+source: .pkgdata/7d9be8c6725a7000e97aca1f57dda60a01300d49dc43665a5db0ca261e72a146
+blake3: 7d9be8c6725a7000e97aca1f57dda60a01300d49dc43665a5db0ca261e72a146
+
+path: /share/man/man1/ls.1
+type: reg
+mode: 644
+source: .pkgdata/ac230fe89589de3b595de3488bd2ddde7add8b0deb23cd1120246e6fc5e139b2
+blake3: ac230fe89589de3b595de3488bd2ddde7add8b0deb23cd1120246e6fc5e139b2
+
+path: /share/man/man1/lzcat.1
 type: sym
-target: ../run/lock
+mode: 777
+target: xz.1
 
-path: /var/cache
+path: /share/man/man1/lzcmp.1
+type: sym
+mode: 777
+target: xzdiff.1
+
+path: /share/man/man1/lzdiff.1
+type: sym
+mode: 777
+target: xzdiff.1
+
+path: /share/man/man1/lzegrep.1
+type: sym
+mode: 777
+target: xzgrep.1
+
+path: /share/man/man1/lzfgrep.1
+type: sym
+mode: 777
+target: xzgrep.1
+
+path: /share/man/man1/lzgrep.1
+type: sym
+mode: 777
+target: xzgrep.1
+
+path: /share/man/man1/lzless.1
+type: sym
+mode: 777
+target: xzless.1
+
+path: /share/man/man1/lzma.1
+type: sym
+mode: 777
+target: xz.1
+
+path: /share/man/man1/lzmadec.1
+type: sym
+mode: 777
+target: xzdec.1
+
+path: /share/man/man1/lzmainfo.1
+type: reg
+mode: 644
+source: .pkgdata/7e86e6f6bb901bd00628672bcc9a4577c532428bc4b8155885c3f228a3551109
+blake3: 7e86e6f6bb901bd00628672bcc9a4577c532428bc4b8155885c3f228a3551109
+
+path: /share/man/man1/lzmore.1
+type: sym
+mode: 777
+target: xzmore.1
+
+path: /share/man/man1/mawk.1
+type: reg
+mode: 644
+source: .pkgdata/c6f25e1e072fdf45f0ea59e896f2fa38f979c2f6be82f1492112a14ba904ea40
+blake3: c6f25e1e072fdf45f0ea59e896f2fa38f979c2f6be82f1492112a14ba904ea40
+
+path: /share/man/man1/md5sum.1
+type: reg
+mode: 644
+source: .pkgdata/9c05c9ecf9847b7e55989c71f56d0c17a6d39ed3eb078935faf80ccfd7aa40c1
+blake3: 9c05c9ecf9847b7e55989c71f56d0c17a6d39ed3eb078935faf80ccfd7aa40c1
+
+path: /share/man/man1/mesg.1
+type: reg
+mode: 644
+source: .pkgdata/bae50fbc33b7008999ab0073bcca08c788aca1a87859763b25381e1770ecb7c9
+blake3: bae50fbc33b7008999ab0073bcca08c788aca1a87859763b25381e1770ecb7c9
+
+path: /share/man/man1/mkdir.1
+type: reg
+mode: 644
+source: .pkgdata/6e7d36e1880f29f8df0f04a22760055091d8cab8c26ece5f8e6f6b27899b8d48
+blake3: 6e7d36e1880f29f8df0f04a22760055091d8cab8c26ece5f8e6f6b27899b8d48
+
+path: /share/man/man1/mkfifo.1
+type: reg
+mode: 644
+source: .pkgdata/344d641370a37a4868f2f85b11a94c48fdb6dfefb49266c0fc224871f973f1e1
+blake3: 344d641370a37a4868f2f85b11a94c48fdb6dfefb49266c0fc224871f973f1e1
+
+path: /share/man/man1/mknod.1
+type: reg
+mode: 644
+source: .pkgdata/f30bbe531f366c203b3944410b981f0e949bdbd52b8512762b4ee93c55ad236d
+blake3: f30bbe531f366c203b3944410b981f0e949bdbd52b8512762b4ee93c55ad236d
+
+path: /share/man/man1/mktemp.1
+type: reg
+mode: 644
+source: .pkgdata/79dae82433d66b2b243219954436bbc2a28bc51e4d02d8323c2775ea5d6e1255
+blake3: 79dae82433d66b2b243219954436bbc2a28bc51e4d02d8323c2775ea5d6e1255
+
+path: /share/man/man1/mountpoint.1
+type: reg
+mode: 644
+source: .pkgdata/72fb7fce804d670339e987a0c124ac9d653a627afd548c0a64b74b7425393d5d
+blake3: 72fb7fce804d670339e987a0c124ac9d653a627afd548c0a64b74b7425393d5d
+
+path: /share/man/man1/mv.1
+type: reg
+mode: 644
+source: .pkgdata/41aa103e412d406c2b063af7d03dfe95630c26ed24edd10051305b04816c0d0f
+blake3: 41aa103e412d406c2b063af7d03dfe95630c26ed24edd10051305b04816c0d0f
+
+path: /share/man/man1/nice.1
+type: reg
+mode: 644
+source: .pkgdata/5330317f887534151f3d60ada237b6368965ef8aaa271b6504241d920ac26e43
+blake3: 5330317f887534151f3d60ada237b6368965ef8aaa271b6504241d920ac26e43
+
+path: /share/man/man1/nl.1
+type: reg
+mode: 644
+source: .pkgdata/ee99c75ca99aa5ae783f90d5d14f973863b4a28e9a1bc7762d814e37961fc193
+blake3: ee99c75ca99aa5ae783f90d5d14f973863b4a28e9a1bc7762d814e37961fc193
+
+path: /share/man/man1/nohup.1
+type: reg
+mode: 644
+source: .pkgdata/d146b29387a411624336ddb9033da45777a9eb5c77ac8a52d1285cebfd636692
+blake3: d146b29387a411624336ddb9033da45777a9eb5c77ac8a52d1285cebfd636692
+
+path: /share/man/man1/od.1
+type: reg
+mode: 644
+source: .pkgdata/a41e639bb2eb38f8c7e5bc94ff87ee1f2e38aa7ab039c50982031ec2b9ae6f4f
+blake3: a41e639bb2eb38f8c7e5bc94ff87ee1f2e38aa7ab039c50982031ec2b9ae6f4f
+
+path: /share/man/man1/oksh.1
+type: reg
+mode: 644
+source: .pkgdata/edeb464a5c5096996badf285e1c9d3b4dacbda94a60dbabf198c0a4ee4ee9119
+blake3: edeb464a5c5096996badf285e1c9d3b4dacbda94a60dbabf198c0a4ee4ee9119
+
+path: /share/man/man1/pagesize.1
+type: reg
+mode: 644
+source: .pkgdata/e11ee3dc7f6cd639257600db33f591b9be15eee9ae17c500d14c82aa023b8047
+blake3: e11ee3dc7f6cd639257600db33f591b9be15eee9ae17c500d14c82aa023b8047
+
+path: /share/man/man1/passwd.1
+type: reg
+mode: 644
+source: .pkgdata/f20988e53db8223b2b2c36b660c9b88a0de76c81aa302b47a090c3c2f8e3b31d
+blake3: f20988e53db8223b2b2c36b660c9b88a0de76c81aa302b47a090c3c2f8e3b31d
+
+path: /share/man/man1/paste.1
+type: reg
+mode: 644
+source: .pkgdata/7acddab140bc59ae784c8cf3f9a581d509f7c5cccdd53248cdfc04180cd62791
+blake3: 7acddab140bc59ae784c8cf3f9a581d509f7c5cccdd53248cdfc04180cd62791
+
+path: /share/man/man1/pathchk.1
+type: reg
+mode: 644
+source: .pkgdata/b28cc37b03837dd15aeb607947f0104baacce344b877541f744bc0cf9e5bfb0d
+blake3: b28cc37b03837dd15aeb607947f0104baacce344b877541f744bc0cf9e5bfb0d
+
+path: /share/man/man1/pidof.1
+type: reg
+mode: 644
+source: .pkgdata/e8c26628a6abc8b1c3af7f126241b7109e2335a38c4ae753a1544ec7ce91ca69
+blake3: e8c26628a6abc8b1c3af7f126241b7109e2335a38c4ae753a1544ec7ce91ca69
+
+path: /share/man/man1/printenv.1
+type: reg
+mode: 644
+source: .pkgdata/395e4ef3df45d36f5d5d243843199b20849038e5b3bb6c3ceb3c500cb1715ed7
+blake3: 395e4ef3df45d36f5d5d243843199b20849038e5b3bb6c3ceb3c500cb1715ed7
+
+path: /share/man/man1/printf.1
+type: reg
+mode: 644
+source: .pkgdata/4717ec5c38d6d897087c963ef582f60c2ecf67f5a2c8f0fd675b5ddb24ca3925
+blake3: 4717ec5c38d6d897087c963ef582f60c2ecf67f5a2c8f0fd675b5ddb24ca3925
+
+path: /share/man/man1/ps.1
+type: reg
+mode: 644
+source: .pkgdata/3075efaafae4dcd7bf0db8d6cdb1b6bcb93d335eaadc0fe697e326f01501c12e
+blake3: 3075efaafae4dcd7bf0db8d6cdb1b6bcb93d335eaadc0fe697e326f01501c12e
+
+path: /share/man/man1/pwd.1
+type: reg
+mode: 644
+source: .pkgdata/9252fca9d9bafae86d6e314b72a494220e04847adafc7f9e640e2c1ce0cba4ef
+blake3: 9252fca9d9bafae86d6e314b72a494220e04847adafc7f9e640e2c1ce0cba4ef
+
+path: /share/man/man1/pwdx.1
+type: reg
+mode: 644
+source: .pkgdata/9076dc4a5c3ef878d19d093f63e8d40fd357188b1040f6ab41fe0cbf56fb3f3d
+blake3: 9076dc4a5c3ef878d19d093f63e8d40fd357188b1040f6ab41fe0cbf56fb3f3d
+
+path: /share/man/man1/readlink.1
+type: reg
+mode: 644
+source: .pkgdata/b2c48f8d397967f7a727072da5305893701f7b7ef67e50045decf136cd5e4189
+blake3: b2c48f8d397967f7a727072da5305893701f7b7ef67e50045decf136cd5e4189
+
+path: /share/man/man1/renice.1
+type: reg
+mode: 644
+source: .pkgdata/38da66dc2d96e6ffc3d866a882a3b54ecba9e2088b28faae1d3bb54651ab2efe
+blake3: 38da66dc2d96e6ffc3d866a882a3b54ecba9e2088b28faae1d3bb54651ab2efe
+
+path: /share/man/man1/respawn.1
+type: reg
+mode: 644
+source: .pkgdata/a93977adab733da09e1ed58f73af549ad14ad6833147d887f9a61647ca44d3fa
+blake3: a93977adab733da09e1ed58f73af549ad14ad6833147d887f9a61647ca44d3fa
+
+path: /share/man/man1/rev.1
+type: reg
+mode: 644
+source: .pkgdata/df08104e35b10d56bece7a4d21002740099ca851faf98a2d35169b8f0ea92c07
+blake3: df08104e35b10d56bece7a4d21002740099ca851faf98a2d35169b8f0ea92c07
+
+path: /share/man/man1/rm.1
+type: reg
+mode: 644
+source: .pkgdata/2a7c4cf5319e70151b68fc16eed294e544092254c7eabec73d4253bf71aff5f6
+blake3: 2a7c4cf5319e70151b68fc16eed294e544092254c7eabec73d4253bf71aff5f6
+
+path: /share/man/man1/rmdir.1
+type: reg
+mode: 644
+source: .pkgdata/cf966cc25a39434a1ae3afdf8cd96f47a3b0345bd1f182972a00bae9d9a78ad0
+blake3: cf966cc25a39434a1ae3afdf8cd96f47a3b0345bd1f182972a00bae9d9a78ad0
+
+path: /share/man/man1/sed.1
+type: reg
+mode: 644
+source: .pkgdata/ea397b4eae643d763252de46f4274f67701644046f441d0fb500864604077f3f
+blake3: ea397b4eae643d763252de46f4274f67701644046f441d0fb500864604077f3f
+
+path: /share/man/man1/seq.1
+type: reg
+mode: 644
+source: .pkgdata/827e4ea764fb2cbca52e021c19f4b093d6c4762f68a77cd59d03bfa516b7c35d
+blake3: 827e4ea764fb2cbca52e021c19f4b093d6c4762f68a77cd59d03bfa516b7c35d
+
+path: /share/man/man1/setsid.1
+type: reg
+mode: 644
+source: .pkgdata/a2fcbf66aae1eeb06db62e21ccfafb208f5de87ca0553e1d95d3d78a85aaeda2
+blake3: a2fcbf66aae1eeb06db62e21ccfafb208f5de87ca0553e1d95d3d78a85aaeda2
+
+path: /share/man/man1/sha1sum.1
+type: reg
+mode: 644
+source: .pkgdata/68314962a4b6468bad11afc4445e99b27a47a36a8a4585852905889cc79480b2
+blake3: 68314962a4b6468bad11afc4445e99b27a47a36a8a4585852905889cc79480b2
+
+path: /share/man/man1/sha224sum.1
+type: reg
+mode: 644
+source: .pkgdata/f9e48a7560bb6b6d1ab7cd1070305e5b2c430e2cc4f51a20c5130dc30aea04e5
+blake3: f9e48a7560bb6b6d1ab7cd1070305e5b2c430e2cc4f51a20c5130dc30aea04e5
+
+path: /share/man/man1/sha256sum.1
+type: reg
+mode: 644
+source: .pkgdata/6071101ff975242b6d72499ae92f08e26f3743901bfaa7ebc1f89bb4962d7b44
+blake3: 6071101ff975242b6d72499ae92f08e26f3743901bfaa7ebc1f89bb4962d7b44
+
+path: /share/man/man1/sha384sum.1
+type: reg
+mode: 644
+source: .pkgdata/e5c64b1627cfeb337a98b8cde6e18556c7d4678843f1399578e19d758b49c9c7
+blake3: e5c64b1627cfeb337a98b8cde6e18556c7d4678843f1399578e19d758b49c9c7
+
+path: /share/man/man1/sha512-224sum.1
+type: reg
+mode: 644
+source: .pkgdata/80d82e40146615e4fa324a6eeae95dee60797fafe6ccf34df83406f70f274cdd
+blake3: 80d82e40146615e4fa324a6eeae95dee60797fafe6ccf34df83406f70f274cdd
+
+path: /share/man/man1/sha512-256sum.1
+type: reg
+mode: 644
+source: .pkgdata/02fc55d68bf84dbf9be48b0b693d16484f24458dd1e7f021dab2defe4d3631d5
+blake3: 02fc55d68bf84dbf9be48b0b693d16484f24458dd1e7f021dab2defe4d3631d5
+
+path: /share/man/man1/sha512sum.1
+type: reg
+mode: 644
+source: .pkgdata/58d546c38b8eb309e2d56843aec0ce72ae8445eeecefac66d6935c9a7886456d
+blake3: 58d546c38b8eb309e2d56843aec0ce72ae8445eeecefac66d6935c9a7886456d
+
+path: /share/man/man1/sleep.1
+type: reg
+mode: 644
+source: .pkgdata/23d3821efa1b3667ad14ede3143dc700c0994bfb0f09fb005633c175b81a1a26
+blake3: 23d3821efa1b3667ad14ede3143dc700c0994bfb0f09fb005633c175b81a1a26
+
+path: /share/man/man1/sort.1
+type: reg
+mode: 644
+source: .pkgdata/ef9bf7bd7fbd6c1e397af63e76f6a2b699bf7b614ccb83ea1ef14b4e5a4ce074
+blake3: ef9bf7bd7fbd6c1e397af63e76f6a2b699bf7b614ccb83ea1ef14b4e5a4ce074
+
+path: /share/man/man1/split.1
+type: reg
+mode: 644
+source: .pkgdata/3ea9fed5ca6f0a846ae9dc9b3cbb3ec96789e5b44b52a9013b4645da6532cfe7
+blake3: 3ea9fed5ca6f0a846ae9dc9b3cbb3ec96789e5b44b52a9013b4645da6532cfe7
+
+path: /share/man/man1/sponge.1
+type: reg
+mode: 644
+source: .pkgdata/97211beca7f49b9ba6868b5d3389583d7cb39c790ed229212d27f6c873e61f58
+blake3: 97211beca7f49b9ba6868b5d3389583d7cb39c790ed229212d27f6c873e61f58
+
+path: /share/man/man1/stat.1
+type: reg
+mode: 644
+source: .pkgdata/75dab34f6d4d94ca7a1b01aadb09ac320dfd8f5b16d320ce3941501821cd3571
+blake3: 75dab34f6d4d94ca7a1b01aadb09ac320dfd8f5b16d320ce3941501821cd3571
+
+path: /share/man/man1/strings.1
+type: reg
+mode: 644
+source: .pkgdata/5b91a1dce6cd011cd8d76fe63283250ad6e67a62793073a62bf81f8fee5a7fe6
+blake3: 5b91a1dce6cd011cd8d76fe63283250ad6e67a62793073a62bf81f8fee5a7fe6
+
+path: /share/man/man1/su.1
+type: reg
+mode: 644
+source: .pkgdata/3701771639dfe68ba51e12e1880cccf76f90ab9324492df1e8d7acef64ab2b57
+blake3: 3701771639dfe68ba51e12e1880cccf76f90ab9324492df1e8d7acef64ab2b57
+
+path: /share/man/man1/sync.1
+type: reg
+mode: 644
+source: .pkgdata/d62d2f106b994a51ba3282e447684ab4d507535d31ed04b909357345d09f3cfa
+blake3: d62d2f106b994a51ba3282e447684ab4d507535d31ed04b909357345d09f3cfa
+
+path: /share/man/man1/tail.1
+type: reg
+mode: 644
+source: .pkgdata/a992a3e76e7a2149278a1fc22b75158ab975a8df7e40ebe93ea129e374ad3ce2
+blake3: a992a3e76e7a2149278a1fc22b75158ab975a8df7e40ebe93ea129e374ad3ce2
+
+path: /share/man/man1/tar.1
+type: reg
+mode: 644
+source: .pkgdata/61569085ad19628e355a1c0fb88f725b68dd1d61cf3407f40f2ec4cd9874fb0d
+blake3: 61569085ad19628e355a1c0fb88f725b68dd1d61cf3407f40f2ec4cd9874fb0d
+
+path: /share/man/man1/tee.1
+type: reg
+mode: 644
+source: .pkgdata/8c4028009fb24ef2d11f3aeb8c42f7863d1855fd02aa90b06f286a19648179bf
+blake3: 8c4028009fb24ef2d11f3aeb8c42f7863d1855fd02aa90b06f286a19648179bf
+
+path: /share/man/man1/test.1
+type: reg
+mode: 644
+source: .pkgdata/39e9bf1d1458f382667b8c1e64aaaa712d8c4e52b38b8397456221b3633c273e
+blake3: 39e9bf1d1458f382667b8c1e64aaaa712d8c4e52b38b8397456221b3633c273e
+
+path: /share/man/man1/tftp.1
+type: reg
+mode: 644
+source: .pkgdata/2bc7737f2aa347410b23bdfc6be9a3397b61adc32f0013fa89caba11ff2f60e7
+blake3: 2bc7737f2aa347410b23bdfc6be9a3397b61adc32f0013fa89caba11ff2f60e7
+
+path: /share/man/man1/time.1
+type: reg
+mode: 644
+source: .pkgdata/229bb2f3ed9969560e3bde59e1128a760a95e6a867dbbbc90993253f7fec0b61
+blake3: 229bb2f3ed9969560e3bde59e1128a760a95e6a867dbbbc90993253f7fec0b61
+
+path: /share/man/man1/touch.1
+type: reg
+mode: 644
+source: .pkgdata/23ab9d4f6b646429d67efff2fa44fafd033441dbfcb46225f80b2dcfec58a5f7
+blake3: 23ab9d4f6b646429d67efff2fa44fafd033441dbfcb46225f80b2dcfec58a5f7
+
+path: /share/man/man1/tr.1
+type: reg
+mode: 644
+source: .pkgdata/47925a4082519492188ef5078047294c3b6e2e50aedb872a99e591d1619bc374
+blake3: 47925a4082519492188ef5078047294c3b6e2e50aedb872a99e591d1619bc374
+
+path: /share/man/man1/true.1
+type: reg
+mode: 644
+source: .pkgdata/3367a891bea2730ba55138aa993822a8167d0566124d38e77b1a609c1437eb0c
+blake3: 3367a891bea2730ba55138aa993822a8167d0566124d38e77b1a609c1437eb0c
+
+path: /share/man/man1/truncate.1
+type: reg
+mode: 644
+source: .pkgdata/ac2dbf6bc6be78689c3103c5c2ce62ca69d6cafda51b54a64de8e69624373ae0
+blake3: ac2dbf6bc6be78689c3103c5c2ce62ca69d6cafda51b54a64de8e69624373ae0
+
+path: /share/man/man1/tsort.1
+type: reg
+mode: 644
+source: .pkgdata/c772aee299f986e59d0e13d42d84461565227a27439392c5a976fad072142972
+blake3: c772aee299f986e59d0e13d42d84461565227a27439392c5a976fad072142972
+
+path: /share/man/man1/tty.1
+type: reg
+mode: 644
+source: .pkgdata/a9389b4637cc1bb9208fbed8f30a2206a476648983ab9b323fad9fec92c98719
+blake3: a9389b4637cc1bb9208fbed8f30a2206a476648983ab9b323fad9fec92c98719
+
+path: /share/man/man1/uname.1
+type: reg
+mode: 644
+source: .pkgdata/3046855dccd7804db78ea66e8ddb41d42d9a13f860ba8026a841b3420fb554da
+blake3: 3046855dccd7804db78ea66e8ddb41d42d9a13f860ba8026a841b3420fb554da
+
+path: /share/man/man1/unexpand.1
+type: reg
+mode: 644
+source: .pkgdata/389b7853aac97808b039f30a82a90612970b873195f3511f42be13d67b8155a4
+blake3: 389b7853aac97808b039f30a82a90612970b873195f3511f42be13d67b8155a4
+
+path: /share/man/man1/uniq.1
+type: reg
+mode: 644
+source: .pkgdata/15c64c75121ded7aa5241be5a926c073cec9146495fc0453d0446cafd4455019
+blake3: 15c64c75121ded7aa5241be5a926c073cec9146495fc0453d0446cafd4455019
+
+path: /share/man/man1/unlink.1
+type: reg
+mode: 644
+source: .pkgdata/9d05c3c4797c4782df7db03aae140e71f77fc6f0f7f727e71c63771df4490feb
+blake3: 9d05c3c4797c4782df7db03aae140e71f77fc6f0f7f727e71c63771df4490feb
+
+path: /share/man/man1/unlzma.1
+type: sym
+mode: 777
+target: xz.1
+
+path: /share/man/man1/unshare.1
+type: reg
+mode: 644
+source: .pkgdata/a094a5f01d184ad8e1a5c74e81ba5baf0066ee32cb072d5e66876e8e2403b3a3
+blake3: a094a5f01d184ad8e1a5c74e81ba5baf0066ee32cb072d5e66876e8e2403b3a3
+
+path: /share/man/man1/unxz.1
+type: sym
+mode: 777
+target: xz.1
+
+path: /share/man/man1/uptime.1
+type: reg
+mode: 644
+source: .pkgdata/70b4df1ff8a55cbcfc815fde206b33af1219938d7cd68c0f30fe84e80aef906c
+blake3: 70b4df1ff8a55cbcfc815fde206b33af1219938d7cd68c0f30fe84e80aef906c
+
+path: /share/man/man1/uudecode.1
+type: reg
+mode: 644
+source: .pkgdata/e4f16a60f093727fdc0f3acdbc4f118d00e95daf7e80b36d33da840b6661c574
+blake3: e4f16a60f093727fdc0f3acdbc4f118d00e95daf7e80b36d33da840b6661c574
+
+path: /share/man/man1/uuencode.1
+type: reg
+mode: 644
+source: .pkgdata/fd05cd9be98257aef0db1b155730ac3c2823dd8ca0d9c322f6d73d464ca5b329
+blake3: fd05cd9be98257aef0db1b155730ac3c2823dd8ca0d9c322f6d73d464ca5b329
+
+path: /share/man/man1/vtallow.1
+type: reg
+mode: 644
+source: .pkgdata/51766863645157c8a70631ac9ec76c69c4e35d05589cb37a25e2ee6298e88456
+blake3: 51766863645157c8a70631ac9ec76c69c4e35d05589cb37a25e2ee6298e88456
+
+path: /share/man/man1/watch.1
+type: reg
+mode: 644
+source: .pkgdata/05705b60f895cb2b317af26dbef5396843de6806d7d995d15ee8a7d02e223cf9
+blake3: 05705b60f895cb2b317af26dbef5396843de6806d7d995d15ee8a7d02e223cf9
+
+path: /share/man/man1/wc.1
+type: reg
+mode: 644
+source: .pkgdata/f0c023f8b6308283b569da88d355463dacac7667c53a93c215565d8b0157d083
+blake3: f0c023f8b6308283b569da88d355463dacac7667c53a93c215565d8b0157d083
+
+path: /share/man/man1/which.1
+type: reg
+mode: 644
+source: .pkgdata/0af8d3e33fdb5997987dfe4183be113b25c5439e24d87d367d262e6674d0341f
+blake3: 0af8d3e33fdb5997987dfe4183be113b25c5439e24d87d367d262e6674d0341f
+
+path: /share/man/man1/who.1
+type: reg
+mode: 644
+source: .pkgdata/c73f695cccea033af47428aea373e6ffcf830c6a36fc0293fc6faeca2b4350ab
+blake3: c73f695cccea033af47428aea373e6ffcf830c6a36fc0293fc6faeca2b4350ab
+
+path: /share/man/man1/whoami.1
+type: reg
+mode: 644
+source: .pkgdata/b117388d3d94d7a1689c4a4c1f7d39c1328ed3a903851bafa516b380118c18e7
+blake3: b117388d3d94d7a1689c4a4c1f7d39c1328ed3a903851bafa516b380118c18e7
+
+path: /share/man/man1/xargs.1
+type: reg
+mode: 644
+source: .pkgdata/fafa467abfe31d26651207631aa9f2ea078e61f9dbafb772c079587fa63c202f
+blake3: fafa467abfe31d26651207631aa9f2ea078e61f9dbafb772c079587fa63c202f
+
+path: /share/man/man1/xz.1
+type: reg
+mode: 644
+source: .pkgdata/76d15ce3f480be2a2b5a1f1b437862dc73031332aeb997269bcdd356f17f769b
+blake3: 76d15ce3f480be2a2b5a1f1b437862dc73031332aeb997269bcdd356f17f769b
+
+path: /share/man/man1/xzcat.1
+type: sym
+mode: 777
+target: xz.1
+
+path: /share/man/man1/xzcmp.1
+type: sym
+mode: 777
+target: xzdiff.1
+
+path: /share/man/man1/xzdec.1
+type: reg
+mode: 644
+source: .pkgdata/2992b064de17ca519b95196aab1ff80f0d0f4c737ac58cc77d69a05129bb958e
+blake3: 2992b064de17ca519b95196aab1ff80f0d0f4c737ac58cc77d69a05129bb958e
+
+path: /share/man/man1/xzdiff.1
+type: reg
+mode: 644
+source: .pkgdata/8e361ecba56cec7f1b36b79d23a978ccb4ef8d1c955ee3699206f2167a688c82
+blake3: 8e361ecba56cec7f1b36b79d23a978ccb4ef8d1c955ee3699206f2167a688c82
+
+path: /share/man/man1/xzegrep.1
+type: sym
+mode: 777
+target: xzgrep.1
+
+path: /share/man/man1/xzfgrep.1
+type: sym
+mode: 777
+target: xzgrep.1
+
+path: /share/man/man1/xzgrep.1
+type: reg
+mode: 644
+source: .pkgdata/9c168c6d23311a46a11e4c849a2b2973c261926f862ed27c3358db55e3eee1b1
+blake3: 9c168c6d23311a46a11e4c849a2b2973c261926f862ed27c3358db55e3eee1b1
+
+path: /share/man/man1/xzless.1
+type: reg
+mode: 644
+source: .pkgdata/c6f7fc73dd4753ca8ba285fdde68de5bf2dffba9aa3707adf035f963081ef719
+blake3: c6f7fc73dd4753ca8ba285fdde68de5bf2dffba9aa3707adf035f963081ef719
+
+path: /share/man/man1/xzmore.1
+type: reg
+mode: 644
+source: .pkgdata/a532fe109922001de000b0c0f8bd2c89f17df4fc2291fc5608c7879903f73a3f
+blake3: a532fe109922001de000b0c0f8bd2c89f17df4fc2291fc5608c7879903f73a3f
+
+path: /share/man/man1/yes.1
+type: reg
+mode: 644
+source: .pkgdata/a1b638efd46cfda8d69373cb18ddafb47d8111cd5d59522912e8c768c9b8a69a
+blake3: a1b638efd46cfda8d69373cb18ddafb47d8111cd5d59522912e8c768c9b8a69a
+
+path: /share/man/man1/zcat.1
+type: reg
+mode: 644
+source: .pkgdata/e992a8389df796ffb0d87f22c9d98db89e9d3a60b1993d90da6f7602d492ba88
+blake3: e992a8389df796ffb0d87f22c9d98db89e9d3a60b1993d90da6f7602d492ba88
+
+path: /share/man/man1/zcmp.1
+type: reg
+mode: 644
+source: .pkgdata/d83a264fb50194d4e442134a30d73ce5c4dadffb8a758d744c1cb06d6ebce30c
+blake3: d83a264fb50194d4e442134a30d73ce5c4dadffb8a758d744c1cb06d6ebce30c
+
+path: /share/man/man1/zdiff.1
+type: reg
+mode: 644
+source: .pkgdata/8a81062d5d6866d792680674c71385ee9098280b917721e7c63f6df4946de6fa
+blake3: 8a81062d5d6866d792680674c71385ee9098280b917721e7c63f6df4946de6fa
+
+path: /share/man/man1/zforce.1
+type: reg
+mode: 644
+source: .pkgdata/6104e9cbfae354ee847a7739e40359f6dc972857d8b3b030354e53de6df19645
+blake3: 6104e9cbfae354ee847a7739e40359f6dc972857d8b3b030354e53de6df19645
+
+path: /share/man/man1/zgrep.1
+type: reg
+mode: 644
+source: .pkgdata/70dc5cec0408c63b4d23115c9c5239f7f14e0febd2fd9eb9e46d8c17024b67ef
+blake3: 70dc5cec0408c63b4d23115c9c5239f7f14e0febd2fd9eb9e46d8c17024b67ef
+
+path: /share/man/man1/zless.1
+type: reg
+mode: 644
+source: .pkgdata/af7dc58308591ea447c0991a7b37ff28cdc2a449e039acbd402f773b22435f83
+blake3: af7dc58308591ea447c0991a7b37ff28cdc2a449e039acbd402f773b22435f83
+
+path: /share/man/man1/zmore.1
+type: reg
+mode: 644
+source: .pkgdata/e69a178ce144f55c09e2da69b3d7f18eb5302c697416894b92f05ce9095d0d5b
+blake3: e69a178ce144f55c09e2da69b3d7f18eb5302c697416894b92f05ce9095d0d5b
+
+path: /share/man/man1/znew.1
+type: reg
+mode: 644
+source: .pkgdata/885b93b422a7d086d2d377a196274341586ba68de7ba3cad8eb46a59464102dc
+blake3: 885b93b422a7d086d2d377a196274341586ba68de7ba3cad8eb46a59464102dc
+
+path: /share/man/man3
 type: dir
+mode: 755
+
+path: /share/man/man3/libnetlink.3
+type: reg
+mode: 644
+source: .pkgdata/1b8bc55ba9903c62619f97d5b3c7e6bd54189a3ddd9898cc8c9bc22d94c20567
+blake3: 1b8bc55ba9903c62619f97d5b3c7e6bd54189a3ddd9898cc8c9bc22d94c20567
+
+path: /share/man/man5
+type: dir
+mode: 755
+
+path: /share/man/man5/perpetrate.5
+type: reg
+mode: 644
+source: .pkgdata/2194152dccadaed2b46204cc9e429c58e95fcf39c156c66d8978bb8e93132f19
+blake3: 2194152dccadaed2b46204cc9e429c58e95fcf39c156c66d8978bb8e93132f19
+
+path: /share/man/man7
+type: dir
+mode: 755
+
+path: /share/man/man7/tc-hfsc.7
+type: reg
+mode: 644
+source: .pkgdata/1134d0621c66312dc9635eac238d9987889bc819b9c3ffc8436779dfd7c061e1
+blake3: 1134d0621c66312dc9635eac238d9987889bc819b9c3ffc8436779dfd7c061e1
+
+path: /share/man/man8
+type: dir
+mode: 755
+
+path: /share/man/man8/arpd.8
+type: reg
+mode: 644
+source: .pkgdata/46c542b9304db396b9767649c384be49c9c96cda426b9dfdd424c9e62d22a5c6
+blake3: 46c542b9304db396b9767649c384be49c9c96cda426b9dfdd424c9e62d22a5c6
+
+path: /share/man/man8/bridge.8
+type: reg
+mode: 644
+source: .pkgdata/148962d1ba4b15483d64d1067c51b1796b303467828dd3dc7f55b2f4533ccd34
+blake3: 148962d1ba4b15483d64d1067c51b1796b303467828dd3dc7f55b2f4533ccd34
+
+path: /share/man/man8/ctrlaltdel.8
+type: reg
+mode: 644
+source: .pkgdata/9db004ecc113927d3326749d9a020c169196bdf4797d6b738dd08c55381ff477
+blake3: 9db004ecc113927d3326749d9a020c169196bdf4797d6b738dd08c55381ff477
+
+path: /share/man/man8/ctstat.8
+type: reg
+mode: 644
+source: .pkgdata/eca7bee1d38325f7400cf9fce14064442d32eb38d71329a2fec8886c949f7010
+blake3: eca7bee1d38325f7400cf9fce14064442d32eb38d71329a2fec8886c949f7010
+
+path: /share/man/man8/devlink-dev.8
+type: reg
+mode: 644
+source: .pkgdata/9f100b425cfadf43190d6ae6c312780f61cf12b9dedba21b651fa0a76a61f7c3
+blake3: 9f100b425cfadf43190d6ae6c312780f61cf12b9dedba21b651fa0a76a61f7c3
+
+path: /share/man/man8/devlink-dpipe.8
+type: reg
+mode: 644
+source: .pkgdata/c30c79afb674234afb70b85fd693857e0a19a886b51e666a7f65b7a35badaa58
+blake3: c30c79afb674234afb70b85fd693857e0a19a886b51e666a7f65b7a35badaa58
+
+path: /share/man/man8/devlink-health.8
+type: reg
+mode: 644
+source: .pkgdata/396d82f845d0954e743e6d84baa487b91113d215c78b40cdfc965bbba5f3e54d
+blake3: 396d82f845d0954e743e6d84baa487b91113d215c78b40cdfc965bbba5f3e54d
+
+path: /share/man/man8/devlink-monitor.8
+type: reg
+mode: 644
+source: .pkgdata/33c6d4f9324ee66cb499c5b11ad85afc7f885188bb07c69f5af716429eb3dc72
+blake3: 33c6d4f9324ee66cb499c5b11ad85afc7f885188bb07c69f5af716429eb3dc72
+
+path: /share/man/man8/devlink-port.8
+type: reg
+mode: 644
+source: .pkgdata/d3764ccbb663ea75c5d491f6cb83b35d9c7c022f9c1dbfcb0a97df56b1692c94
+blake3: d3764ccbb663ea75c5d491f6cb83b35d9c7c022f9c1dbfcb0a97df56b1692c94
+
+path: /share/man/man8/devlink-region.8
+type: reg
+mode: 644
+source: .pkgdata/1f817206aa6d806fe3cb106abe8e1a9a742e449a01edf339f63087bee28c9b01
+blake3: 1f817206aa6d806fe3cb106abe8e1a9a742e449a01edf339f63087bee28c9b01
+
+path: /share/man/man8/devlink-resource.8
+type: reg
+mode: 644
+source: .pkgdata/3059e992ca4c5940af8f7272f9bedd0fa5124616e86acd196f295032045e6bdd
+blake3: 3059e992ca4c5940af8f7272f9bedd0fa5124616e86acd196f295032045e6bdd
+
+path: /share/man/man8/devlink-sb.8
+type: reg
+mode: 644
+source: .pkgdata/f8f028e283db1c0227953c222ebe7fce99f683d927c394faa5b76aeea21bdbdb
+blake3: f8f028e283db1c0227953c222ebe7fce99f683d927c394faa5b76aeea21bdbdb
+
+path: /share/man/man8/devlink-trap.8
+type: reg
+mode: 644
+source: .pkgdata/c9631b907ebbd673d49d4faa4e2522a471bdd084162175a92974653c10a14411
+blake3: c9631b907ebbd673d49d4faa4e2522a471bdd084162175a92974653c10a14411
+
+path: /share/man/man8/devlink.8
+type: reg
+mode: 644
+source: .pkgdata/992179e1a19d6ad9eeec7f4cc71f893a6573986d4ef60edf8b26fcd275b3371a
+blake3: 992179e1a19d6ad9eeec7f4cc71f893a6573986d4ef60edf8b26fcd275b3371a
+
+path: /share/man/man8/dropbear.8
+type: reg
+mode: 644
+source: .pkgdata/a76b15741dd9abfb0b1c11056b0daf95dd3fb821d2721d0fc1bc357fe7639fdf
+blake3: a76b15741dd9abfb0b1c11056b0daf95dd3fb821d2721d0fc1bc357fe7639fdf
+
+path: /share/man/man8/freeramdisk.8
+type: reg
+mode: 644
+source: .pkgdata/243c0569d00fa15fd77ddf4f6e44b56d05cf283f7515c554b6f2143fa6f99eda
+blake3: 243c0569d00fa15fd77ddf4f6e44b56d05cf283f7515c554b6f2143fa6f99eda
+
+path: /share/man/man8/fsfreeze.8
+type: reg
+mode: 644
+source: .pkgdata/80827ca29ab30cac50b6dccb7381c7871ee2b9f1cca1e4df681e30dd369eddb9
+blake3: 80827ca29ab30cac50b6dccb7381c7871ee2b9f1cca1e4df681e30dd369eddb9
+
+path: /share/man/man8/genl.8
+type: reg
+mode: 644
+source: .pkgdata/5c0b6c911df3b8c0615fffc79cacfc0d8bf6f0b6cf8222b4ce56094071fca1a9
+blake3: 5c0b6c911df3b8c0615fffc79cacfc0d8bf6f0b6cf8222b4ce56094071fca1a9
+
+path: /share/man/man8/getty.8
+type: reg
+mode: 644
+source: .pkgdata/86567637f318c7766ae5b7fd734fd5e9a1c6ac4786968658e1293773ce23b2cf
+blake3: 86567637f318c7766ae5b7fd734fd5e9a1c6ac4786968658e1293773ce23b2cf
+
+path: /share/man/man8/halt.8
+type: reg
+mode: 644
+source: .pkgdata/4e2cbcdfaa5ef75eadaa1d584661ab2ce029c8f55e5551a8ed4b15a8d8ac6100
+blake3: 4e2cbcdfaa5ef75eadaa1d584661ab2ce029c8f55e5551a8ed4b15a8d8ac6100
+
+path: /share/man/man8/hwclock.8
+type: reg
+mode: 644
+source: .pkgdata/5dec5b11568a07556daccc80cc3f12d84069f7bdb6088c61bad07841515f576b
+blake3: 5dec5b11568a07556daccc80cc3f12d84069f7bdb6088c61bad07841515f576b
+
+path: /share/man/man8/ifcfg.8
+type: reg
+mode: 644
+source: .pkgdata/3c53836ff76dfaba0bc17560e5c655d59830264c6b3650b9f1a9d77548d3fc11
+blake3: 3c53836ff76dfaba0bc17560e5c655d59830264c6b3650b9f1a9d77548d3fc11
+
+path: /share/man/man8/ifstat.8
+type: reg
+mode: 644
+source: .pkgdata/119c19de961cd07f8add75b3223f950fd1feb114b302bd5079e9817e16f27d43
+blake3: 119c19de961cd07f8add75b3223f950fd1feb114b302bd5079e9817e16f27d43
+
+path: /share/man/man8/insmod.8
+type: reg
+mode: 644
+source: .pkgdata/790397f88ef322f23ccc910c7597b93a0f43d01beee6d43d54a6e7728761bfee
+blake3: 790397f88ef322f23ccc910c7597b93a0f43d01beee6d43d54a6e7728761bfee
+
+path: /share/man/man8/ip-address.8
+type: reg
+mode: 644
+source: .pkgdata/0b6d4e291b9bd8d94ea7126c474612c3abd189becdafd9bfc8072d455d081ee3
+blake3: 0b6d4e291b9bd8d94ea7126c474612c3abd189becdafd9bfc8072d455d081ee3
+
+path: /share/man/man8/ip-addrlabel.8
+type: reg
+mode: 644
+source: .pkgdata/6eea1e14a5fc61be3c2a0f3fe2ef46082406cced915834cbde310c681d8866cc
+blake3: 6eea1e14a5fc61be3c2a0f3fe2ef46082406cced915834cbde310c681d8866cc
+
+path: /share/man/man8/ip-fou.8
+type: reg
+mode: 644
+source: .pkgdata/f9290947620fdd82d96c1a350b00e67e79f62a3175904de26135d3617021ea10
+blake3: f9290947620fdd82d96c1a350b00e67e79f62a3175904de26135d3617021ea10
+
+path: /share/man/man8/ip-gue.8
+type: reg
+mode: 644
+source: .pkgdata/7cd915e87526a646beab8659d8d4ce9aa2bce9e4b9fbc1994a35737fb7cae335
+blake3: 7cd915e87526a646beab8659d8d4ce9aa2bce9e4b9fbc1994a35737fb7cae335
+
+path: /share/man/man8/ip-l2tp.8
+type: reg
+mode: 644
+source: .pkgdata/2ce6d2e03c74da0d79131cad3da036ab2584ab6bf7745537a3a70b054491ee15
+blake3: 2ce6d2e03c74da0d79131cad3da036ab2584ab6bf7745537a3a70b054491ee15
+
+path: /share/man/man8/ip-link.8
+type: reg
+mode: 644
+source: .pkgdata/118fb87bac7aaf4d4fe1a25d701755013d5d0041ec9214ac6dacb0a0a8580ac3
+blake3: 118fb87bac7aaf4d4fe1a25d701755013d5d0041ec9214ac6dacb0a0a8580ac3
+
+path: /share/man/man8/ip-macsec.8
+type: reg
+mode: 644
+source: .pkgdata/ee674a9fbb42e9653fb1401046b543931b569f06b540612680bdd46106ea58dc
+blake3: ee674a9fbb42e9653fb1401046b543931b569f06b540612680bdd46106ea58dc
+
+path: /share/man/man8/ip-maddress.8
+type: reg
+mode: 644
+source: .pkgdata/8c66159cf0d7f8f0f06afcd3e6838e008f19c7d31f3b52abbbb217ba1ca2d7c4
+blake3: 8c66159cf0d7f8f0f06afcd3e6838e008f19c7d31f3b52abbbb217ba1ca2d7c4
+
+path: /share/man/man8/ip-monitor.8
+type: reg
+mode: 644
+source: .pkgdata/1a54464679cc00412c93eb3e28bfbe50775a331db54ab4777a2dde80cdaff3d9
+blake3: 1a54464679cc00412c93eb3e28bfbe50775a331db54ab4777a2dde80cdaff3d9
+
+path: /share/man/man8/ip-mptcp.8
+type: reg
+mode: 644
+source: .pkgdata/6962d5c1ec6a9e9ba1f32568ca17fbb81e0a540c8de396f6756cb699eb6a81e5
+blake3: 6962d5c1ec6a9e9ba1f32568ca17fbb81e0a540c8de396f6756cb699eb6a81e5
+
+path: /share/man/man8/ip-mroute.8
+type: reg
+mode: 644
+source: .pkgdata/fd8d133672f118755d903c7d15030814873f6f858dfc0584e400b985072eff11
+blake3: fd8d133672f118755d903c7d15030814873f6f858dfc0584e400b985072eff11
+
+path: /share/man/man8/ip-neighbour.8
+type: reg
+mode: 644
+source: .pkgdata/98ddd865eac5ad1164e3c424b4d184da28bbbc09b596681d5812a64c442fb7f0
+blake3: 98ddd865eac5ad1164e3c424b4d184da28bbbc09b596681d5812a64c442fb7f0
+
+path: /share/man/man8/ip-netconf.8
+type: reg
+mode: 644
+source: .pkgdata/a3a206b5a98aff7acdb84fd3ad5245e836bd9cf828ffc986455ca24c7193f8ed
+blake3: a3a206b5a98aff7acdb84fd3ad5245e836bd9cf828ffc986455ca24c7193f8ed
+
+path: /share/man/man8/ip-netns.8
+type: reg
+mode: 644
+source: .pkgdata/cb274f97c9c8cc4ec296c20a47b1f0aca7a63185c317db8028aa0fff962a29b3
+blake3: cb274f97c9c8cc4ec296c20a47b1f0aca7a63185c317db8028aa0fff962a29b3
+
+path: /share/man/man8/ip-nexthop.8
+type: reg
+mode: 644
+source: .pkgdata/1fde653df6f63164425274924ecba8be8a418ad2bf41022312548868da277efd
+blake3: 1fde653df6f63164425274924ecba8be8a418ad2bf41022312548868da277efd
+
+path: /share/man/man8/ip-ntable.8
+type: reg
+mode: 644
+source: .pkgdata/955777f166590dcc47dc8fa345e4cd50bad3c2dbf9815860fddfe029cc663b1e
+blake3: 955777f166590dcc47dc8fa345e4cd50bad3c2dbf9815860fddfe029cc663b1e
+
+path: /share/man/man8/ip-route.8
+type: reg
+mode: 644
+source: .pkgdata/b36c7ff21c7b8cc620f151c3edfa434c8fdbb0e619dd78287f95cbe233c05583
+blake3: b36c7ff21c7b8cc620f151c3edfa434c8fdbb0e619dd78287f95cbe233c05583
+
+path: /share/man/man8/ip-rule.8
+type: reg
+mode: 644
+source: .pkgdata/5623729639258b2d94d5e1dfae55556b1dbacdf6de520a103cdaa7b38811608e
+blake3: 5623729639258b2d94d5e1dfae55556b1dbacdf6de520a103cdaa7b38811608e
+
+path: /share/man/man8/ip-sr.8
+type: reg
+mode: 644
+source: .pkgdata/79179658f325bcf195b4c644c48e6bb6ec27fc94af41b36fe1d066d9a149f616
+blake3: 79179658f325bcf195b4c644c48e6bb6ec27fc94af41b36fe1d066d9a149f616
+
+path: /share/man/man8/ip-tcp_metrics.8
+type: reg
+mode: 644
+source: .pkgdata/41ef20460fb3487b45c6011e0ae46e0f9f498bca894faf4f245574a6d9f2e1c1
+blake3: 41ef20460fb3487b45c6011e0ae46e0f9f498bca894faf4f245574a6d9f2e1c1
+
+path: /share/man/man8/ip-token.8
+type: reg
+mode: 644
+source: .pkgdata/7c58513bd82ecf8c3a62bfb63eb153e242c1100a3c004b5e224b221c994fad90
+blake3: 7c58513bd82ecf8c3a62bfb63eb153e242c1100a3c004b5e224b221c994fad90
+
+path: /share/man/man8/ip-tunnel.8
+type: reg
+mode: 644
+source: .pkgdata/5cf6e947d524f111a4a18442f287ec4e3c8243e179613ac3c5696f892bedbb74
+blake3: 5cf6e947d524f111a4a18442f287ec4e3c8243e179613ac3c5696f892bedbb74
+
+path: /share/man/man8/ip-vrf.8
+type: reg
+mode: 644
+source: .pkgdata/3c9ecaa5dc3f71888ffdc1faad49b80ba1a77c9e7eef01a05096de372f7ce026
+blake3: 3c9ecaa5dc3f71888ffdc1faad49b80ba1a77c9e7eef01a05096de372f7ce026
+
+path: /share/man/man8/ip-xfrm.8
+type: reg
+mode: 644
+source: .pkgdata/c4fae0c7e10617dbb8a8f65ceaaee8ec4c0097f9a23a0f7cf0e53ae1e817ef15
+blake3: c4fae0c7e10617dbb8a8f65ceaaee8ec4c0097f9a23a0f7cf0e53ae1e817ef15
+
+path: /share/man/man8/ip.8
+type: reg
+mode: 644
+source: .pkgdata/c86d46f01327760cdbf2417433b18348951b08e7b7c1b31a373b3aed727931aa
+blake3: c86d46f01327760cdbf2417433b18348951b08e7b7c1b31a373b3aed727931aa
+
+path: /share/man/man8/killall5.8
+type: reg
+mode: 644
+source: .pkgdata/4e80fd1783b8883763e58035b2693e9cbf82ca2eaf161ec928afb380787ad064
+blake3: 4e80fd1783b8883763e58035b2693e9cbf82ca2eaf161ec928afb380787ad064
+
+path: /share/man/man8/lastlog.8
+type: reg
+mode: 644
+source: .pkgdata/5ac4cd50c9479ba0ce8a07432d7f43ee300b46bf8c6b489a42d2d412aaf62ded
+blake3: 5ac4cd50c9479ba0ce8a07432d7f43ee300b46bf8c6b489a42d2d412aaf62ded
+
+path: /share/man/man8/lnstat.8
+type: reg
+mode: 644
+source: .pkgdata/0cbc87199401170729c204404a8be3110866087cf077ebab82e8b798b8378568
+blake3: 0cbc87199401170729c204404a8be3110866087cf077ebab82e8b798b8378568
+
+path: /share/man/man8/lsmod.8
+type: reg
+mode: 644
+source: .pkgdata/ed0b8487d88697e933988173248e260e93b39e731be8048f345cbb703fad122e
+blake3: ed0b8487d88697e933988173248e260e93b39e731be8048f345cbb703fad122e
+
+path: /share/man/man8/lsusb.8
+type: reg
+mode: 644
+source: .pkgdata/afd1fd89201dc7f8ac720e81518ebb88319e409d2a38b5f6956cd8249d5a0fdc
+blake3: afd1fd89201dc7f8ac720e81518ebb88319e409d2a38b5f6956cd8249d5a0fdc
+
+path: /share/man/man8/mkswap.8
+type: reg
+mode: 644
+source: .pkgdata/4d6a124610936ff857e05be0411937b413cc798dfc2552612e6f21b3a27e2cee
+blake3: 4d6a124610936ff857e05be0411937b413cc798dfc2552612e6f21b3a27e2cee
+
+path: /share/man/man8/mount.8
+type: reg
+mode: 644
+source: .pkgdata/56b7a128daa5c53b2ecd70472249e0505bf3f0e0ca3ec442fa239ec6d3df8d28
+blake3: 56b7a128daa5c53b2ecd70472249e0505bf3f0e0ca3ec442fa239ec6d3df8d28
+
+path: /share/man/man8/nologin.8
+type: reg
+mode: 644
+source: .pkgdata/1528e472ecefd47de3e611f16dd1608e9708829ff8f0cf5450faa4044957fe43
+blake3: 1528e472ecefd47de3e611f16dd1608e9708829ff8f0cf5450faa4044957fe43
+
+path: /share/man/man8/nstat.8
+type: reg
+mode: 644
+source: .pkgdata/38d90b58e8dc5489749f46e188eef2ee20a575303920c1c71778efb467e40d31
+blake3: 38d90b58e8dc5489749f46e188eef2ee20a575303920c1c71778efb467e40d31
+
+path: /share/man/man8/perp-setup.8
+type: reg
+mode: 644
+source: .pkgdata/d9bf40bea7a9abd6e10ad62627dae7fae46d729b3d344b3096a98d3c5ef72c43
+blake3: d9bf40bea7a9abd6e10ad62627dae7fae46d729b3d344b3096a98d3c5ef72c43
+
+path: /share/man/man8/perp_intro.8
+type: reg
+mode: 644
+source: .pkgdata/f2d01531605b0a64824176f704276b48e49b8c2aa5db3d7ebb0620b10390fa77
+blake3: f2d01531605b0a64824176f704276b48e49b8c2aa5db3d7ebb0620b10390fa77
+
+path: /share/man/man8/perpboot.8
+type: reg
+mode: 644
+source: .pkgdata/0ffb778d475100c8c6d55a845d043d14e56600deee1cf948f177c2745e0ef353
+blake3: 0ffb778d475100c8c6d55a845d043d14e56600deee1cf948f177c2745e0ef353
+
+path: /share/man/man8/perpctl.8
+type: reg
+mode: 644
+source: .pkgdata/1bfc1144fc85f393df18d2457b417c21de316798ce0f5f4f0178f36d818863a8
+blake3: 1bfc1144fc85f393df18d2457b417c21de316798ce0f5f4f0178f36d818863a8
+
+path: /share/man/man8/perpd.8
+type: reg
+mode: 644
+source: .pkgdata/01df924010163d77e4fb892b8547ad60bf80e4f3894613bedc78579881a29dbd
+blake3: 01df924010163d77e4fb892b8547ad60bf80e4f3894613bedc78579881a29dbd
+
+path: /share/man/man8/perpetrate.8
+type: reg
+mode: 644
+source: .pkgdata/47d4c910c25f3d3911f430575b6f7310f4a769363ba1c1f183950e1c9504a3c8
+blake3: 47d4c910c25f3d3911f430575b6f7310f4a769363ba1c1f183950e1c9504a3c8
+
+path: /share/man/man8/perphup.8
+type: reg
+mode: 644
+source: .pkgdata/2417027bfcc84fb6bb9b2b49fc88000e0616cb0fbc20d7abf586bc6c09cbf76e
+blake3: 2417027bfcc84fb6bb9b2b49fc88000e0616cb0fbc20d7abf586bc6c09cbf76e
+
+path: /share/man/man8/perpls.8
+type: reg
+mode: 644
+source: .pkgdata/5d8371326e9989531a70b61c074e45b348e27d2a7aad6dcddfb0b057bb4a1e0b
+blake3: 5d8371326e9989531a70b61c074e45b348e27d2a7aad6dcddfb0b057bb4a1e0b
+
+path: /share/man/man8/perpok.8
+type: reg
+mode: 644
+source: .pkgdata/ec68329ad20eace0804847449655db729111b4ec3570248a272c265e015ac8de
+blake3: ec68329ad20eace0804847449655db729111b4ec3570248a272c265e015ac8de
+
+path: /share/man/man8/perpstat.8
+type: reg
+mode: 644
+source: .pkgdata/64527a03d4ab69c781525a83abf9c220f1f75333507c584ebdcdac78b6bccc70
+blake3: 64527a03d4ab69c781525a83abf9c220f1f75333507c584ebdcdac78b6bccc70
+
+path: /share/man/man8/pivot_root.8
+type: reg
+mode: 644
+source: .pkgdata/628d23502e545e457527dddaacc937f7936326f94b536ad304444c465ad7feba
+blake3: 628d23502e545e457527dddaacc937f7936326f94b536ad304444c465ad7feba
+
+path: /share/man/man8/rdma-dev.8
+type: reg
+mode: 644
+source: .pkgdata/f3801ba408dbf4ea8cfd17483d921f4f60a757e03cd6b8a952429177e9ee954f
+blake3: f3801ba408dbf4ea8cfd17483d921f4f60a757e03cd6b8a952429177e9ee954f
+
+path: /share/man/man8/rdma-link.8
+type: reg
+mode: 644
+source: .pkgdata/5a52157ba59cce679d45815a25ec0a3706cdb1a7c35ca9854ded6665d6894613
+blake3: 5a52157ba59cce679d45815a25ec0a3706cdb1a7c35ca9854ded6665d6894613
+
+path: /share/man/man8/rdma-resource.8
+type: reg
+mode: 644
+source: .pkgdata/f4f01456938ba83f7dd8d46ba8466a4d22325b5252ef3bbd97928f19152bc9bf
+blake3: f4f01456938ba83f7dd8d46ba8466a4d22325b5252ef3bbd97928f19152bc9bf
+
+path: /share/man/man8/rdma-statistic.8
+type: reg
+mode: 644
+source: .pkgdata/4eec2a2dcdb404187affc361184d73720634fb0b6af254abfb563e11357d5dba
+blake3: 4eec2a2dcdb404187affc361184d73720634fb0b6af254abfb563e11357d5dba
+
+path: /share/man/man8/rdma-system.8
+type: reg
+mode: 644
+source: .pkgdata/f0014080f408bf4a728eafc638ebbdb2de6c51eb19682242873db34651d1dfce
+blake3: f0014080f408bf4a728eafc638ebbdb2de6c51eb19682242873db34651d1dfce
+
+path: /share/man/man8/rdma.8
+type: reg
+mode: 644
+source: .pkgdata/f5609def270191346ab3f15f2ad0670dd9fa7e53825587d69906d1bbd592b862
+blake3: f5609def270191346ab3f15f2ad0670dd9fa7e53825587d69906d1bbd592b862
+
+path: /share/man/man8/readahead.8
+type: reg
+mode: 644
+source: .pkgdata/1855d84f4822d8ef4eb4254f12c355e311c136305924c6a18aed3cfabf345060
+blake3: 1855d84f4822d8ef4eb4254f12c355e311c136305924c6a18aed3cfabf345060
+
+path: /share/man/man8/rmmod.8
+type: reg
+mode: 644
+source: .pkgdata/a5454a2d8fe6ebccfe60986b14aa76d372a2c6a52d0c0ba90fc0924cf05caede
+blake3: a5454a2d8fe6ebccfe60986b14aa76d372a2c6a52d0c0ba90fc0924cf05caede
+
+path: /share/man/man8/routef.8
+type: reg
+mode: 644
+source: .pkgdata/c5b704d310b029daabf746dcbf2ab328a011c6f0b83739effac2e2ad44145635
+blake3: c5b704d310b029daabf746dcbf2ab328a011c6f0b83739effac2e2ad44145635
+
+path: /share/man/man8/routel.8
+type: reg
+mode: 644
+source: .pkgdata/7cb6d7c1501151311a8cd7ca1fcdf2672d03fda137232a4e7ae9670fde85b9ab
+blake3: 7cb6d7c1501151311a8cd7ca1fcdf2672d03fda137232a4e7ae9670fde85b9ab
+
+path: /share/man/man8/rtacct.8
+type: reg
+mode: 644
+source: .pkgdata/28e6042e7ccebac1c38acea70ff2b6b0b03a504a33cc2ec9dda5a11d2a94b265
+blake3: 28e6042e7ccebac1c38acea70ff2b6b0b03a504a33cc2ec9dda5a11d2a94b265
+
+path: /share/man/man8/rtmon.8
+type: reg
+mode: 644
+source: .pkgdata/ea18fcb031a868acbdc1a4dc90162ab0b2d834e130a97165b313b8e86c70d1b6
+blake3: ea18fcb031a868acbdc1a4dc90162ab0b2d834e130a97165b313b8e86c70d1b6
+
+path: /share/man/man8/rtpr.8
+type: reg
+mode: 644
+source: .pkgdata/1b7260be22a191c2388c27141be2941828113e45b5ea97cc6eb202465308354c
+blake3: 1b7260be22a191c2388c27141be2941828113e45b5ea97cc6eb202465308354c
+
+path: /share/man/man8/rtstat.8
+type: reg
+mode: 644
+source: .pkgdata/eca7bee1d38325f7400cf9fce14064442d32eb38d71329a2fec8886c949f7010
+blake3: eca7bee1d38325f7400cf9fce14064442d32eb38d71329a2fec8886c949f7010
+
+path: /share/man/man8/runargs.8
+type: reg
+mode: 644
+source: .pkgdata/710e9b42fd0b81273abd593685de0726d6e7814cc96dea3d1ffb7e5a5bc24059
+blake3: 710e9b42fd0b81273abd593685de0726d6e7814cc96dea3d1ffb7e5a5bc24059
+
+path: /share/man/man8/runargv0.8
+type: reg
+mode: 644
+source: .pkgdata/574b0dafd005dfcf5a5740d5928c1f2a0b6a3621f6f04c666c27cf2505974407
+blake3: 574b0dafd005dfcf5a5740d5928c1f2a0b6a3621f6f04c666c27cf2505974407
+
+path: /share/man/man8/runchoom.8
+type: reg
+mode: 644
+source: .pkgdata/156b70f699781f899a99ef6e95a61935c3da35feedf837b44d0cc64275e4e703
+blake3: 156b70f699781f899a99ef6e95a61935c3da35feedf837b44d0cc64275e4e703
+
+path: /share/man/man8/rundetach.8
+type: reg
+mode: 644
+source: .pkgdata/150be0cf29b0fc99bdefa263bae79f91bb58e1d94f1ff7f23e57025e1979fb80
+blake3: 150be0cf29b0fc99bdefa263bae79f91bb58e1d94f1ff7f23e57025e1979fb80
+
+path: /share/man/man8/rundeux.8
+type: reg
+mode: 644
+source: .pkgdata/dc8b2a41f3da750389da444d7dae12948ebecf941074c8a3a6f125eb6d4bcd38
+blake3: dc8b2a41f3da750389da444d7dae12948ebecf941074c8a3a6f125eb6d4bcd38
+
+path: /share/man/man8/runenv.8
+type: reg
+mode: 644
+source: .pkgdata/f96906d64cbbcb8a445fc8ebf87ef159a6a2fb8fc2e49d295bc591f49ef4e1fd
+blake3: f96906d64cbbcb8a445fc8ebf87ef159a6a2fb8fc2e49d295bc591f49ef4e1fd
+
+path: /share/man/man8/runfile.8
+type: reg
+mode: 644
+source: .pkgdata/432cd4495eba26dbeb8c69dcf2d8c34d9e9bc38817dda0101ea65a4680788cee
+blake3: 432cd4495eba26dbeb8c69dcf2d8c34d9e9bc38817dda0101ea65a4680788cee
+
+path: /share/man/man8/runlimit.8
+type: reg
+mode: 644
+source: .pkgdata/fa84ac059a20004d5f888304d1bc53b7c30394ecf03fbe18f8b602f817c66271
+blake3: fa84ac059a20004d5f888304d1bc53b7c30394ecf03fbe18f8b602f817c66271
+
+path: /share/man/man8/runlock.8
+type: reg
+mode: 644
+source: .pkgdata/c1b9961af2520fc1d77cab176ac97dbac43dafa4357560a8789c1d4740a5036d
+blake3: c1b9961af2520fc1d77cab176ac97dbac43dafa4357560a8789c1d4740a5036d
+
+path: /share/man/man8/runpause.8
+type: reg
+mode: 644
+source: .pkgdata/dad41bdf7de09dc97ca2d3cc01af8c2ca3d2912cc6221fbb7806c3621abcac0e
+blake3: dad41bdf7de09dc97ca2d3cc01af8c2ca3d2912cc6221fbb7806c3621abcac0e
+
+path: /share/man/man8/runsession.8
+type: reg
+mode: 644
+source: .pkgdata/22ac0d84650c4a5681746cd86c9a4589ecd9145b9f851f1525e429074a911c02
+blake3: 22ac0d84650c4a5681746cd86c9a4589ecd9145b9f851f1525e429074a911c02
+
+path: /share/man/man8/runtool.8
+type: reg
+mode: 644
+source: .pkgdata/cbfbebef35556b557b6fcf5cd0c44144616a29e45bc8c9177685547d99533cc5
+blake3: cbfbebef35556b557b6fcf5cd0c44144616a29e45bc8c9177685547d99533cc5
+
+path: /share/man/man8/runtools_intro.8
+type: reg
+mode: 644
+source: .pkgdata/5319d7fa60462d977e63b8db2d78ca23c38a79d86127ba7f524e6e03832e028a
+blake3: 5319d7fa60462d977e63b8db2d78ca23c38a79d86127ba7f524e6e03832e028a
+
+path: /share/man/man8/runtrap.8
+type: reg
+mode: 644
+source: .pkgdata/2a010d0a406f0193168d356e479c59781be3353748735656432e4aac5511023a
+blake3: 2a010d0a406f0193168d356e479c59781be3353748735656432e4aac5511023a
+
+path: /share/man/man8/runuid.8
+type: reg
+mode: 644
+source: .pkgdata/3a5cf769a8cef80aff151725d3717dc28b3aae13d20bae9ac220da1f7ac66151
+blake3: 3a5cf769a8cef80aff151725d3717dc28b3aae13d20bae9ac220da1f7ac66151
+
+path: /share/man/man8/sinit.8
+type: reg
+mode: 644
+source: .pkgdata/373628fc193da854ab7c84ea642789bad4cc539da87aa55ba0e741537fb2ad9d
+blake3: 373628fc193da854ab7c84ea642789bad4cc539da87aa55ba0e741537fb2ad9d
+
+path: /share/man/man8/sissylog.8
+type: reg
+mode: 644
+source: .pkgdata/c1dac6824af74c17b3ec93aef9d06f4e05c8abecee029b4ab1d65d20ba44f322
+blake3: c1dac6824af74c17b3ec93aef9d06f4e05c8abecee029b4ab1d65d20ba44f322
+
+path: /share/man/man8/ss.8
+type: reg
+mode: 644
+source: .pkgdata/5b0f386c5d42afb2af49966d2c874ab2847bd9cb4adab2f2eb1144d0207e0575
+blake3: 5b0f386c5d42afb2af49966d2c874ab2847bd9cb4adab2f2eb1144d0207e0575
+
+path: /share/man/man8/swaplabel.8
+type: reg
+mode: 644
+source: .pkgdata/0a6c4565a65d4dd94c5ea4be04878f6f8a8a9bd56471bbe17b3f7fe2a717ebac
+blake3: 0a6c4565a65d4dd94c5ea4be04878f6f8a8a9bd56471bbe17b3f7fe2a717ebac
+
+path: /share/man/man8/swapoff.8
+type: reg
+mode: 644
+source: .pkgdata/f8234eb9d8a09b66b263b1085116a56fcf3609fce48cf8fd186b35b4024e4975
+blake3: f8234eb9d8a09b66b263b1085116a56fcf3609fce48cf8fd186b35b4024e4975
+
+path: /share/man/man8/swapon.8
+type: reg
+mode: 644
+source: .pkgdata/470e7fe4536d4099a8a06a9ef8583a4e50899dba5d2585e79cb46b85b4e22ef9
+blake3: 470e7fe4536d4099a8a06a9ef8583a4e50899dba5d2585e79cb46b85b4e22ef9
+
+path: /share/man/man8/switch_root.8
+type: reg
+mode: 644
+source: .pkgdata/1615cbe6dc9263740a8522cfa9a3d0ad2c4c7bb233603b4aa8e98a74ed545008
+blake3: 1615cbe6dc9263740a8522cfa9a3d0ad2c4c7bb233603b4aa8e98a74ed545008
+
+path: /share/man/man8/sysctl.8
+type: reg
+mode: 644
+source: .pkgdata/4bf009f1000b44128361a553f73c13ea6c43fdc0a6e9ee8f5a4be040180ff867
+blake3: 4bf009f1000b44128361a553f73c13ea6c43fdc0a6e9ee8f5a4be040180ff867
+
+path: /share/man/man8/tc-actions.8
+type: reg
+mode: 644
+source: .pkgdata/83018ddf98da6fccdfce708455c925f1a264ad795d26a56a4980785f52fef1b7
+blake3: 83018ddf98da6fccdfce708455c925f1a264ad795d26a56a4980785f52fef1b7
+
+path: /share/man/man8/tc-basic.8
+type: reg
+mode: 644
+source: .pkgdata/9aa5ff13f7655f799511bdb38d781e0961847d5f59e38e758f7130eb50e0dd51
+blake3: 9aa5ff13f7655f799511bdb38d781e0961847d5f59e38e758f7130eb50e0dd51
+
+path: /share/man/man8/tc-bfifo.8
+type: reg
+mode: 644
+source: .pkgdata/96657b34d676532fb215a29cc02ba6d8fdc58d30be508e164d0e79308d3b942d
+blake3: 96657b34d676532fb215a29cc02ba6d8fdc58d30be508e164d0e79308d3b942d
+
+path: /share/man/man8/tc-bpf.8
+type: reg
+mode: 644
+source: .pkgdata/0cfd4f792ab8279666caa0c8ce0bb3dc16139c203e371c936d9cf572f0d130e0
+blake3: 0cfd4f792ab8279666caa0c8ce0bb3dc16139c203e371c936d9cf572f0d130e0
+
+path: /share/man/man8/tc-cake.8
+type: reg
+mode: 644
+source: .pkgdata/46c7c4749e7c838fbcd8bb3602400b14f8327dd24c6a930c1832d6335bc25b57
+blake3: 46c7c4749e7c838fbcd8bb3602400b14f8327dd24c6a930c1832d6335bc25b57
+
+path: /share/man/man8/tc-cbq-details.8
+type: reg
+mode: 644
+source: .pkgdata/c4c2b725a753c3f6c972e10e23e723fb514bb9e097de74a2c6eef4d082c1eba7
+blake3: c4c2b725a753c3f6c972e10e23e723fb514bb9e097de74a2c6eef4d082c1eba7
+
+path: /share/man/man8/tc-cbq.8
+type: reg
+mode: 644
+source: .pkgdata/0d87bf14c5ca47a936ea3b6eb642f12c87c846b7e263d08ebb2ea99ac09dde2d
+blake3: 0d87bf14c5ca47a936ea3b6eb642f12c87c846b7e263d08ebb2ea99ac09dde2d
+
+path: /share/man/man8/tc-cbs.8
+type: reg
+mode: 644
+source: .pkgdata/62441c0e508ff80d2297f567d05eac9e112eeb9c1a5d7919a637438c90e5a333
+blake3: 62441c0e508ff80d2297f567d05eac9e112eeb9c1a5d7919a637438c90e5a333
+
+path: /share/man/man8/tc-cgroup.8
+type: reg
+mode: 644
+source: .pkgdata/6faea3fb1e6866710c0d30bd08922f3b705cff112c3f6809f47be4fa589038aa
+blake3: 6faea3fb1e6866710c0d30bd08922f3b705cff112c3f6809f47be4fa589038aa
+
+path: /share/man/man8/tc-choke.8
+type: reg
+mode: 644
+source: .pkgdata/dba1d8ca9da8c6ef6f9c15f71d3e6de37037313f7d87c574751c2d3725bda119
+blake3: dba1d8ca9da8c6ef6f9c15f71d3e6de37037313f7d87c574751c2d3725bda119
+
+path: /share/man/man8/tc-codel.8
+type: reg
+mode: 644
+source: .pkgdata/5c69cafe007d68fefcb9ac197ec90884f14194db5ad059e6789af840188f4b5c
+blake3: 5c69cafe007d68fefcb9ac197ec90884f14194db5ad059e6789af840188f4b5c
+
+path: /share/man/man8/tc-connmark.8
+type: reg
+mode: 644
+source: .pkgdata/43f8812accc2e6677f45838effdd744341a963938af91b88c34b7e3a57ce0edc
+blake3: 43f8812accc2e6677f45838effdd744341a963938af91b88c34b7e3a57ce0edc
+
+path: /share/man/man8/tc-csum.8
+type: reg
+mode: 644
+source: .pkgdata/515af91e36f5809f91dc767d1b8549f46a2cebbebdad8f6a2909b0f25cd24446
+blake3: 515af91e36f5809f91dc767d1b8549f46a2cebbebdad8f6a2909b0f25cd24446
+
+path: /share/man/man8/tc-ct.8
+type: reg
+mode: 644
+source: .pkgdata/6c04a71833b41107dd5fd80e6812f9f91a0b79869a18d006e855dd385eba417b
+blake3: 6c04a71833b41107dd5fd80e6812f9f91a0b79869a18d006e855dd385eba417b
+
+path: /share/man/man8/tc-ctinfo.8
+type: reg
+mode: 644
+source: .pkgdata/0bd4a9edb19522e917989432eaa2512170277e389399aff0f17815fd0ec0adcb
+blake3: 0bd4a9edb19522e917989432eaa2512170277e389399aff0f17815fd0ec0adcb
+
+path: /share/man/man8/tc-drr.8
+type: reg
+mode: 644
+source: .pkgdata/5659241310c254b6be7dd31a83b27fbf0ddbfd3669ceae63a30524af8aecaa94
+blake3: 5659241310c254b6be7dd31a83b27fbf0ddbfd3669ceae63a30524af8aecaa94
+
+path: /share/man/man8/tc-ematch.8
+type: reg
+mode: 644
+source: .pkgdata/f01935ca6fea91ae4c173063e167104f60ffdbda8ca2f91605df6fe57a112701
+blake3: f01935ca6fea91ae4c173063e167104f60ffdbda8ca2f91605df6fe57a112701
+
+path: /share/man/man8/tc-etf.8
+type: reg
+mode: 644
+source: .pkgdata/9121041cee370cf72d5cf4adae0debc409b4097362deec17072aab241f108368
+blake3: 9121041cee370cf72d5cf4adae0debc409b4097362deec17072aab241f108368
+
+path: /share/man/man8/tc-ets.8
+type: reg
+mode: 644
+source: .pkgdata/bcce721072717c69b40f5b963a45aaab1b464515b7d5b85769ded428def0e34a
+blake3: bcce721072717c69b40f5b963a45aaab1b464515b7d5b85769ded428def0e34a
+
+path: /share/man/man8/tc-flow.8
+type: reg
+mode: 644
+source: .pkgdata/97f149de08c8c3e58905e8e2e5e46a36332e4846c85f4918e0ae8163e8cbd193
+blake3: 97f149de08c8c3e58905e8e2e5e46a36332e4846c85f4918e0ae8163e8cbd193
+
+path: /share/man/man8/tc-flower.8
+type: reg
+mode: 644
+source: .pkgdata/95695e920217055b7efeb383f334619cf4fd0e2538b0795a6296ff57776af161
+blake3: 95695e920217055b7efeb383f334619cf4fd0e2538b0795a6296ff57776af161
+
+path: /share/man/man8/tc-fq.8
+type: reg
+mode: 644
+source: .pkgdata/d8d6ea5d8b0ad89576468a244123c1614fbc222d430dd1806ae86127d928326a
+blake3: d8d6ea5d8b0ad89576468a244123c1614fbc222d430dd1806ae86127d928326a
+
+path: /share/man/man8/tc-fq_codel.8
+type: reg
+mode: 644
+source: .pkgdata/0074faf386bdcd7a08756c19559b63a92adce98c995b1542bab807757bef12d1
+blake3: 0074faf386bdcd7a08756c19559b63a92adce98c995b1542bab807757bef12d1
+
+path: /share/man/man8/tc-fq_pie.8
+type: reg
+mode: 644
+source: .pkgdata/002255e2053a9dcbb742f7d8c2757eb6002f2a48d76646e31a63b0b65e1b8980
+blake3: 002255e2053a9dcbb742f7d8c2757eb6002f2a48d76646e31a63b0b65e1b8980
+
+path: /share/man/man8/tc-fw.8
+type: reg
+mode: 644
+source: .pkgdata/b0a7ed963a655ada275295f6c034dcefd42b2c8941082297a6589a9c49b295f6
+blake3: b0a7ed963a655ada275295f6c034dcefd42b2c8941082297a6589a9c49b295f6
+
+path: /share/man/man8/tc-gate.8
+type: reg
+mode: 644
+source: .pkgdata/6b2950b9ec0606955496d9ec6f39fe3e927fc4b065cbae9c1111198f6d988801
+blake3: 6b2950b9ec0606955496d9ec6f39fe3e927fc4b065cbae9c1111198f6d988801
+
+path: /share/man/man8/tc-hfsc.8
+type: reg
+mode: 644
+source: .pkgdata/02b69fb5f2f7492173b28581766646b8916dbc2a3a19d8229a2048b6d84a716a
+blake3: 02b69fb5f2f7492173b28581766646b8916dbc2a3a19d8229a2048b6d84a716a
+
+path: /share/man/man8/tc-htb.8
+type: reg
+mode: 644
+source: .pkgdata/493aa6ecbd759443ae3593c73ce7c51b01d6cadebb81069b26942613340766dd
+blake3: 493aa6ecbd759443ae3593c73ce7c51b01d6cadebb81069b26942613340766dd
+
+path: /share/man/man8/tc-ife.8
+type: reg
+mode: 644
+source: .pkgdata/f6ccdd0825cf32d76d87ca466549241cf227a1f3af8c18c1f4362e7a6b16d00c
+blake3: f6ccdd0825cf32d76d87ca466549241cf227a1f3af8c18c1f4362e7a6b16d00c
+
+path: /share/man/man8/tc-matchall.8
+type: reg
+mode: 644
+source: .pkgdata/9ee22b3c977f4aab6b0d9bc3597c3ef6235325d09e06ed1d0254abbca0154e5b
+blake3: 9ee22b3c977f4aab6b0d9bc3597c3ef6235325d09e06ed1d0254abbca0154e5b
+
+path: /share/man/man8/tc-mirred.8
+type: reg
+mode: 644
+source: .pkgdata/3a6a01556ec2e04c2dd7aba41046bd9410786cd607ca2ed8a8f7d7bc229dc89c
+blake3: 3a6a01556ec2e04c2dd7aba41046bd9410786cd607ca2ed8a8f7d7bc229dc89c
+
+path: /share/man/man8/tc-mpls.8
+type: reg
+mode: 644
+source: .pkgdata/21186dcbe451c935493e0aaa9da9fdf4713b75a8ea30608b02a54c6293095cc4
+blake3: 21186dcbe451c935493e0aaa9da9fdf4713b75a8ea30608b02a54c6293095cc4
+
+path: /share/man/man8/tc-mqprio.8
+type: reg
+mode: 644
+source: .pkgdata/c883becb8aee235b7042dc030992e4ff0faf4cfb20b2fe2998f1ad4568aeb523
+blake3: c883becb8aee235b7042dc030992e4ff0faf4cfb20b2fe2998f1ad4568aeb523
+
+path: /share/man/man8/tc-nat.8
+type: reg
+mode: 644
+source: .pkgdata/75fa29dfcc57f3eb104df159ea668e450a1b21290298caf177e7b5d276bd21a2
+blake3: 75fa29dfcc57f3eb104df159ea668e450a1b21290298caf177e7b5d276bd21a2
+
+path: /share/man/man8/tc-netem.8
+type: reg
+mode: 644
+source: .pkgdata/24459cd8cd643489ea1eea0d0280e9523fb18ddbe77df73ee8117a2b46c00c3f
+blake3: 24459cd8cd643489ea1eea0d0280e9523fb18ddbe77df73ee8117a2b46c00c3f
+
+path: /share/man/man8/tc-pedit.8
+type: reg
+mode: 644
+source: .pkgdata/4eac9c9d6502e09b91ee2fe2ceb9a2bb6dd1a08c1e4900197f5a38f40f8c29bc
+blake3: 4eac9c9d6502e09b91ee2fe2ceb9a2bb6dd1a08c1e4900197f5a38f40f8c29bc
+
+path: /share/man/man8/tc-pfifo.8
+type: reg
+mode: 644
+source: .pkgdata/0e61bd205130000f54666793988cbb985a15b8536172d8be544728b6b0596ae4
+blake3: 0e61bd205130000f54666793988cbb985a15b8536172d8be544728b6b0596ae4
+
+path: /share/man/man8/tc-pfifo_fast.8
+type: reg
+mode: 644
+source: .pkgdata/c9f86895c0950c3f07c266329c47b4c144f36b6f24151572a1eb0efbfd12688c
+blake3: c9f86895c0950c3f07c266329c47b4c144f36b6f24151572a1eb0efbfd12688c
+
+path: /share/man/man8/tc-pie.8
+type: reg
+mode: 644
+source: .pkgdata/4853da29f95f7a9a1319753ab7190a2042953bc00213361630342a07446c30a4
+blake3: 4853da29f95f7a9a1319753ab7190a2042953bc00213361630342a07446c30a4
+
+path: /share/man/man8/tc-police.8
+type: reg
+mode: 644
+source: .pkgdata/9e145681bb2a6242b986c5ff12a51580b444dee5da94aae9a69addb545188edb
+blake3: 9e145681bb2a6242b986c5ff12a51580b444dee5da94aae9a69addb545188edb
+
+path: /share/man/man8/tc-prio.8
+type: reg
+mode: 644
+source: .pkgdata/08bb888f952ed3145413af77f16ce48584cbd2eeb7db694fabe6002009d728ea
+blake3: 08bb888f952ed3145413af77f16ce48584cbd2eeb7db694fabe6002009d728ea
+
+path: /share/man/man8/tc-red.8
+type: reg
+mode: 644
+source: .pkgdata/26d0c8630ec4408df55f42cbd8ba2ef3972bcbcd8f06cffda5598d3da05f8425
+blake3: 26d0c8630ec4408df55f42cbd8ba2ef3972bcbcd8f06cffda5598d3da05f8425
+
+path: /share/man/man8/tc-route.8
+type: reg
+mode: 644
+source: .pkgdata/68f1475b04c34e63c824b4f322f410a0a089cd5e4128f22396c9c214eebfc003
+blake3: 68f1475b04c34e63c824b4f322f410a0a089cd5e4128f22396c9c214eebfc003
+
+path: /share/man/man8/tc-sample.8
+type: reg
+mode: 644
+source: .pkgdata/f1acbe492797448ad04fb479b2e5d0e08f7a1f2ec0849f65101ec8a1e578f8eb
+blake3: f1acbe492797448ad04fb479b2e5d0e08f7a1f2ec0849f65101ec8a1e578f8eb
+
+path: /share/man/man8/tc-sfb.8
+type: reg
+mode: 644
+source: .pkgdata/71b9f3e7bd689504a0778ac4e49605002870e72146a9d147ced4816ddad944c5
+blake3: 71b9f3e7bd689504a0778ac4e49605002870e72146a9d147ced4816ddad944c5
+
+path: /share/man/man8/tc-sfq.8
+type: reg
+mode: 644
+source: .pkgdata/2e3ba50c59391588eefce6dfe1429da4d420c3dc0794370aa4d5a9f8c930a6a0
+blake3: 2e3ba50c59391588eefce6dfe1429da4d420c3dc0794370aa4d5a9f8c930a6a0
+
+path: /share/man/man8/tc-simple.8
+type: reg
+mode: 644
+source: .pkgdata/d393260e11d45c111d6e73855aa31288dca562333b9c536c18091f4629c7a46c
+blake3: d393260e11d45c111d6e73855aa31288dca562333b9c536c18091f4629c7a46c
+
+path: /share/man/man8/tc-skbedit.8
+type: reg
+mode: 644
+source: .pkgdata/3116d39589b1a284c1d4f122786a225e67f4a79495080c348120c6403724d1b6
+blake3: 3116d39589b1a284c1d4f122786a225e67f4a79495080c348120c6403724d1b6
+
+path: /share/man/man8/tc-skbmod.8
+type: reg
+mode: 644
+source: .pkgdata/5162c8387abea94ee1c1936da65872a9eca330373bcbe9a0761ee4c770ab03c1
+blake3: 5162c8387abea94ee1c1936da65872a9eca330373bcbe9a0761ee4c770ab03c1
+
+path: /share/man/man8/tc-skbprio.8
+type: reg
+mode: 644
+source: .pkgdata/ba00f85287112ad68b38042c15bb10fc3a07429bdaeacc82e302364110dfca86
+blake3: ba00f85287112ad68b38042c15bb10fc3a07429bdaeacc82e302364110dfca86
+
+path: /share/man/man8/tc-stab.8
+type: reg
+mode: 644
+source: .pkgdata/6432191f77cd86e19995d36f625f2de1950fea9b74edef825d282d6648ae8745
+blake3: 6432191f77cd86e19995d36f625f2de1950fea9b74edef825d282d6648ae8745
+
+path: /share/man/man8/tc-taprio.8
+type: reg
+mode: 644
+source: .pkgdata/886b1489fe7ae4666716f673cfdcaded285713c52be6f1a1342e14397c4fc57d
+blake3: 886b1489fe7ae4666716f673cfdcaded285713c52be6f1a1342e14397c4fc57d
+
+path: /share/man/man8/tc-tbf.8
+type: reg
+mode: 644
+source: .pkgdata/1c47e6a4ddcdd9ce5f16a50d170ec24e36ba8b2c40c87b941637b19c683a70da
+blake3: 1c47e6a4ddcdd9ce5f16a50d170ec24e36ba8b2c40c87b941637b19c683a70da
+
+path: /share/man/man8/tc-tcindex.8
+type: reg
+mode: 644
+source: .pkgdata/469caa76d0237ef6917142ad36774b687ac0bb82e4f2ffd74b4446a76817cf26
+blake3: 469caa76d0237ef6917142ad36774b687ac0bb82e4f2ffd74b4446a76817cf26
+
+path: /share/man/man8/tc-tunnel_key.8
+type: reg
+mode: 644
+source: .pkgdata/ddc33c30de7ddda49b985bf1190e7d67468b098cea9b2a595d352eef5c963e4e
+blake3: ddc33c30de7ddda49b985bf1190e7d67468b098cea9b2a595d352eef5c963e4e
+
+path: /share/man/man8/tc-u32.8
+type: reg
+mode: 644
+source: .pkgdata/5f4673a6e0b135d6db48b76e9b09677a8122a064844ae649974d7504a733f206
+blake3: 5f4673a6e0b135d6db48b76e9b09677a8122a064844ae649974d7504a733f206
+
+path: /share/man/man8/tc-vlan.8
+type: reg
+mode: 644
+source: .pkgdata/c28167c176f4f4d87ecdba7bb0817d20dcbf80ee073948096d5f99302f9b7e6f
+blake3: c28167c176f4f4d87ecdba7bb0817d20dcbf80ee073948096d5f99302f9b7e6f
+
+path: /share/man/man8/tc-xt.8
+type: reg
+mode: 644
+source: .pkgdata/309aef63c7f2832c2e94dfdd58234a0d0a42f3ec68bacbaa27be4fe5239bf454
+blake3: 309aef63c7f2832c2e94dfdd58234a0d0a42f3ec68bacbaa27be4fe5239bf454
+
+path: /share/man/man8/tc.8
+type: reg
+mode: 644
+source: .pkgdata/ef7e13fb63b6ef70fa44c0bffadde3553a0cb7a293a01f5f8bf12c6b551e8c79
+blake3: ef7e13fb63b6ef70fa44c0bffadde3553a0cb7a293a01f5f8bf12c6b551e8c79
+
+path: /share/man/man8/tinylog.8
+type: reg
+mode: 644
+source: .pkgdata/9e6df30e0fec7713bad564c9fddc35d20c3c7044418907565558a6a427d3c876
+blake3: 9e6df30e0fec7713bad564c9fddc35d20c3c7044418907565558a6a427d3c876
+
+path: /share/man/man8/tipc-bearer.8
+type: reg
+mode: 644
+source: .pkgdata/09b85e9d5a5959bea788cdf45b7936a8b3e3e74b087f1e9932fe768f38b42e05
+blake3: 09b85e9d5a5959bea788cdf45b7936a8b3e3e74b087f1e9932fe768f38b42e05
+
+path: /share/man/man8/tipc-link.8
+type: reg
+mode: 644
+source: .pkgdata/2a7742c7737f60a73cd88ebae988c65436a004ae46e04c126cb2bd7c73725baa
+blake3: 2a7742c7737f60a73cd88ebae988c65436a004ae46e04c126cb2bd7c73725baa
+
+path: /share/man/man8/tipc-media.8
+type: reg
+mode: 644
+source: .pkgdata/4efde9facb762b94a15723389ab543974d475f50255b396e66a11e92021e022b
+blake3: 4efde9facb762b94a15723389ab543974d475f50255b396e66a11e92021e022b
+
+path: /share/man/man8/tipc-nametable.8
+type: reg
+mode: 644
+source: .pkgdata/90b80fa8593dbaa429c64a982d44bfbecba3dc9f7a52548ee68575b9656df439
+blake3: 90b80fa8593dbaa429c64a982d44bfbecba3dc9f7a52548ee68575b9656df439
+
+path: /share/man/man8/tipc-node.8
+type: reg
+mode: 644
+source: .pkgdata/ec30172fad6a245c818c670461a952af9ae34aad1c760025aa8899c791035402
+blake3: ec30172fad6a245c818c670461a952af9ae34aad1c760025aa8899c791035402
+
+path: /share/man/man8/tipc-peer.8
+type: reg
+mode: 644
+source: .pkgdata/e92bd714511a96b96cea47c8c312afcb29be527fa7635f5e4b88c19c1d175ff3
+blake3: e92bd714511a96b96cea47c8c312afcb29be527fa7635f5e4b88c19c1d175ff3
+
+path: /share/man/man8/tipc-socket.8
+type: reg
+mode: 644
+source: .pkgdata/90fefb2875be54fc17e6458451c750f29f77b5e4e2810f6fe8a5788129bd74b7
+blake3: 90fefb2875be54fc17e6458451c750f29f77b5e4e2810f6fe8a5788129bd74b7
+
+path: /share/man/man8/tipc.8
+type: reg
+mode: 644
+source: .pkgdata/1380e765746a301566773b4769e971d36c4728d3a718d2ce2038f28885d22512
+blake3: 1380e765746a301566773b4769e971d36c4728d3a718d2ce2038f28885d22512
+
+path: /share/man/man8/umount.8
+type: reg
+mode: 644
+source: .pkgdata/805a559c9639e5b9b214fe2fa0e11e98929b467cc6b5dcabeb645f9b88b327a3
+blake3: 805a559c9639e5b9b214fe2fa0e11e98929b467cc6b5dcabeb645f9b88b327a3
+
+path: /sys
+type: dir
+mode: 755
 
 path: /tmp
 type: dir
+mode: 755
+
+path: /usr
+type: dir
+mode: 755
+
+path: /usr/bin
+type: dir
+mode: 755
 
 path: /usr/bin/env
 type: sym
 target: ../../bin/env
+
+path: /var
+type: dir
+mode: 755
+
+path: /var/cache
+type: dir
+mode: 755
+
+path: /var/lock
+type: dir
+target: 755
+
+path: /var/log
+type: dir
+mode: 755
+
+path: /var/run
+type: sym
+target: /run
+

@@ -1,0 +1,6 @@
+../oksh
+../coreutils
+../gcc
+../binutils
+../musl
+../linux-headers
