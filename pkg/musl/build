@@ -1,6 +1,8 @@
 #!/bin/sh
 set -eux
 
-tar --strip-components=1 -xf *
+tar -xzf *
+rm *.tar.gz
+cd *
 ./configure --prefix=""
 make -j$(nproc) install

@@ -1,12 +1,17 @@
 #!/bin/sh
 set -eux
 
-tar --strip-components=1 -xf *.tar.*
+tar -xJf *.tar.xz
+rm *.tar.xz
+cd binutils*
 
-for patch in *.patch
+for patch in ../*.patch
 do
   patch -p1 < $patch
 done
+
+export ac_cv_path_GREP=grep
+export ac_cv_path_SED=sed
 
 ./configure \
   --prefix="/" \
@@ -18,9 +23,12 @@ done
   --enable-default-hash-style=gnu \
   --enable-deterministic-archives \
   --enable-new-dtags
+
 make -j$(nproc)
-make install-strip
+make install
+
 cd $DESTDIR
+
 for b in $(ls x86_64-linux-musl/bin)
 do
   ln -s x86_64-linux-musl-$b bin/$b

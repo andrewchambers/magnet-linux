@@ -97,8 +97,20 @@ sha256: 902c38035cef862088f2711ad15c530641bab4fa6a2d4da5df9ffafc211e37f1
 url: file:///home/ac/Downloads/seed2.tar.gz
 sha256: 45f643dd52ad25ba034fba542bd3aeed331eaa2d12fb8d40510f90794c2e1d67
 
+url: file:///home/ac/Downloads/seed-sbase.tar.gz
+sha256: 9a6b73f9cb6c307c805009bb7ee3e2f65cc0221d921a92e2343fa42ea00a7b4d
+
 url: https://dl.suckless.org/sinit/sinit-1.0.tar.gz
 sha256: 78c2120a97a5e93b80606c5403bd731152f8a344e47aa4ab74970c1c11dc6fc0
 
 url: https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.0.tar.xz/download
 sha256: 0f4d92794edb7a1c95bb3b8c1f823de62be5d0043459c2155fd07fa859c16513
+
+url: http://www.mirbsd.org/MirOS/dist/mir/cpio/paxmirabilis-20201030.tgz
+sha256: 1cc892c9c8ce265d28457bab4225eda71490d93def0a1d2271430c2863b728dc
+
+url: http://landley.net/toybox/downloads/toybox-0.8.6.tar.gz
+sha256: 4298c90a2b238348e4fdc9f89eb4988356c80da3f0cf78c279d2e82b9119034b
+
+url: https://www.libarchive.org/downloads/libarchive-3.6.1.tar.xz
+sha256: 5a411aceb978f43e626f0c2d1812ddd8807b645ed892453acabd532376c148e6

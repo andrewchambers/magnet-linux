@@ -1,10 +1,1 @@
-../oksh
-../make
-../gcc
-../binutils
-../coreutils
-../musl
-../tar
-../gzip
-../sed
-../grep
+../seed

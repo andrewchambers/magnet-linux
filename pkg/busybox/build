@@ -1,7 +1,9 @@
 #!/bin/sh
 set -eux
 
-tar --strip-components=1 -xf *
+tar -xzf *
+rm *.tar.gz
+cd *
 export LDFLAGS="-static"
 make defconfig
 make -j$(nproc)

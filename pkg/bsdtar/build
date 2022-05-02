@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eux
+
+tar -xJf *
+rm *.tar.xz
+cd *
+export ac_cv_path_GREP=grep
+export ac_cv_path_SED=sed
+./configure \
+  --prefix="" \
+  --enable-bsdtar=static \
+  --enable-bsdcat=static \
+  --enable-bsdcpio=static
+make -j$(nproc)
+make install-strip
+rm -r "$DESTDIR/include"
+rm -r "$DESTDIR/lib"
+rm -r "$DESTDIR/share/man/man3"
+rm -r "$DESTDIR/share/man/man5"

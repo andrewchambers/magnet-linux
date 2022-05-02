@@ -2,10 +2,10 @@
 
 set -ex
 
-tar xf gcc-*
-tar xf gmp-*
-tar xf mpc-*
-tar xf mpfr-*
+tar -xJf gcc-*
+tar -xJf gmp-*
+tar -xzf mpc-*
+tar -xJf mpfr-*
 
 rm *.tar.*
 
@@ -19,7 +19,10 @@ cd src
 for f in "$OLDPWD"/*.patch; do
 	patch -p1 -i "$f"
 done
+sed 's/tar xpf/tar -xf/g' gcc/Makefile.in | sponge gcc/Makefile.in # XXX make patch.
 
+export ac_cv_path_GREP=grep
+export ac_cv_path_SED=sed
 ./configure \
 	--build=x86_64-linux-musl \
 	--prefix=/ \

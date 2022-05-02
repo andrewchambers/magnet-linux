@@ -1,6 +1,8 @@
 #!/bin/sh
 set -eux
 
-tar --strip-components=1 -xf *
+tar -xJf *
+rm *.tar.xz
+cd *
 make ARCH=generic prefix= DESTDIR="$DESTDIR" install
 make ARCH=x86_64 prefix= DESTDIR="$DESTDIR" install
