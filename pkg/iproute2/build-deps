@@ -1,0 +1,16 @@
+../oksh
+../coreutils
+../gcc
+../binutils
+../findutils
+../flex
+../bison
+../sed
+../grep
+../gawk
+../musl
+../patch
+../linux-headers
+../tar
+../xz
+../make

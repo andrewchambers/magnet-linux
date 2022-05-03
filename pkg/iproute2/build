@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eux
+
+tar --strip-components=1 -xf *.tar.xz
+./configure --prefix=/
+make -j$(nproc)
+make install DESTDIR="$DESTDIR" SBINDIR=/bin PREFIX=
+rm -r \
+  "$DESTDIR/include" \
+  "$DESTDIR/etc" \
+  "$DESTDIR/lib" \
+  "$DESTDIR/var" \
+  "$DESTDIR/share/bash-completion"
