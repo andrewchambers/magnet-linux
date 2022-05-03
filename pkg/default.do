@@ -93,7 +93,12 @@ case $filename in
 			run-closure \
 			files
 
-		files=$(awk '{ print $2 }' files)
+		files=$(
+			awk '{
+				if (NF != 2) { print("too many columns in", $0) > "/dev/stderr"; exit 1; };
+				print $2;
+			}' files
+		)
 		if test -n "$files"
 		then
 			redo-ifchange $files
@@ -180,7 +185,7 @@ case $filename in
 		redo-ifchange files
 
 		hash=$(
-			awk -v f="$filename" '{ if ($2 == f) { print $1; exit 0; } }' files
+			awk -v f="$filename" '{if ($2 == f) { print $1; exit 0; };}' files
 		)
 
 		if ! test -n "$hash"

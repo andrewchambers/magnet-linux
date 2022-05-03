@@ -9,7 +9,37 @@ out="$2"
 IFS="
 "
 
-for url in $(recsel -e "sha256 = '$hash'" -P url "$mirrors" | shuf)
+
+urls_for_hash () {
+	set -eu
+
+	# Read the recfile using awk, don't worry about recutils.
+	# In the future we might need to create a lookup database
+	# (probably as a redo rule).
+	awk -v hash="$1" '
+	function ltrim(s) {
+		sub(/^[ \t\r\n]+/, "", s);
+		return s;
+	}
+	{
+		if (NF == 0) { 
+			if (found) {
+				for (i = 0; i < nurls; i++)
+					print urls[i];
+				exit 0;
+			}
+			nurls = 0;
+		} else if ($1 == "url:") {
+			$1="";
+			urls[nurls++] = ltrim($0);
+		} else if ($1 == "sha256:" && $2 == hash) {
+			found = 1;
+		}
+	}' "$mirrors"
+}
+
+
+for url in $(urls_for_hash "$hash" | shuf)
 do
 	echo "downloading from mirror $url" 2>&1
 	

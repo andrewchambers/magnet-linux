@@ -114,3 +114,6 @@ sha256: 4298c90a2b238348e4fdc9f89eb4988356c80da3f0cf78c279d2e82b9119034b
 
 url: https://www.libarchive.org/downloads/libarchive-3.6.1.tar.xz
 sha256: 5a411aceb978f43e626f0c2d1812ddd8807b645ed892453acabd532376c148e6
+
+url: https://git.sr.ht/~mcf/pax/archive/70410718f37a898be6c0915536bd00ca56b87b70.tar.gz
+sha256: b309832f340cdeaaf1ab8522abf28d7d6be2386953d1dff1c040b9af3b4547ce

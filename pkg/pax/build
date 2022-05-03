@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eux
+
+tar -xzf *.tar.gz
+rm *.tar.gz
+cd pax-*
+cc -static -s -O2 pax.c -o pax
+mkdir "$DESTDIR/bin"
+mv pax "$DESTDIR/bin"

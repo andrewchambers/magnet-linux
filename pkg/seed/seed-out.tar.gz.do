@@ -9,6 +9,7 @@ pkgs="
 ../binutils
 ../oksh
 ../sbase
+../pax
 ../xz
 ../gzip
 ../patch
